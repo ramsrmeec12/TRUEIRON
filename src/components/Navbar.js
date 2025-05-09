@@ -9,13 +9,13 @@ function Navbar() {
     return (
         <div className="font-roboto sticky top-0 z-50 bg-white shadow-md">
             {/* Top Bar - Only for md and up */}
-            <div style={{ backgroundColor: '#353535' }} className="py-2 px-3 hidden md:flex justify-between">
+            <div style={{ backgroundColor: '#353535' }} className="py-2 px-3 text-center md:flex justify-between">
                 <a href="tel:+919876543210" className="text-white pl-5">
                     📞 Call Us: +91 98765 43210
                 </a>
                 <div className="flex gap-3 text-white">
-                    <Link>Store Locater</Link>
-                    <Link>Contact Us</Link>
+                    <Link className='hidden md:block'>Store Locater</Link>
+                    <Link className='hidden md:block'>Contact Us</Link>
                 </div>
             </div>
 
@@ -23,16 +23,16 @@ function Navbar() {
             <div className='flex items-center justify-between px-4 md:px-[5%] py-2'>
                 {/* Logo */}
                 <div>
-                    <Link><img src={logo} className='h-16' alt="Logo" /></Link>
+                    <Link><img src={logo} className='h-10 md:h-16' alt="Logo" /></Link>
                 </div>
 
                 {/* Search Bar - Hidden on small screens */}
-                <div className="hidden md:flex items-center border border-gray-300 rounded px-2 py-1">
+                <div className="hidden lg:flex items-center border border-gray-300 rounded px-2 py-1">
                     <FiSearch className="text-gray-500 mr-2" />
                     <input
                         type="text"
                         placeholder="Search..."
-                        className="outline-none bg-transparent"
+                        className="outline-none bg-transparent "
                     />
                     <button className='border border-black px-2 p-1 rounded-md'>Submit</button>
                 </div>
