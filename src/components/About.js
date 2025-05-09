@@ -21,7 +21,7 @@ function AboutUs() {
 
       {/* Content */}
       <p className="text-gray-700 text-lg mb-4">
-        At <strong>Fitness Gear Experts</strong>, we’re passionate about empowering every individual and gym owner with cutting-edge fitness equipment that fuels results. From durable treadmills and high-performance cycle machines to strength-training gear and accessories, we provide only the best — designed for performance, safety, and reliability.
+        At <strong>True Iron</strong>, we’re passionate about empowering every individual and gym owner with cutting-edge fitness equipment that fuels results. From durable treadmills and high-performance cycle machines to strength-training gear and accessories, we provide only the best — designed for performance, safety, and reliability.
       </p>
 
       <p className="text-gray-700 text-lg mb-4">
