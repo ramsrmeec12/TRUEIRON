@@ -15,7 +15,7 @@ function Navbar() {
             {/* Top Bar - Only for md and up */}
             <div style={{ backgroundColor: '#353535' }} className="py-2 px-3 text-center md:flex justify-between">
                 <a href="tel:+919876543210" className="text-white pl-5">
-                    📞 Call Us: +91 98765 43210
+                    📞 Call Us: +91 9025416751
                 </a>
                 <div className="flex gap-3 text-white">
                     <Link to={'/location'} className='hidden md:block'>Store Locater</Link>
