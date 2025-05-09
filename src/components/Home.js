@@ -15,7 +15,7 @@ function Home() {
         <Ourproducts></Ourproducts>
         <Ourclients></Ourclients>
         <AboutUs></AboutUs>
-        <Footer></Footer>
+        
         
         </div>
     )

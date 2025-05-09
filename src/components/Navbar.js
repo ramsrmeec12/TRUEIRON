@@ -6,6 +6,10 @@ import { FiSearch, FiMenu, FiX } from 'react-icons/fi';
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const handleMenuClose = () => {
+        setMenuOpen(false);  // Close the menu when a link is clicked
+    };
+
     return (
         <div className="font-roboto sticky top-0 z-50 bg-white shadow-md">
             {/* Top Bar - Only for md and up */}
@@ -14,8 +18,8 @@ function Navbar() {
                     📞 Call Us: +91 98765 43210
                 </a>
                 <div className="flex gap-3 text-white">
-                    <Link className='hidden md:block'>Store Locater</Link>
-                    <Link className='hidden md:block'>Contact Us</Link>
+                    <Link to={'/location'} className='hidden md:block'>Store Locater</Link>
+                    <Link to={'/contact'} className='hidden md:block'>Contact Us</Link>
                 </div>
             </div>
 
@@ -23,7 +27,7 @@ function Navbar() {
             <div className='flex items-center justify-between px-4 md:px-[5%] py-2'>
                 {/* Logo */}
                 <div>
-                    <Link><img src={logo} className='h-10 md:h-16' alt="Logo" /></Link>
+                    <Link to={'/'}><img src={logo} className='h-10 md:h-13' alt="Logo" /></Link>
                 </div>
 
                 {/* Search Bar - Hidden on small screens */}
@@ -39,10 +43,10 @@ function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className='hidden md:flex gap-4 pr-4'>
-                    <Link>Home Gym</Link>
-                    <Link>Commercial</Link>
-                    <Link>Support</Link>
-                    <Link>Contact Us</Link>
+                    <Link to={'/homegym'}>Home Gym</Link>
+                    <Link to={'/Commercial'}>Commercial</Link>
+                    <Link to={'/support'}>Support</Link>
+                    <Link to={'/contact'}>Contact Us</Link>
                 </div>
 
                 {/* Mobile Menu Icon */}
@@ -56,12 +60,11 @@ function Navbar() {
             {/* Mobile Dropdown Menu */}
             {menuOpen && (
                 <div className="md:hidden bg-gray-100 px-4 py-2 space-y-2">
-                    <Link className="block">Home Gym</Link>
-                    <Link className="block">Commercial</Link>
-                    <Link className="block">Support</Link>
-                    <Link className="block">Contact Us</Link>
-                    <Link className="block">Store Locater</Link>
-                    <a href="tel:+919876543210" className="block">📞 +91 98765 43210</a>
+                    <Link to={'/homegym'} className="block" onClick={handleMenuClose}>Home Gym</Link>
+                    <Link to={'/Commercial'} className="block" onClick={handleMenuClose}>Commercial</Link>
+                    <Link to={'/support'} className="block" onClick={handleMenuClose}>Support</Link>
+                    <Link to={'/contact'} className="block" onClick={handleMenuClose}>Contact Us</Link>
+                    <Link to={'/location'} className="block" onClick={handleMenuClose}>Store Locater</Link>
                 </div>
             )}
         </div>

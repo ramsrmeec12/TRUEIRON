@@ -1,4 +1,5 @@
 import { FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -14,7 +15,7 @@ function Footer() {
           <div className="mt-4">
             <h4 className="font-semibold mb-2">Follow us</h4>
             <div className="flex space-x-4 text-white text-xl">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://www.instagram.com/true_iron_equipment/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram />
               </a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -31,10 +32,10 @@ function Footer() {
         <nav aria-label="Products">
           <h3 className="text-lg font-semibold mb-4">Products</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#">Commercial Gym Setup</a></li>
-            <li><a href="#">Home Gym Setup</a></li>
-            <li><a href="#">Massagers</a></li>
-            <li><a href="#">Accessories</a></li>
+            <li><Link to={'/commercial'}>Commercial Gym Setup</Link></li>
+            <li><Link to={'/homegym'}>Home Gym Setup</Link></li>
+            <li><Link to={'/contact'}>Custom Products</Link></li>
+
           </ul>
         </nav>
 
@@ -42,10 +43,15 @@ function Footer() {
         <nav aria-label="Support">
           <h3 className="text-lg font-semibold mb-4">Support</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#">Service & Repair</a></li>
-            <li><a href="#">Certified Products</a></li>
-            <li><a href="#">Warranty Info</a></li>
-            <li><a href="#">Download Catalogue</a></li>
+            <li><Link to={'/support'}>Service & Repair</Link></li>
+            <li><Link to={'/certifiedproducts'}>Certified Products</Link></li>
+            <li><Link to={'/certifiedproducts'}>Warranty Info</Link></li>
+            <li>
+              <a href="/catalogue.pdf" download="True_Iron_Catalogue" >
+                Download Catalogue
+              </a>
+            </li>
+
           </ul>
         </nav>
 

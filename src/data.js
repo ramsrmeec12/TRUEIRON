@@ -1,0 +1,43 @@
+import backmachine1 from '../src/assets/machineimg/backmachine/backmachine1.jpg'
+export const products = [
+  {
+    id: 1,
+    sku: 'GYM-COM-001',
+    name: 'Back Machine',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: backmachine1,
+    price: 75000,
+    type: 'Commercial',
+  },
+  {
+    id: 2,
+    sku: 'GYM-COM-002',
+    name: 'Treadmill Pro',
+    category: 'Cardio',
+    subcategory: 'Treadmill',
+    image: '/assets/treadmill.jpg',
+    price: 95000,
+    type: 'Commercial',
+  },
+  {
+    id: 3,
+    sku: 'GYM-HOME-001',
+    name: 'Dumbbell Set',
+    category: 'Strength',
+    subcategory: 'Dumbbells',
+    image: '',
+    price: 10000,
+    type: 'Home',
+  },
+  {
+    id: 4,
+    sku: 'GYM-HOME-002',
+    name: 'Flat Bench',
+    category: 'Strength',
+    subcategory: 'Bench',
+    image: '',
+    price: 25000,
+    type: 'Home',
+  },
+];
