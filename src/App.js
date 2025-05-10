@@ -26,7 +26,7 @@ function App() {
               <meta name="keywords" content="gym equipment, commercial gym, home gym, fitness products" />
               <meta property="og:title" content="True Iron | Premium Gym Equipment" />
               <meta property="og:description" content="Premium gym equipment for commercial and home use. Trusted by fitness professionals across India." />
-             <meta property="og:image" content="https://trueiron.shop/assets/weblogo.jpg" />
+             <meta property="og:image" content="https://trueiron.shop/favicon.ico" />
               <meta property="og:url" content="https://trueiron.shop" />
               <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
