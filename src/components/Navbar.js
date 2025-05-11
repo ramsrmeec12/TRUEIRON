@@ -43,7 +43,6 @@ function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className='hidden md:flex gap-4 pr-4'>
-                    <Link to={'/homegym'}>Home Gym</Link>
                     <Link to={'/Commercial'}>Commercial</Link>
                     <Link to={'/support'}>Support</Link>
                     <Link to={'/contact'}>Contact Us</Link>
