@@ -1,10 +1,10 @@
 import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import FilterSidebar from '../components/FilterSidebar';
 import ProductGrid from '../components/ProductGrid';
 import { products } from '../data';
-import { useCart } from '../context/CartContext'; // ✅ Import useCart
-import { ShoppingCart } from 'lucide-react'; // ✅ Import icon
-import { useNavigate } from 'react-router-dom'; // ✅ Import navigation
+import { useCart } from '../context/CartContext';
+import { ShoppingCart } from 'lucide-react';
 
 const initialFilters = {
   Strength: ['Back', 'Shoulder', 'Leg', 'Biceps', 'Chest', 'Triceps'],
@@ -14,8 +14,12 @@ const initialFilters = {
 
 export default function Commercial() {
   const [selectedFilters, setSelectedFilters] = useState({});
-  const { cart } = useCart(); // ✅ If needed to show cart count or info
-  const navigate = useNavigate(); // ✅ Setup navigation
+  const { cart } = useCart();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const queryParams = new URLSearchParams(location.search);
+  const searchTerm = queryParams.get('search')?.toLowerCase() || '';
 
   const handleFilterChange = (category, option, checked) => {
     setSelectedFilters((prev) => {
@@ -29,9 +33,18 @@ export default function Commercial() {
 
   const filteredProducts = products.filter((p) => {
     if (p.type !== 'Commercial') return false;
+
+    // Filter by selected category/subcategory filters
     for (let [category, values] of Object.entries(selectedFilters)) {
       if (values.length && !values.includes(p.subcategory)) return false;
     }
+
+    // Filter by search term
+    if (searchTerm) {
+      const combined = `${p.name} ${p.category} ${p.subcategory}`.toLowerCase();
+      if (!combined.includes(searchTerm)) return false;
+    }
+
     return true;
   });
 
@@ -40,7 +53,7 @@ export default function Commercial() {
       <FilterSidebar filters={initialFilters} onFilterChange={handleFilterChange} />
       <ProductGrid products={filteredProducts} />
 
-      {/* ✅ Cart Icon */}
+      {/* Cart Button */}
       <button
         onClick={() => navigate('/cart')}
         className="fixed top-10 right-12 md:top-12 md:right-4 z-50 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition"

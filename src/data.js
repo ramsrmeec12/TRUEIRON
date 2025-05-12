@@ -1,4 +1,5 @@
-import backmachine1 from '../src/assets/machineimg/backmachine/backmachine1.jpg'
+import backmachine1 from '../src/assets/machineimg/backmachine/backmachine1.jpg';
+
 export const products = [
   {
     id: 1,
