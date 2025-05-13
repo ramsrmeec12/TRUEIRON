@@ -11,6 +11,7 @@ import Footer from "./components/footer";
 import Contact from "./pages/Contact";
 import SupportComplaint from "./pages/Support";
 import CertifiedProducts from "./pages/Certifiedproducts";
+import ProductDetail from './pages/ProductDetail';
 function App() {
   return (
     <CartProvider>
@@ -45,6 +46,7 @@ function App() {
                 <Route path="/contact" element={<Contact></Contact>}></Route>
                 <Route path="/support" element={<SupportComplaint></SupportComplaint>}></Route>
                 <Route path="/certifiedproducts" element={<CertifiedProducts></CertifiedProducts>}></Route>
+                <Route path="/product/:id" element={<ProductDetail />} />
               </Routes>
             </main>
 

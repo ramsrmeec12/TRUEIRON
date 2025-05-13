@@ -1,6 +1,6 @@
 export default function FilterSidebar({ filters, onFilterChange }) {
   return (
-    <aside className="w-64 p-4 border-r bg-gray-100">
+    <aside className="w-36 md:w-44 lg:w-64 p-4 border-r bg-gray-100">
       {Object.entries(filters).map(([category, options]) => (
         <div key={category} className="mb-6">
           <h3 className="font-bold mb-2">{category}</h3>

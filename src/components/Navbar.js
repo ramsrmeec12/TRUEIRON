@@ -103,7 +103,6 @@ function Navbar() {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="md:hidden bg-gray-100 px-4 py-2 space-y-2">
-          <Link to="/homegym" className="block" onClick={handleMenuClose}>Home Gym</Link>
           <Link to="/Commercial" className="block" onClick={handleMenuClose}>Commercial</Link>
           <Link to="/support" className="block" onClick={handleMenuClose}>Support</Link>
           <Link to="/contact" className="block" onClick={handleMenuClose}>Contact Us</Link>
