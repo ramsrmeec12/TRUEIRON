@@ -7,14 +7,14 @@ import { useCart } from '../context/CartContext';
 import { ShoppingCart } from 'lucide-react';
 
 const initialFilters = {
-  Strength: ['Back', 'Shoulder', 'Leg', 'Arms', 'Chest', ],
+  Strength: ['Back', 'Shoulder', 'Leg', 'Arms', 'Chest'],
   Cardio: ['Treadmill', 'Cycle'],
-  Accessories: ['Fan', 'Belt']
+  Accessories: ['Fan', 'Belt'],
 };
 
 export default function Commercial() {
   const [selectedFilters, setSelectedFilters] = useState({});
-  const { cart } = useCart();
+  const { cartItems } = useCart(); // Use cartItems from context
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -53,13 +53,18 @@ export default function Commercial() {
       <FilterSidebar filters={initialFilters} onFilterChange={handleFilterChange} />
       <ProductGrid products={filteredProducts} />
 
-      {/* Cart Button */}
+      {/* Cart Button with Item Count */}
       <button
         onClick={() => navigate('/cart')}
         className="fixed top-10 right-12 md:top-12 md:right-4 z-50 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition"
         title="Go to Cart"
       >
         <ShoppingCart />
+        {cartItems.length > 0 && (
+          <span className="absolute top-0 right-0 text-xs font-bold text-white bg-red-500 rounded-full w-5 h-5 flex items-center justify-center">
+            {cartItems.length}
+          </span>
+        )}
       </button>
     </div>
   );
