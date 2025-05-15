@@ -12,11 +12,13 @@ import Contact from "./pages/Contact";
 import SupportComplaint from "./pages/Support";
 import CertifiedProducts from "./pages/Certifiedproducts";
 import ProductDetail from './pages/ProductDetail';
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <CartProvider>
       <HelmetProvider>
         <BrowserRouter>
+        <ScrollToTop/>
           <div className="min-h-screen flex flex-col">
             {/* SEO Meta Tags */}
             <Helmet>
