@@ -26,7 +26,7 @@ export default function ProductDetail() {
         <p className="text-gray-700 mb-1">Category: {product.category}</p>
         <p className="text-gray-700 mb-4">Subcategory: {product.subcategory}</p>
         <p className="text-gray-600 mb-4">{product.description || 'No description available.'}</p>
-
+        <p className="text-gray-600 mb-4">{product.sku || 'No description available.'}</p>
         <button
           onClick={() => addToCart(product)}
           className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 transition"

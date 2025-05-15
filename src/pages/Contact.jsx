@@ -16,7 +16,7 @@ export default function Contact() {
     const whatsappMessage = `Hi, I'm ${name} (Email: ${email}) ${message}`;
 
     // Replace with your actual WhatsApp number (with country code, no `+` or spaces)
-    const phoneNumber = "919025416751"; 
+    const phoneNumber = "919025416751";
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappURL, "_blank");
@@ -67,10 +67,12 @@ export default function Contact() {
         {/* Business Info & Map */}
         <div className="space-y-4">
           <div className="bg-white p-6 rounded shadow">
-            <h2 className="text-xl font-semibold mb-2">IronLife Gym Headquarters</h2>
-            <p>123 Iron Street, Chennai, Tamil Nadu</p>
+            <h2 className="text-xl font-semibold mb-2">TrueIron Headquarters</h2>
+            <p>18, NSE Bose Nagar, Puthapedu, Porur, Chennai-116</p>
             <p>Email: support@ironlife.com</p>
-            <p>Phone: +91 98765 43210</p>
+            <a href="tel:+919840856756" >
+              +91 98408 56756
+            </a>
             <p>Hours: Mon–Sat, 9am – 6pm</p>
           </div>
 
@@ -78,8 +80,7 @@ export default function Contact() {
           <div className="rounded overflow-hidden shadow">
             <iframe
               title="IronLife Gym Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.767801129395!2d80.2094431750792!3d13.051978087279043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f02ee28cd7%3A0x8a5145199c59ae0e!2sIronLife%20Gym!5e0!3m2!1sen!2sin!4v1715250501562!5m2!1sen!2sin"
-              width="100%"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9211.65691931359!2d80.18800848354034!3d13.02823551749613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260d5b4f309af%3A0x27d76f9eb46c8ca!2sIron%20Life%20gym!5e1!3m2!1sen!2sin!4v1747324394404!5m2!1sen!2sin"              width="100%"
               height="250"
               style={{ border: 0 }}
               allowFullScreen=""

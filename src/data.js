@@ -10,6 +10,7 @@ export const products = [
     image: backmachine1,
     price: 75000,
     type: 'Commercial',
+    description: 'good'
   },
   {
     id: 2,

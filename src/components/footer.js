@@ -59,7 +59,7 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact</h3>
           <ul className="space-y-2 text-sm">
-            <li>📞 <a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li>📞 <a href="tel:+919840856756" >+91 98408 56756</a></li>
             <li>📧 <a href="mailto:support@trueiron.com">support@trueiron.com</a></li>
             <li>📍 Chennai, India</li>
           </ul>

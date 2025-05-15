@@ -37,14 +37,14 @@ function Navbar() {
     <div className="font-roboto sticky top-0 z-50 bg-white shadow-md">
       {/* Top Bar */}
       <div style={{ backgroundColor: '#353535' }} className="py-2 px-3 text-center md:flex justify-between">
-        <a href="tel:+919876543210" className="text-white pl-5">
-          📞 Call Us: +91 9025416751
+        <a href="tel:+919840856756" className="text-white pl-5">
+          📞 Call Us: +91 98408 56756
         </a>
         <div className="flex gap-3 text-white">
           <Link to="/location" className="hidden md:block">Store Locater</Link>
           <Link to="/contact" className="hidden md:block">Contact Us</Link>
         </div>
-      </div>
+      </div> 
 
       {/* Main Nav */}
       <div className='relative flex items-center justify-between px-4 md:px-[5%] py-2'>
