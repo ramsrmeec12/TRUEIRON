@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom'; // <-- Import Link
 import prod1 from '../assets/newarrival/prod1.jpg';
 import prod2 from '../assets/newarrival/prod2.jpg';
 import prod3 from '../assets/newarrival/prod3.jpg';
@@ -23,7 +24,6 @@ function Newarrival() {
     const interval = setInterval(() => {
       nextSlide();
     }, 3000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -62,14 +62,18 @@ function Newarrival() {
       {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 transition-all duration-500">
         {visibleProducts.map((product) => (
-          <div key={product.id} className="border rounded shadow p-4 flex flex-col items-center">
+          <Link
+            key={product.id}
+            to={'/commercial'} // <-- Navigate to commercial detail page
+            className="border rounded shadow p-4 flex flex-col items-center hover:shadow-lg transition cursor-pointer"
+          >
             <img src={product.img} alt={product.desc} className="h-40 object-cover mb-4" />
             <p className="font-medium">{product.desc}</p>
             <p className="text-sm text-gray-500 mb-2">SKU: {product.sku}</p>
             <button className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">
-              Add to Cart
+              View Product
             </button>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

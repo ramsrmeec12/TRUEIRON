@@ -16,7 +16,7 @@ export const products = [
     sku: 'GYM-COM-002',
     name: 'Treadmill Pro',
     category: 'Cardio',
-    subcategory: 'Treadmill',
+    subcategory: 'Fan',
     image: backmachine1,
     price: 95000,
     type: 'Commercial',
