@@ -5,9 +5,9 @@ export default function ProductCard({ product }) {
   const { addToCart } = useCart();
 
   return (
-    <div className="w-60 border rounded-lg shadow p-4 flex flex-col items-center bg-white hover:shadow-md transition">
+    <div className="w-80 h-96 border rounded-lg shadow p-4 flex flex-col items-center bg-white hover:shadow-md transition">
       <Link to={`/product/${product.id}`} className="w-full">
-        <div className="w-full h-48 flex justify-center items-center bg-gray-100 rounded mb-3">
+        <div className="w-72 h-56 flex justify-center items-center rounded mb-3">
           <img
             src={product.image}
             alt={product.name}

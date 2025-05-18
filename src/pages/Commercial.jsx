@@ -7,8 +7,8 @@ import { useCart } from '../context/CartContext';
 import { ShoppingCart } from 'lucide-react';
 
 const initialFilters = {
-  Strength: ['Back', 'Shoulder', 'Leg', 'Arms', 'Chest'],
-  Cardio: ['Treadmill', 'Cycle','Fan'],
+  Cardio: ['Treadmills','Ellipticals','Upright Bikes','Recumbent Bikes','Spinning Bikes'],
+  Strength: ['Chest','Back','Shoulder','Arms','Legs','Abdominal','Multiopurpose'],
   Accessories: ['Fan', 'Belt'],
 };
 
