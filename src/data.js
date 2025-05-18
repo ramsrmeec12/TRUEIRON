@@ -1,6 +1,8 @@
 import backmachine1 from '../src/assets/machineimg/backmachine/backmachine1.jpg';
+import cardio1 from '../src/assets/commercial/cardio/cardio1.jpg'
 
 export const products = [
+  //cardio
   {
     id: 1,
     sku: 'GYM-COM-001',
@@ -12,34 +14,16 @@ export const products = [
     type: 'Commercial',
     description: 'good'
   },
-  {
+   {
     id: 2,
     sku: 'GYM-COM-002',
-    name: 'Treadmill Pro',
+    name: 'TreadMill Pro',
     category: 'Cardio',
-    subcategory: 'Fan',
-    image: backmachine1,
-    price: 95000,
+    subcategory: 'Treadmill',
+    image: cardio1,
+    price: 75000,
     type: 'Commercial',
+    description: 'good'
   },
-  {
-    id: 3,
-    sku: 'GYM-COM-003',
-    name: 'Dumbell',
-    category: 'Strength',
-    subcategory: 'Arms',
-    image: backmachine1,
-    price: 9000,
-    type: 'Commercial',
-  },
-  {
-    id: 4,
-    sku: 'GYM-COM-003',
-    name: 'Dumbell',
-    category: 'Strength',
-    subcategory: 'Arms',
-    image: backmachine1,
-    price: 9000,
-    type: 'Commercial',
-  },
+  
 ];

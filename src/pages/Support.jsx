@@ -18,7 +18,7 @@ export default function SupportComplaint() {
     e.preventDefault();
     const { name, email, message } = formData;
     const whatsappMessage = `*URGENT SUPPORT REQUEST*%0A%0AName: ${name}%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
-    const phoneNumber = '919025416751'; // Replace with your WhatsApp number
+    const phoneNumber = '919840856756'; // Replace with your WhatsApp number
     window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, '_blank');
   };
 

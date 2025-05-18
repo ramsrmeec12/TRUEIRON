@@ -16,7 +16,7 @@ export default function Contact() {
     const whatsappMessage = `Hi, I'm ${name} (Email: ${email}) ${message}`;
 
     // Replace with your actual WhatsApp number (with country code, no `+` or spaces)
-    const phoneNumber = "919025416751";
+    const phoneNumber = "919840856756";
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappURL, "_blank");

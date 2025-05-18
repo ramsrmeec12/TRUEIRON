@@ -69,6 +69,7 @@ function Footer() {
       <div className="border-t border-gray-700 mt-10 pt-4 text-center text-xs text-gray-400">
         © {new Date().getFullYear()} True Iron. All rights reserved.
       </div>
+      <p className=" border-gray-700 mt-2 text-center text-xs text-gray-400">Powered by Peace Media Company</p>
     </footer>
   );
 }
