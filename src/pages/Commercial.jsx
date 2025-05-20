@@ -1,21 +1,19 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import FilterSidebar from '../components/FilterSidebar';
 import ProductGrid from '../components/ProductGrid';
 import { products } from '../data';
 import { useCart } from '../context/CartContext';
 import { ShoppingCart } from 'lucide-react';
 
-const initialFilters = {
-  Cardio: ['Treadmills','Ellipticals','Upright Bikes','Recumbent Bikes','Spinning Bikes'],
-  Strength: ['Chest','Back','Shoulder','Arms','Legs','Abdominal','Multiopurpose'],
+const categories = {
+  Cardio: ['Treadmills', 'Ellipticals', 'Upright Bikes', 'Recumbent Bikes', 'Spinning Bikes'],
+  Strength: ['Chest', 'Back', 'Shoulder', 'Arms', 'Legs', 'Abdominal', 'Multiopurpose'],
   Accessories: ['Fan', 'Belt'],
 };
 
 export default function Commercial() {
-  const [selectedFilters, setSelectedFilters] = useState({});
-  const [activeCategory, setActiveCategory] = useState(null); // Category view
-  const [activeSubcategory, setActiveSubcategory] = useState(null); // Subcategory filter
+  const [activeSubcategory, setActiveSubcategory] = useState(null);
+  const [openCategory, setOpenCategory] = useState(null); // Track which category is open
   const { cartItems } = useCart();
   const navigate = useNavigate();
   const location = useLocation();
@@ -23,84 +21,67 @@ export default function Commercial() {
   const queryParams = new URLSearchParams(location.search);
   const searchTerm = queryParams.get('search')?.toLowerCase() || '';
 
-  const handleFilterChange = (category, option, checked) => {
-    setActiveCategory(null);
-    setActiveSubcategory(null);
-    setSelectedFilters((prev) => {
-      const current = prev[category] || [];
-      const updated = checked
-        ? [...current, option]
-        : current.filter((item) => item !== option);
-      return { ...prev, [category]: updated };
-    });
-  };
-
   const handleSubcategoryClick = (subcategory) => {
-    setSelectedFilters({});
-    setActiveCategory(null);
     setActiveSubcategory(subcategory);
+    setOpenCategory(null); // close dropdown after selection
   };
 
   const filteredProducts = products.filter((p) => {
     if (p.type !== 'Commercial') return false;
-
     if (activeSubcategory && p.subcategory !== activeSubcategory) return false;
-
-    for (let [category, values] of Object.entries(selectedFilters)) {
-      if (values.length && !values.includes(p.subcategory)) return false;
-    }
-
     if (searchTerm) {
       const combined = `${p.name} ${p.category} ${p.subcategory}`.toLowerCase();
       if (!combined.includes(searchTerm)) return false;
     }
-
     return true;
   });
 
   return (
-    <div className="flex relative">
-      <FilterSidebar filters={initialFilters} onFilterChange={handleFilterChange} />
-
-      <div className="flex-1 px-4 py-6">
-        {/* Category Buttons with Hover Dropdown */}
-        <div className="flex gap-6 mb-6 relative">
-          {Object.entries(initialFilters).map(([category, subcategories]) => (
-            <div key={category} className="relative group">
+    <div className="flex flex-col min-h-screen bg-gray-50">
+      {/* Top Navigation Filter */}
+      <div className="bg-white shadow p-4">
+        <div className="flex flex-wrap gap-6 justify-center">
+          {Object.entries(categories).map(([category, subcategories]) => (
+            <div key={category} className="relative">
               <button
-                className={`px-4 py-2 rounded border ${
-                  activeCategory === category
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-black border-gray-300'
-                } hover:bg-blue-500 hover:text-white transition`}
+                className="text-base font-medium px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition"
+                onClick={() =>
+                  setOpenCategory(openCategory === category ? null : category)
+                }
               >
                 {category}
               </button>
 
-              {/* Dropdown on Hover */}
-              <div className="absolute hidden group-hover:flex flex-col bg-white border shadow-md mt-2 z-10 w-48">
-                {subcategories.map((sub) => (
-                  <button
-                    key={sub}
-                    onClick={() => handleSubcategoryClick(sub)}
-                    className="px-4 py-2 text-left hover:bg-gray-100"
-                  >
-                    {sub}
-                  </button>
-                ))}
-              </div>
+              {/* Show subcategories only if this category is open */}
+              {openCategory === category && (
+                <div className="absolute left-0 mt-1 flex flex-col bg-white border rounded shadow-md z-10 min-w-48">
+                  {subcategories.map((sub) => (
+                    <button
+                      key={sub}
+                      onClick={() => handleSubcategoryClick(sub)}
+                      className={`px-4 py-2 text-left hover:bg-gray-100 ${
+                        activeSubcategory === sub ? 'bg-blue-100 font-semibold' : ''
+                      }`}
+                    >
+                      {sub}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Product Grid */}
+      {/* Product Grid */}
+      <div className="flex-1 px-4 py-6 mx-auto">
         <ProductGrid products={filteredProducts} />
       </div>
 
       {/* Cart Button */}
       <button
         onClick={() => navigate('/cart')}
-        className="fixed top-10 right-12 md:top-12 md:right-4 z-50 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition"
+        className="fixed top-10 right-12 md:top-12 md:right-4 z-50 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition relative"
         title="Go to Cart"
       >
         <ShoppingCart />
