@@ -14,7 +14,9 @@ const initialFilters = {
 
 export default function Commercial() {
   const [selectedFilters, setSelectedFilters] = useState({});
-  const { cartItems } = useCart(); // Use cartItems from context
+  const [activeCategory, setActiveCategory] = useState(null); // Category view
+  const [activeSubcategory, setActiveSubcategory] = useState(null); // Subcategory filter
+  const { cartItems } = useCart();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,6 +24,8 @@ export default function Commercial() {
   const searchTerm = queryParams.get('search')?.toLowerCase() || '';
 
   const handleFilterChange = (category, option, checked) => {
+    setActiveCategory(null);
+    setActiveSubcategory(null);
     setSelectedFilters((prev) => {
       const current = prev[category] || [];
       const updated = checked
@@ -31,15 +35,21 @@ export default function Commercial() {
     });
   };
 
+  const handleSubcategoryClick = (subcategory) => {
+    setSelectedFilters({});
+    setActiveCategory(null);
+    setActiveSubcategory(subcategory);
+  };
+
   const filteredProducts = products.filter((p) => {
     if (p.type !== 'Commercial') return false;
 
-    // Filter by selected category/subcategory filters
+    if (activeSubcategory && p.subcategory !== activeSubcategory) return false;
+
     for (let [category, values] of Object.entries(selectedFilters)) {
       if (values.length && !values.includes(p.subcategory)) return false;
     }
 
-    // Filter by search term
     if (searchTerm) {
       const combined = `${p.name} ${p.category} ${p.subcategory}`.toLowerCase();
       if (!combined.includes(searchTerm)) return false;
@@ -51,9 +61,43 @@ export default function Commercial() {
   return (
     <div className="flex relative">
       <FilterSidebar filters={initialFilters} onFilterChange={handleFilterChange} />
-      <ProductGrid products={filteredProducts} />
 
-      {/* Cart Button with Item Count */}
+      <div className="flex-1 px-4 py-6">
+        {/* Category Buttons with Hover Dropdown */}
+        <div className="flex gap-6 mb-6 relative">
+          {Object.entries(initialFilters).map(([category, subcategories]) => (
+            <div key={category} className="relative group">
+              <button
+                className={`px-4 py-2 rounded border ${
+                  activeCategory === category
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white text-black border-gray-300'
+                } hover:bg-blue-500 hover:text-white transition`}
+              >
+                {category}
+              </button>
+
+              {/* Dropdown on Hover */}
+              <div className="absolute hidden group-hover:flex flex-col bg-white border shadow-md mt-2 z-10 w-48">
+                {subcategories.map((sub) => (
+                  <button
+                    key={sub}
+                    onClick={() => handleSubcategoryClick(sub)}
+                    className="px-4 py-2 text-left hover:bg-gray-100"
+                  >
+                    {sub}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Product Grid */}
+        <ProductGrid products={filteredProducts} />
+      </div>
+
+      {/* Cart Button */}
       <button
         onClick={() => navigate('/cart')}
         className="fixed top-10 right-12 md:top-12 md:right-4 z-50 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition"
