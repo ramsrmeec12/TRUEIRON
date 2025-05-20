@@ -1,3 +1,4 @@
+// src/pages/Commercial.jsx
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ProductGrid from '../components/ProductGrid';
@@ -13,7 +14,7 @@ const categories = {
 
 export default function Commercial() {
   const [activeSubcategory, setActiveSubcategory] = useState(null);
-  const [openCategory, setOpenCategory] = useState(null); // Track which category is open
+  const [openCategory, setOpenCategory] = useState(null);
   const { cartItems } = useCart();
   const navigate = useNavigate();
   const location = useLocation();
@@ -23,7 +24,7 @@ export default function Commercial() {
 
   const handleSubcategoryClick = (subcategory) => {
     setActiveSubcategory(subcategory);
-    setOpenCategory(null); // close dropdown after selection
+    setOpenCategory(null);
   };
 
   const filteredProducts = products.filter((p) => {
@@ -51,8 +52,6 @@ export default function Commercial() {
               >
                 {category}
               </button>
-
-              {/* Show subcategories only if this category is open */}
               {openCategory === category && (
                 <div className="absolute left-0 mt-1 flex flex-col bg-white border rounded shadow-md z-10 min-w-48">
                   {subcategories.map((sub) => (
@@ -78,15 +77,15 @@ export default function Commercial() {
         <ProductGrid products={filteredProducts} />
       </div>
 
-      {/* Cart Button */}
+      {/* Cart Icon */}
       <button
         onClick={() => navigate('/cart')}
-        className="fixed top-10 right-12 md:top-12 md:right-4 z-50 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition relative"
+        className="fixed top-4 right-4 z-50 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition relative"
         title="Go to Cart"
       >
-        <ShoppingCart />
+        <ShoppingCart size={24} />
         {cartItems.length > 0 && (
-          <span className="absolute top-0 right-0 text-xs font-bold text-white bg-red-500 rounded-full w-5 h-5 flex items-center justify-center">
+          <span className="absolute -top-1 -right-1 text-xs font-bold text-white bg-red-500 rounded-full w-5 h-5 flex items-center justify-center">
             {cartItems.length}
           </span>
         )}

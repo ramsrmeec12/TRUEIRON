@@ -264,11 +264,11 @@ export const products = [
     description: 'good'
   },
   {
-    id: 20,
+    id: 21,
     sku: 'GYM-COM-002',
     name: 'UP Right',
     category: 'Strength',
-    subcategory: 'Recumbent Bikes',
+    subcategory: 'Back',
     image: Recumbent5,
     price: 75000,
     type: 'Commercial',

@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import logo from '../assets/logo.png';
 import { Link, useNavigate } from 'react-router-dom';
-import { FiSearch, FiMenu, FiX } from 'react-icons/fi';
-import { products } from '../data'; // ✅ Import products for suggestions
+import { FiSearch, FiMenu, FiX, FiShoppingCart } from 'react-icons/fi';
+import { products } from '../data';
+import { useCart } from '../context/CartContext';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const { cartItems } = useCart(); // ✅ Get cart items from context
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
@@ -23,7 +25,7 @@ function Navbar() {
       const combined = `${p.name} ${p.category} ${p.subcategory}`.toLowerCase();
       return p.type === 'Commercial' && combined.includes(searchTerm.toLowerCase());
     })
-    .slice(0, 5); // limit to top 5 suggestions
+    .slice(0, 5);
 
   const handleSelectSuggestion = (suggestion) => {
     setSearchTerm(suggestion.name);
@@ -44,7 +46,7 @@ function Navbar() {
           <Link to="/location" className="hidden md:block">Store Locater</Link>
           <Link to="/contact" className="hidden md:block">Contact Us</Link>
         </div>
-      </div> 
+      </div>
 
       {/* Main Nav */}
       <div className='relative flex items-center justify-between px-4 md:px-[5%] py-2'>
@@ -86,18 +88,40 @@ function Navbar() {
         </form>
 
         {/* Desktop Nav */}
-        <div className='hidden md:flex gap-4 pr-4'>
+        <div className='hidden md:flex gap-4 pr-4 items-center'>
           <Link to="/Commercial">Commercial</Link>
           <Link to="/support">Support</Link>
           <Link to="/contact">Contact Us</Link>
+
+          {/* Cart Icon */}
+          <Link to="/cart" className="relative flex items-center">
+            <FiShoppingCart size={22} />
+            {cartItems.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                {cartItems.length}
+              </span>
+            )}
+          </Link>
         </div>
 
-        {/* Mobile Menu */}
-        <div className="md:hidden pr-2">
-          <button onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-          </button>
-        </div>
+        {/* Mobile Cart + Menu Toggle */}
+<div className="md:hidden flex items-center gap-4 pr-2">
+  {/* Cart Icon */}
+  <Link to="/cart" className="relative">
+    <FiShoppingCart size={22} />
+    {cartItems.length > 0 && (
+      <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+        {cartItems.length}
+      </span>
+    )}
+  </Link>
+
+  {/* Menu Button */}
+  <button onClick={() => setMenuOpen(!menuOpen)}>
+    {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+  </button>
+</div>
+
       </div>
 
       {/* Mobile Dropdown Menu */}
@@ -107,6 +131,17 @@ function Navbar() {
           <Link to="/support" className="block" onClick={handleMenuClose}>Support</Link>
           <Link to="/contact" className="block" onClick={handleMenuClose}>Contact Us</Link>
           <Link to="/location" className="block" onClick={handleMenuClose}>Store Locater</Link>
+
+          {/* Mobile Cart */}
+          <Link to="/cart" className="block flex items-center gap-2" onClick={handleMenuClose}>
+            <FiShoppingCart />
+            Cart
+            {cartItems.length > 0 && (
+              <span className="ml-2 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                {cartItems.length}
+              </span>
+            )}
+          </Link>
         </div>
       )}
     </div>
