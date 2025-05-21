@@ -23,11 +23,17 @@ export default function Cart() {
         <div className="space-y-4">
           {cartItems.map(item => (
             <div key={item.id} className="flex justify-between items-center border p-2 rounded">
+              <div className='flex'>
+                <div>
+                <img src={item.image} className='h-16 px-5'></img>
+              </div>
               <div>
                 <p className="font-semibold">{item.name}</p>
                 <p className="text-sm">SKU: {item.sku}</p>
                 <p>₹{item.price}</p>
               </div>
+              </div>
+              
               <button onClick={() => removeFromCart(item.id)} className="text-red-500">Remove</button>
             </div>
           ))}
