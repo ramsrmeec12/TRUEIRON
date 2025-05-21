@@ -1,5 +1,5 @@
 // src/pages/Commercial.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ProductGrid from '../components/ProductGrid';
 import { products } from '../data';
@@ -25,6 +25,14 @@ export default function Commercial() {
   const handleSubcategoryClick = (subcategory) => {
     setActiveSubcategory(subcategory);
     setOpenCategory(null);
+
+    // ✅ Remove the search query from the URL
+    const newParams = new URLSearchParams(location.search);
+    newParams.delete('search');
+    navigate({
+      pathname: location.pathname,
+      search: newParams.toString(),
+    });
   };
 
   const filteredProducts = products.filter((p) => {

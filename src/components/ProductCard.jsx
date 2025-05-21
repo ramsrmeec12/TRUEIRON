@@ -19,7 +19,7 @@ export default function ProductCard({ product }) {
           {product.category} - {product.subcategory}
         </p>
       </Link>
-
+      
       <button
         onClick={() => addToCart(product)}
         className="bg-green-500 text-white px-4 py-2 mt-3 rounded hover:bg-green-600 transition"

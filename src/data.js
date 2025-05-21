@@ -30,6 +30,28 @@ import Recumbent3 from '../src/assets/commercial/cardio/Recumbent/Recumbent3.jpg
 import Recumbent4 from '../src/assets/commercial/cardio/Recumbent/Recumbent4.jpg'
 import Recumbent5 from '../src/assets/commercial/cardio/Recumbent/Recumbent5.jpg'
 
+
+//Strength --> Chest
+import Chest1 from '../src/assets/commercial/Strength/Chest/Chest1.jpg'
+import Chest2 from '../src/assets/commercial/Strength/Chest/Chest2.jpg'
+import Chest3 from '../src/assets/commercial/Strength/Chest/Chest3.jpg'
+import Chest4 from '../src/assets/commercial/Strength/Chest/Chest4.jpg'
+import Chest5 from '../src/assets/commercial/Strength/Chest/Chest5.jpg'
+import Chest6 from '../src/assets/commercial/Strength/Chest/Chest6.jpg'
+import Chest7 from '../src/assets/commercial/Strength/Chest/Chest7.jpg'
+import Chest8 from '../src/assets/commercial/Strength/Chest/Chest8.jpg'
+import Chest9 from '../src/assets/commercial/Strength/Chest/Chest9.jpg'
+import Chest10 from '../src/assets/commercial/Strength/Chest/Chest10.jpg'
+import Chest11 from '../src/assets/commercial/Strength/Chest/Chest11.jpg'
+import Chest12 from '../src/assets/commercial/Strength/Chest/Chest12.jpg'
+import Chest13 from '../src/assets/commercial/Strength/Chest/Chest13.jpg'
+import Chest14 from '../src/assets/commercial/Strength/Chest/Chest14.jpg'
+import Chest15 from '../src/assets/commercial/Strength/Chest/Chest15.jpg'
+import Chest16 from '../src/assets/commercial/Strength/Chest/Chest16.jpg'
+import Chest17 from '../src/assets/commercial/Strength/Chest/Chest17.jpg'
+import Chest18 from '../src/assets/commercial/Strength/Chest/Chest18.jpg'
+
+
 export const products = [
   //cardio-->Treadmill
    {
@@ -263,13 +285,203 @@ export const products = [
     type: 'Commercial',
     description: 'good'
   },
+
+
+  //Strength --> Chest 
   {
     id: 21,
     sku: 'GYM-COM-002',
-    name: 'UP Right',
+    name: 'Chest1',
     category: 'Strength',
-    subcategory: 'Back',
-    image: Recumbent5,
+    subcategory: 'Chest',
+    image: Chest1,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 22,
+    sku: 'GYM-COM-002',
+    name: 'Chest2',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest2,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+{
+    id: 23,
+    sku: 'GYM-COM-002',
+    name: 'Chest3',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest3,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+{
+    id: 24,
+    sku: 'GYM-COM-002',
+    name: 'Chest4',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest4,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 25,
+    sku: 'GYM-COM-002',
+    name: 'Chest5',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest5,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 26,
+    sku: 'GYM-COM-002',
+    name: 'Chest6',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest6,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+    {
+    id: 27,
+    sku: 'GYM-COM-002',
+    name: 'Chest7',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest7,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 28,
+    sku: 'GYM-COM-002',
+    name: 'Chest8',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest8,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 29,
+    sku: 'GYM-COM-002',
+    name: 'Chest9',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest9,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 30,
+    sku: 'GYM-COM-002',
+    name: 'Chest10',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest10,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 31,
+    sku: 'GYM-COM-002',
+    name: 'Chest11',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest11,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 32,
+    sku: 'GYM-COM-002',
+    name: 'Chest12',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest12,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 33,
+    sku: 'GYM-COM-002',
+    name: 'Chest13',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest13,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 34,
+    sku: 'GYM-COM-002',
+    name: 'Chest14',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest14,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 35,
+    sku: 'GYM-COM-002',
+    name: 'Chest15',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest15,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 36,
+    sku: 'GYM-COM-002',
+    name: 'Chest16',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest16,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 37,
+    sku: 'GYM-COM-002',
+    name: 'Chest17',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest17,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 38,
+    sku: 'GYM-COM-002',
+    name: 'Chest18',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest18,
     price: 75000,
     type: 'Commercial',
     description: 'good'

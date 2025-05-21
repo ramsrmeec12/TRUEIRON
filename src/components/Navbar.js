@@ -9,16 +9,18 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const { cartItems } = useCart(); // ✅ Get cart items from context
+  const { cartItems } = useCart();
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchTerm.trim()) {
       navigate(`/Commercial?search=${encodeURIComponent(searchTerm.trim())}`);
+      setSearchTerm(''); // ✅ Clear the search bar
       setShowSuggestions(false);
     }
   };
+
 
   const filteredSuggestions = products
     .filter(p => {
@@ -28,12 +30,14 @@ function Navbar() {
     .slice(0, 5);
 
   const handleSelectSuggestion = (suggestion) => {
-    setSearchTerm(suggestion.name);
+    setSearchTerm('');
     navigate(`/Commercial?search=${encodeURIComponent(suggestion.name)}`);
     setShowSuggestions(false);
   };
 
-  const handleMenuClose = () => setMenuOpen(false);
+  const handleMenuClose = () => {setMenuOpen(false);
+    
+  }
 
   return (
     <div className="font-roboto sticky top-0 z-50 bg-white shadow-md">
@@ -105,22 +109,22 @@ function Navbar() {
         </div>
 
         {/* Mobile Cart + Menu Toggle */}
-<div className="md:hidden flex items-center gap-4 pr-2">
-  {/* Cart Icon */}
-  <Link to="/cart" className="relative">
-    <FiShoppingCart size={22} />
-    {cartItems.length > 0 && (
-      <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-        {cartItems.length}
-      </span>
-    )}
-  </Link>
+        <div className="md:hidden flex items-center gap-4 pr-2">
+          {/* Cart Icon */}
+          <Link to="/cart" className="relative">
+            <FiShoppingCart size={22} />
+            {cartItems.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                {cartItems.length}
+              </span>
+            )}
+          </Link>
 
-  {/* Menu Button */}
-  <button onClick={() => setMenuOpen(!menuOpen)}>
-    {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-  </button>
-</div>
+          {/* Menu Button */}
+          <button onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          </button>
+        </div>
 
       </div>
 
