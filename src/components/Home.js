@@ -1,6 +1,7 @@
 
 import AboutUs from "./About";
 import Advertisement from "./Advertisement";
+import MovingText from "./Movingtext";
 import Newarrival from "./Newarrival";
 import Adtextbox from "./adtextbox";
 import Footer from "./footer";
@@ -15,6 +16,7 @@ function Home() {
         <Ourproducts></Ourproducts>
         <Ourclients></Ourclients>
         <AboutUs></AboutUs>
+        <MovingText></MovingText>
         
         
         </div>

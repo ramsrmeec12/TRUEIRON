@@ -25,7 +25,7 @@ export default function Cart() {
             <div key={item.id} className="flex justify-between items-center border p-2 rounded">
               <div className='flex'>
                 <div>
-                <img src={item.image} className='h-16 px-5'></img>
+                <img src={item.image} alt={item.name} className='h-16 px-5'></img>
               </div>
               <div>
                 <p className="font-semibold">{item.name}</p>

@@ -1,77 +1,75 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
-import prod1 from '../assets/Ourproducts/prod1.png';
-import prod2 from '../assets/Ourproducts/prod2.png';
-import prod3 from '../assets/Ourproducts/prod3.png';
-import prod4 from '../assets/Ourproducts/prod4.png';
-import prod5 from '../assets/Ourproducts/prod5.jpg';
+import React, { useEffect, useState } from 'react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom'; // <-- Import Link
+import cardio1 from '../assets/commercial/cardio/Treadmills/Treadmill1.jpg'
+import Chest1 from '../assets/commercial/Strength/Chest/Chest1.jpg'
+
 
 const products = [
-  { img: prod1, name: 'Treadmill', link: '/commercial/1' },
-  { img: prod2, name: 'Treadmill', link: '/commercial/2' },
-  { img: prod3, name: 'Cycle Machine', link: '/commercial/3' },
-  { img: prod4, name: 'Dumbbell', link: '/commercial/4' },
-  { img: prod5, name: 'Strength', link: '/commercial/5' },
-];
+  { id: 1, img: cardio1, desc: 'Treadmill', sku: 'SKU001' },
+  { id: 1, img: Chest1, desc: 'Chest', sku: 'SKU001' },
+  { id: 1, img: cardio1, desc: 'Product 1', sku: 'SKU001' },
+  { id: 1, img: Chest1, desc: 'Product 1', sku: 'SKU001' },
+  { id: 1, img: cardio1, desc: 'Product 1', sku: 'SKU001' },
+  { id: 1, img: Chest1, desc: 'Product 1', sku: 'SKU001' },]
+  
 
-function Ourproducts() {
-  const [index, setIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+function Newarrival() {
+  const [startIndex, setStartIndex] = useState(0);
 
-  const handleNext = () => {
-    if (isTransitioning || index + 3 >= products.length) return;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setIndex((prev) => prev + 3);
-      setIsTransitioning(false);
-    }, 1000);
+  const nextSlide = () => {
+    setStartIndex((prev) => (prev + 3) % products.length);
   };
 
-  const handlePrev = () => {
-    if (isTransitioning || index === 0) return;
-
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setIndex((prev) => Math.max(0, prev - 3));
-      setIsTransitioning(false);
-    }, 1000);
+  const prevSlide = () => {
+    setStartIndex((prev) => (prev - 3 + products.length) % products.length);
   };
+
+  const visibleProducts =
+    products.slice(startIndex, startIndex + 3).length === 3
+      ? products.slice(startIndex, startIndex + 3)
+      : [...products.slice(startIndex), ...products.slice(0, (startIndex + 3) % products.length)];
 
   return (
-    <div className="p-4 text-center">
-      <h1 className="text-3xl font-bold mb-4">Our Products</h1>
+    <div className="w-full max-w-6xl mx-auto py-8 relative">
+      <h2 className="text-4xl font-bold mb-6 text-center">Our Products</h2>
 
-      <div className="flex justify-between items-center mb-4">
-        <button
-          onClick={handlePrev}
-          disabled={index === 0 || isTransitioning}
-          className="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
-        >
-          ←
-        </button>
-        <button
-          onClick={handleNext}
-          disabled={index + 3 >= products.length || isTransitioning}
-          className="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
-        >
-          →
-        </button>
-      </div>
+      {/* Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow hover:bg-gray-700 z-10"
+      >
+        <FaArrowLeft />
+      </button>
 
-      <div className="grid grid-cols-3 gap-6 transition-opacity duration-500">
-        {products.slice(index, index + 3).map((product, i) => (
+      <button
+        onClick={nextSlide}
+        className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow hover:bg-gray-700 z-10"
+      >
+        <FaArrowRight />
+      </button>
+
+      {/* Products Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 transition-all duration-500">
+        {visibleProducts.map((product) => (
           <Link
-            key={i}
-            to={'/commercial'} // Use Link and to prop for client-side routing
-            className="text-center block"
+            key={product.id}
+            to={'/commercial'} // <-- Navigate to commercial detail page
+            className="border rounded shadow p-4 flex flex-col items-center hover:shadow-lg transition cursor-pointer"
           >
-            <img
-              src={product.img}
-              alt={product.name}
-              className="w-full h-auto rounded shadow hover:scale-105 transition-transform duration-300"
-            />
-            <p className="mt-4 text-lg font-medium">{product.name}</p>
+            <img src={product.img} alt={product.desc} className="h-40 object-cover mb-4" />
+            <p className="font-medium">{product.desc}</p>
+            <p className="text-sm text-gray-500 mb-2">SKU: {product.sku}</p>
+            <button className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">
+              View Product
+            </button>
           </Link>
         ))}
       </div>
@@ -79,4 +77,4 @@ function Ourproducts() {
   );
 }
 
-export default Ourproducts;
+export default Newarrival;
