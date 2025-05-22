@@ -2,9 +2,6 @@ import { useParams } from 'react-router-dom';
 import { products } from '../data';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
-import Zoom from 'react-medium-image-zoom';
-import 'react-medium-image-zoom/dist/styles.css';
-
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -20,15 +17,11 @@ export default function ProductDetail() {
   return (
     <div className="p-6 flex flex-col md:flex-row gap-6">
       <div className="w-full md:w-1/2 flex justify-center">
-
-        <Zoom>
-          <img
-            alt={product.name}
-            src={product.image}
-            className="max-w-full max-h-[400px] object-contain rounded"
-          />
-        </Zoom>
-
+        <img
+          src={product.image}
+          alt={product.name}
+          className="max-w-full max-h-[400px] object-contain rounded"
+        />
       </div>
       <div className="w-full md:w-1/2">
         <h1 className="text-2xl font-bold mb-2">{product.name}</h1>
@@ -40,10 +33,11 @@ export default function ProductDetail() {
         <button
           onClick={() => addToCart(product)}
           disabled={isInCart}
-          className={`px-6 py-2 rounded transition ${isInCart
+          className={`px-6 py-2 rounded transition ${
+            isInCart
               ? 'bg-gray-400 text-white cursor-not-allowed'
               : 'bg-green-500 hover:bg-green-600 text-white'
-            }`}
+          }`}
         >
           {isInCart ? 'Added to Cart' : 'Add to Cart'}
         </button>
