@@ -144,13 +144,13 @@ export const products = [
   },
 
   
-  //Cardio --> Ellipticals
+  //Cardio --> Upright
 {
     id: 9,
     sku: 'GYM-COM-002',
-    name: 'Ellipticals',
+    name: 'Upright Bike',
     category: 'Cardio',
-    subcategory: 'Ellipticals',
+    subcategory: 'Upright Bikes',
     image: Elliptical1,
     price: 75000,
     type: 'Commercial',
@@ -159,9 +159,9 @@ export const products = [
   {
     id: 10,
     sku: 'GYM-COM-002',
-    name: 'Ellipticals',
+    name: 'Upright Bike',
     category: 'Cardio',
-    subcategory: 'Ellipticals',
+    subcategory: 'Upright Bikes',
     image: Elliptical2,
     price: 75000,
     type: 'Commercial',
@@ -170,9 +170,9 @@ export const products = [
   {
     id: 11,
     sku: 'GYM-COM-002',
-    name: 'Ellipticals',
+    name: 'Upright Bike',
     category: 'Cardio',
-    subcategory: 'Ellipticals',
+    subcategory: 'Upright Bikes',
     image: Elliptical3,
     price: 75000,
     type: 'Commercial',
@@ -181,9 +181,9 @@ export const products = [
   {
     id: 12,
     sku: 'GYM-COM-002',
-    name: 'Ellipticals',
+    name: 'Upright Bike',
     category: 'Cardio',
-    subcategory: 'Ellipticals',
+    subcategory: 'Upright Bikes',
     image: Elliptical4,
     price: 75000,
     type: 'Commercial',
@@ -192,23 +192,23 @@ export const products = [
   {
     id: 13,
     sku: 'GYM-COM-002',
-    name: 'Ellipticals',
+    name: 'Upright Bike',
     category: 'Cardio',
-    subcategory: 'Ellipticals',
+    subcategory: 'Upright Bikes',
     image: Elliptical5,
     price: 75000,
     type: 'Commercial',
     description: 'good'
   },
 
-  //Cardio --> Upright
+  //Cardio --> Ellipticals
 
     {
     id: 14,
     sku: 'GYM-COM-002',
-    name: 'UP Right',
+    name: 'Ellipticals',
     category: 'Cardio',
-    subcategory: 'Upright Bikes',
+    subcategory: 'Ellipticals',
     image: Upright1,
     price: 75000,
     type: 'Commercial',
@@ -233,7 +233,7 @@ export const products = [
   {
     id: 16,
     sku: 'GYM-COM-002',
-    name: 'UP Right',
+    name: 'Recumbent1',
     category: 'Cardio',
     subcategory: 'Recumbent Bikes',
     image: Recumbent1,
@@ -244,7 +244,7 @@ export const products = [
     {
     id: 17,
     sku: 'GYM-COM-002',
-    name: 'UP Right',
+    name: 'Recumbent2',
     category: 'Cardio',
     subcategory: 'Recumbent Bikes',
     image: Recumbent2,
@@ -255,7 +255,7 @@ export const products = [
     {
     id: 18,
     sku: 'GYM-COM-002',
-    name: 'UP Right',
+    name: 'Recumbent3',
     category: 'Cardio',
     subcategory: 'Recumbent Bikes',
     image: Recumbent3,
@@ -266,7 +266,7 @@ export const products = [
     {
     id: 19,
     sku: 'GYM-COM-002',
-    name: 'UP Right',
+    name: 'Recumbent4',
     category: 'Cardio',
     subcategory: 'Recumbent Bikes',
     image: Recumbent4,
@@ -277,7 +277,7 @@ export const products = [
     {
     id: 20,
     sku: 'GYM-COM-002',
-    name: 'UP Right',
+    name: 'Recumbent5',
     category: 'Cardio',
     subcategory: 'Recumbent Bikes',
     image: Recumbent5,

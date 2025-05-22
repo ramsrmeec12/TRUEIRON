@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom';
 import { products } from '../data';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import ReactImageMagnify from 'react-image-magnify';
+
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -17,11 +19,27 @@ export default function ProductDetail() {
   return (
     <div className="p-6 flex flex-col md:flex-row gap-6">
       <div className="w-full md:w-1/2 flex justify-center">
-        <img
-          src={product.image}
-          alt={product.name}
-          className="max-w-full max-h-[400px] object-contain rounded"
-        />
+        <ReactImageMagnify
+  {...{
+    smallImage: {
+      alt: product.name,
+      isFluidWidth: true,
+      src: product.image,
+    },
+    largeImage: {
+      src: product.image,
+      width: 1200,
+      height: 1800,
+    },
+    enlargedImageContainerDimensions: {
+      width: '200%',
+      height: '100%',
+    },
+    isHintEnabled: true,
+    shouldUsePositiveSpaceLens: true,
+  }}
+/>
+
       </div>
       <div className="w-full md:w-1/2">
         <h1 className="text-2xl font-bold mb-2">{product.name}</h1>
