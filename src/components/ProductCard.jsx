@@ -2,7 +2,10 @@ import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 
 export default function ProductCard({ product }) {
-  const { addToCart } = useCart();
+  const { addToCart, cartItems } = useCart();
+
+  // Check if the item is already in the cart
+  const isInCart = cartItems.some(item => item.id === product.id);
 
   return (
     <div className="w-80 h-96 border rounded-lg shadow p-4 flex flex-col items-center bg-white hover:shadow-md transition">
@@ -19,12 +22,17 @@ export default function ProductCard({ product }) {
           {product.category} - {product.subcategory}
         </p>
       </Link>
-      
+
       <button
         onClick={() => addToCart(product)}
-        className="bg-green-500 text-white px-4 py-2 mt-3 rounded hover:bg-green-600 transition"
+        className={`px-4 py-2 mt-3 rounded transition  ${
+          isInCart
+            ? 'bg-gray-400 cursor-not-allowed text-white'
+            : 'bg-green-500 hover:bg-green-600 text-white'
+        }`}
+        disabled={isInCart}
       >
-        Add to Cart
+        {isInCart ? 'Added to Cart' : 'Add to Cart'}
       </button>
     </div>
   );

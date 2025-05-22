@@ -136,16 +136,7 @@ function Navbar() {
           <Link to="/contact" className="block" onClick={handleMenuClose}>Contact Us</Link>
           <Link to="/location" className="block" onClick={handleMenuClose}>Store Locater</Link>
 
-          {/* Mobile Cart */}
-          <Link to="/cart" className="block flex items-center gap-2" onClick={handleMenuClose}>
-            <FiShoppingCart />
-            Cart
-            {cartItems.length > 0 && (
-              <span className="ml-2 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-                {cartItems.length}
-              </span>
-            )}
-          </Link>
+          
         </div>
       )}
     </div>
