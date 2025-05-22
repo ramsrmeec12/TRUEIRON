@@ -2,7 +2,8 @@ import { useParams } from 'react-router-dom';
 import { products } from '../data';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
-import ReactImageMagnify from 'react-image-magnify';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 
 export default function ProductDetail() {
@@ -19,26 +20,14 @@ export default function ProductDetail() {
   return (
     <div className="p-6 flex flex-col md:flex-row gap-6">
       <div className="w-full md:w-1/2 flex justify-center">
-        <ReactImageMagnify
-  {...{
-    smallImage: {
-      alt: product.name,
-      isFluidWidth: true,
-      src: product.image,
-    },
-    largeImage: {
-      src: product.image,
-      width: 1200,
-      height: 1800,
-    },
-    enlargedImageContainerDimensions: {
-      width: '200%',
-      height: '100%',
-    },
-    isHintEnabled: true,
-    shouldUsePositiveSpaceLens: true,
-  }}
-/>
+
+        <Zoom>
+          <img
+            alt={product.name}
+            src={product.image}
+            className="max-w-full max-h-[400px] object-contain rounded"
+          />
+        </Zoom>
 
       </div>
       <div className="w-full md:w-1/2">
@@ -51,11 +40,10 @@ export default function ProductDetail() {
         <button
           onClick={() => addToCart(product)}
           disabled={isInCart}
-          className={`px-6 py-2 rounded transition ${
-            isInCart
+          className={`px-6 py-2 rounded transition ${isInCart
               ? 'bg-gray-400 text-white cursor-not-allowed'
               : 'bg-green-500 hover:bg-green-600 text-white'
-          }`}
+            }`}
         >
           {isInCart ? 'Added to Cart' : 'Add to Cart'}
         </button>
