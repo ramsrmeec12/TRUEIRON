@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { HelmetProvider, Helmet } from "react-helmet-async";  // Import Helmet
+import { HelmetProvider, Helmet } from "react-helmet-async";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Commercial from "./pages/Commercial";
@@ -12,11 +12,24 @@ import SupportComplaint from "./pages/Support";
 import CertifiedProducts from "./pages/Certifiedproducts";
 import ProductDetail from './pages/ProductDetail';
 import ScrollToTop from "./components/ScrollToTop";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const disableContextMenu = (e) => {
+      e.preventDefault();
+    };
+
+    document.addEventListener('contextmenu', disableContextMenu);
+
+    return () => {
+      document.removeEventListener('contextmenu', disableContextMenu);
+    };
+  }, []);
+
   return (
     <CartProvider>
-      <HelmetProvider>
+      <HelmetProvider> 
         <BrowserRouter>
           <ScrollToTop />
           <div className="min-h-screen flex flex-col">
@@ -44,11 +57,10 @@ function App() {
                 <Route path="/Commercial" element={<Commercial />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/location" element={<Location />} />
-                <Route path="/contact" element={<Contact></Contact>}></Route>
-                <Route path="/support" element={<SupportComplaint></SupportComplaint>}></Route>
-                <Route path="/certifiedproducts" element={<CertifiedProducts></CertifiedProducts>}></Route>
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/support" element={<SupportComplaint />} />
+                <Route path="/certifiedproducts" element={<CertifiedProducts />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
-
               </Routes>
             </main>
 
@@ -60,4 +72,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

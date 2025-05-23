@@ -60,6 +60,17 @@ import Back4 from '../src/assets/commercial/Strength/Back/Back4.jpg'
 import Back5 from '../src/assets/commercial/Strength/Back/Back5.jpg'
 import Back6 from '../src/assets/commercial/Strength/Back/Back6.jpg'
 import Back7 from '../src/assets/commercial/Strength/Back/Back7.jpg'
+import Back8 from '../src/assets/commercial/Strength/Back/Back8.png'
+import Back9 from '../src/assets/commercial/Strength/Back/Back9.png'
+import Back10 from '../src/assets/commercial/Strength/Back/Back10.png'
+import Back11 from '../src/assets/commercial/Strength/Back/Back11.png'
+import Back12 from '../src/assets/commercial/Strength/Back/Back12.png'
+import Back13 from '../src/assets/commercial/Strength/Back/Back13.png'
+import Back14 from '../src/assets/commercial/Strength/Back/Back14.png'
+import Back15 from '../src/assets/commercial/Strength/Back/Back15.png'
+import Back16 from '../src/assets/commercial/Strength/Back/Back16.png'
+import Back17 from '../src/assets/commercial/Strength/Back/Back17.png'
+
 
 
 
@@ -578,4 +589,115 @@ export const products = [
     type: 'Commercial',
     description: 'good'
   },
+  {
+    id: 46,
+    sku: 'GYM-COM-002',
+    name: 'Back8',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back8,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 47,
+    sku: 'GYM-COM-002',
+    name: 'Back9',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back9,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 48,
+    sku: 'GYM-COM-002',
+    name: 'Back10',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back10,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+   {
+    id: 49,
+    sku: 'GYM-COM-002',
+    name: 'Back11',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back11,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+   {
+    id: 50,
+    sku: 'GYM-COM-002',
+    name: 'Back12',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back12,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+   {
+    id: 51,
+    sku: 'GYM-COM-002',
+    name: 'Back13',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back13,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+   {
+    id: 52,
+    sku: 'GYM-COM-002',
+    name: 'Back14',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back14,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+   {
+    id: 53,
+    sku: 'GYM-COM-002',
+    name: 'Back15',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back15,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+   {
+    id: 54,
+    sku: 'GYM-COM-002',
+    name: 'Back16',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back16,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+   {
+    id: 55,
+    sku: 'GYM-COM-002',
+    name: 'Back17',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back17,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
 ];
+
