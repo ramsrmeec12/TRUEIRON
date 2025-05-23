@@ -1,14 +1,44 @@
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
 
 export default function ProductCard({ product }) {
   const { addToCart, cartItems } = useCart();
 
-  // Check if the item is already in the cart
   const isInCart = cartItems.some(item => item.id === product.id);
+  const cardRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (cardRef.current) observer.observe(cardRef.current);
+
+    return () => {
+      if (cardRef.current) observer.unobserve(cardRef.current);
+    };
+  }, []);
 
   return (
-    <div className="w-80 h-96 border rounded-lg shadow p-4 flex flex-col items-center bg-white hover:shadow-md transition">
+    <div
+      ref={cardRef}
+      className={`w-80 h-96 border rounded-lg shadow p-4 flex flex-col items-center bg-white transition-transform transition-opacity duration-700 ease-in-out
+        ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
+
+        hover:scale-105 hover:shadow-2xl hover:z-10
+        cursor-pointer
+      `}
+      style={{ willChange: 'transform, opacity' }} // Hint browser for smoother animation
+    >
       <Link to={`/product/${product.id}`} className="w-full">
         <div className="w-72 h-56 flex justify-center items-center rounded mb-3">
           <img

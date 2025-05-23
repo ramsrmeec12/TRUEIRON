@@ -5,6 +5,7 @@ import { FiSearch, FiMenu, FiX, FiShoppingCart } from 'react-icons/fi';
 import { products } from '../data';
 import { useCart } from '../context/CartContext';
 
+
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,11 +17,10 @@ function Navbar() {
     e.preventDefault();
     if (searchTerm.trim()) {
       navigate(`/Commercial?search=${encodeURIComponent(searchTerm.trim())}`);
-      setSearchTerm(''); // ✅ Clear the search bar
+      setSearchTerm('');
       setShowSuggestions(false);
     }
   };
-
 
   const filteredSuggestions = products
     .filter(p => {
@@ -35,31 +35,29 @@ function Navbar() {
     setShowSuggestions(false);
   };
 
-  const handleMenuClose = () => {setMenuOpen(false);
-    
-  }
+  const handleMenuClose = () => setMenuOpen(false);
 
   return (
-    <div className="font-roboto sticky top-0 z-50 bg-white shadow-md">
+    <div className="font-roboto sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
       {/* Top Bar */}
       <div style={{ backgroundColor: '#353535' }} className="py-2 px-3 text-center md:flex justify-between">
-        <a href="tel:+919840856756" className="text-white pl-5">
-          📞 Call Us: +91 98408 56756
-        </a>
+        <a href="tel:+919840856756" className="text-white pl-5 hover:underline transition">📞 Call Us: +91 98408 56756</a>
         <div className="flex gap-3 text-white">
-          <Link to="/location" className="hidden md:block">Store Locater</Link>
-          <Link to="/contact" className="hidden md:block">Contact Us</Link>
+          <Link to="/location" className="hidden md:block hover:underline transition">Store Locater</Link>
+          <Link to="/contact" className="hidden md:block hover:underline transition">Contact Us</Link>
         </div>
       </div>
 
       {/* Main Nav */}
       <div className='relative flex items-center justify-between px-4 md:px-[5%] py-2'>
         {/* Logo */}
-        <Link to="/"><img src={logo} className='h-10 md:h-13' alt="Logo" /></Link>
+        <Link to="/" className="transform transition-transform hover:scale-105">
+          <img src={logo} className='h-10 md:h-13' alt="Logo" />
+        </Link>
 
         {/* Search */}
         <form onSubmit={handleSearch} className="hidden md:flex flex-col relative">
-          <div className="flex items-center border border-gray-300 rounded px-2 py-1 bg-white">
+          <div className="flex items-center border border-gray-300 rounded px-2 py-1 bg-white shadow-sm transition">
             <FiSearch className="text-gray-500 mr-2" />
             <input
               type="text"
@@ -70,19 +68,21 @@ function Navbar() {
                 setShowSuggestions(true);
               }}
               onFocus={() => setShowSuggestions(true)}
-              className="outline-none bg-transparent"
+              className="outline-none bg-transparent w-52"
             />
-            <button type="submit" className='border border-black px-2 p-1 rounded-md ml-2'>Submit</button>
+            <button type="submit" className='border border-black px-2 p-1 rounded-md ml-2 hover:bg-black hover:text-white transition'>
+              Submit
+            </button>
           </div>
 
           {/* Suggestions Dropdown */}
           {showSuggestions && searchTerm && filteredSuggestions.length > 0 && (
-            <ul className="absolute top-full mt-1 w-full bg-white border border-gray-300 rounded shadow z-50">
+            <ul className="absolute top-full mt-1 w-full bg-white border border-gray-300 rounded shadow z-50 animate-fadeIn slide-in-down">
               {filteredSuggestions.map((s, index) => (
                 <li
                   key={index}
                   onClick={() => handleSelectSuggestion(s)}
-                  className="px-3 py-2 cursor-pointer hover:bg-gray-100"
+                  className="px-3 py-2 cursor-pointer hover:bg-gray-100 transition-colors"
                 >
                   {s.name} – <span className="text-sm text-gray-500">{s.subcategory}</span>
                 </li>
@@ -93,15 +93,21 @@ function Navbar() {
 
         {/* Desktop Nav */}
         <div className='hidden md:flex gap-4 pr-4 items-center'>
-          <Link to="/Commercial">Commercial</Link>
-          <Link to="/support">Support</Link>
-          <Link to="/contact">Contact Us</Link>
+          {['Commercial', 'Support', 'Contact Us'].map((label, i) => (
+            <Link
+              key={i}
+              to={`/${label.replace(' ', '').toLowerCase()}`}
+              className="hover:text-red-600 transition"
+            >
+              {label}
+            </Link>
+          ))}
 
           {/* Cart Icon */}
-          <Link to="/cart" className="relative flex items-center">
+          <Link to="/cart" className="relative flex items-center hover:text-red-600 transition">
             <FiShoppingCart size={22} />
             {cartItems.length > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full transition-all">
                 {cartItems.length}
               </span>
             )}
@@ -110,33 +116,28 @@ function Navbar() {
 
         {/* Mobile Cart + Menu Toggle */}
         <div className="md:hidden flex items-center gap-4 pr-2">
-          {/* Cart Icon */}
           <Link to="/cart" className="relative">
             <FiShoppingCart size={22} />
             {cartItems.length > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full transition-all">
                 {cartItems.length}
               </span>
             )}
           </Link>
-
-          {/* Menu Button */}
-          <button onClick={() => setMenuOpen(!menuOpen)}>
+          <button onClick={() => setMenuOpen(!menuOpen)} className="transition">
             {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
-
       </div>
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-gray-100 px-4 py-2 space-y-2">
-          <Link to="/Commercial" className="block" onClick={handleMenuClose}>Commercial</Link>
-          <Link to="/support" className="block" onClick={handleMenuClose}>Support</Link>
-          <Link to="/contact" className="block" onClick={handleMenuClose}>Contact Us</Link>
-          <Link to="/location" className="block" onClick={handleMenuClose}>Store Locater</Link>
-
-          
+        <div className="md:hidden bg-gray-100 px-4 py-2 space-y-2 animate-fadeIn slide-in-down transition-all duration-300 ease-in-out">
+          {['Commercial', 'Support', 'Contact Us', 'Store Locater'].map((label, i) => (
+            <Link key={i} to={`/${label.replace(' ', '').toLowerCase()}`} className="block hover:text-red-600 transition" onClick={handleMenuClose}>
+              {label}
+            </Link>
+          ))}
         </div>
       )}
     </div>

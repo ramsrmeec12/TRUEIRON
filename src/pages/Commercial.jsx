@@ -1,5 +1,5 @@
 // src/pages/Commercial.jsx
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ProductGrid from '../components/ProductGrid';
 import { products } from '../data';
@@ -26,7 +26,6 @@ export default function Commercial() {
     setActiveSubcategory(subcategory);
     setOpenCategory(null);
 
-    // ✅ Remove the search query from the URL
     const newParams = new URLSearchParams(location.search);
     newParams.delete('search');
     navigate({
@@ -53,7 +52,7 @@ export default function Commercial() {
           {Object.entries(categories).map(([category, subcategories]) => (
             <div key={category} className="relative">
               <button
-                className="text-base font-medium px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition"
+                className="text-base font-medium px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transform transition duration-200 hover:scale-105"
                 onClick={() =>
                   setOpenCategory(openCategory === category ? null : category)
                 }
@@ -61,12 +60,12 @@ export default function Commercial() {
                 {category}
               </button>
               {openCategory === category && (
-                <div className="absolute left-0 mt-1 flex flex-col bg-white border rounded shadow-md z-10 min-w-48">
+                <div className="absolute left-0 mt-1 flex flex-col bg-white border rounded shadow-md z-10 min-w-48 animate-slideDown fade-in">
                   {subcategories.map((sub) => (
                     <button
                       key={sub}
                       onClick={() => handleSubcategoryClick(sub)}
-                      className={`px-4 py-2 text-left hover:bg-gray-100 ${
+                      className={`px-4 py-2 text-left hover:bg-gray-100 transition duration-150 ${
                         activeSubcategory === sub ? 'bg-blue-100 font-semibold' : ''
                       }`}
                     >
@@ -81,7 +80,7 @@ export default function Commercial() {
       </div>
 
       {/* Product Grid */}
-      <div className="flex-1 px-4 py-6 mx-auto">
+      <div className="flex-1 px-4 py-6 mx-auto animate-fadeUp">
         <ProductGrid products={filteredProducts} />
       </div>
     </div>

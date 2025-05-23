@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom'; // <-- Import Link
-import cardio1 from '../assets/commercial/cardio/Treadmills/Treadmill1.jpg'
-import Chest1 from '../assets/commercial/Strength/Chest/Chest1.jpg'
-
+import prod1 from '../assets/newarrival/prod1.jpg';
+import prod2 from '../assets/newarrival/prod2.jpg';
+import prod3 from '../assets/newarrival/prod3.jpg';
+import prod4 from '../assets/newarrival/prod4.jpg';
+import prod5 from '../assets/newarrival/prod5.jpg';
+import prod6 from '../assets/newarrival/prod6.jpg';
 
 const products = [
-  { id: 1, img: cardio1, desc: 'Treadmill', sku: 'SKU001' },
-  { id: 1, img: Chest1, desc: 'Chest', sku: 'SKU001' },
-  { id: 1, img: cardio1, desc: 'Product 1', sku: 'SKU001' },
-  { id: 1, img: Chest1, desc: 'Product 1', sku: 'SKU001' },
-  { id: 1, img: cardio1, desc: 'Product 1', sku: 'SKU001' },
-  { id: 1, img: Chest1, desc: 'Product 1', sku: 'SKU001' },]
-  
+  { id: 1, img: prod1, desc: 'Product 1', sku: 'SKU001' },
+  { id: 2, img: prod2, desc: 'Product 2', sku: 'SKU002' },
+  { id: 3, img: prod3, desc: 'Product 3', sku: 'SKU003' },
+  { id: 4, img: prod4, desc: 'Product 4', sku: 'SKU004' },
+  { id: 5, img: prod5, desc: 'Product 5', sku: 'SKU005' },
+  { id: 6, img: prod6, desc: 'Product 6', sku: 'SKU006' },
+];
 
 function Newarrival() {
   const [startIndex, setStartIndex] = useState(0);
@@ -62,7 +65,7 @@ function Newarrival() {
           <Link
             key={product.id}
             to={'/commercial'} // <-- Navigate to commercial detail page
-            className="border rounded shadow p-4 flex flex-col items-center hover:shadow-lg transition cursor-pointer"
+            className="border rounded shadow p-4 flex flex-col items-center hover:shadow-lg transition cursor-pointer animate-fadeIn"
           >
             <img src={product.img} alt={product.desc} className="h-40 object-cover mb-4" />
             <p className="font-medium">{product.desc}</p>

@@ -5,25 +5,31 @@ import adimg2 from "../assets/adimg/adimg2.jpg";
 import adimg3 from "../assets/adimg/adimg3.jpg";
 
 const images = [adimg1, adimg2, adimg3];
-
 function Advertisement() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [fade, setFade] = useState(true);
 
   const prevImage = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setFade(false);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+      setFade(true);
+    }, 300);
   };
 
   const nextImage = () => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setFade(false);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+      setFade(true);
+    }, 300);
   };
 
-  // Auto-slide every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 1500);
-
-    return () => clearInterval(interval); // Clear interval on unmount
+      nextImage();
+    }, 3000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -31,7 +37,9 @@ function Advertisement() {
       <img
         src={images[currentIndex]}
         alt="Advertisement"
-        className="w-full h-auto object-cover transition-all duration-500"
+        className={`w-full h-auto object-cover transition-opacity duration-500 ${
+          fade ? "opacity-100" : "opacity-0"
+        }`}
       />
 
       {/* Left Arrow */}

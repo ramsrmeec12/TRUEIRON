@@ -65,7 +65,7 @@ function Newarrival() {
           <Link
             key={product.id}
             to={'/commercial'} // <-- Navigate to commercial detail page
-            className="border rounded shadow p-4 flex flex-col items-center hover:shadow-lg transition cursor-pointer"
+            className="border rounded shadow p-4 flex flex-col items-center hover:shadow-lg transition cursor-pointer animate-fadeIn"
           >
             <img src={product.img} alt={product.desc} className="h-40 object-cover mb-4" />
             <p className="font-medium">{product.desc}</p>

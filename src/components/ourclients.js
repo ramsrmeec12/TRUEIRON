@@ -1,4 +1,3 @@
-import React from 'react';
 import client1 from '../assets/Ourclients/client1.jpg';
 import client2 from '../assets/Ourclients/client2.jpg';
 import client3 from '../assets/Ourclients/client3.jpg';
@@ -17,22 +16,26 @@ const products = [
 
 function Ourclients() {
   return (
-    <div className="w-full bg-black text-white py-12 px-4">
+    <div className="w-full bg-black text-white py-12 px-4 overflow-hidden">
       <h2 className="text-4xl font-bold mb-8 text-center">Our Clients</h2>
-      <div className="flex flex-wrap justify-center gap-6">
-        {products.map((product) => (
-          <div
-            key={product.id}
-            className="w-40 border rounded shadow p-4 bg-white text-black flex flex-col items-center"
-          >
-            <img
-              src={product.img}
-              alt={product.desc}
-              className="h-24 object-cover mb-2"
-            />
-            
-          </div>
-        ))}
+      
+      {/* Scrolling container */}
+      <div className="relative w-full">
+        <div className="flex gap-6 animate-scroll whitespace-nowrap">
+          {/* Duplicate for seamless loop */}
+          {[...products, ...products].map((product, index) => (
+            <div
+              key={index}
+              className="w-40 flex-shrink-0 border rounded shadow p-4 bg-white text-black flex flex-col items-center transform transition-transform duration-300 hover:scale-105"
+            >
+              <img
+                src={product.img}
+                alt={product.desc}
+                className="h-24 object-cover mb-2 rounded"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
