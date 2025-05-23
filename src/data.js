@@ -75,95 +75,96 @@ import Back17 from '../src/assets/commercial/Strength/Back/Back17.png'
 
 
 export const products = [
-  //cardio-->Treadmill
-   {
-    id: 1,
-    sku: 'GYM-COM-002',
-    name: 'TreadMill Pro',
-    category: 'Cardio',
-    subcategory: 'Treadmills',
-    image: Treadmill1,
-    price: 75000,
-    type: 'Commercial',
-    description: 'good'
-  },
-  {
-    id: 2,
-    sku: 'GYM-COM-002',
-    name: 'TreadMill Pro',
-    category: 'Cardio',
-    subcategory: 'Treadmills',
-    image: Treadmill2,
-    price: 75000,
-    type: 'Commercial',
-    description: 'good'
-  },
-     {
-    id: 3,
-    sku: 'GYM-COM-002',
-    name: 'TreadMill Pro',
-    category: 'Cardio',
-    subcategory: 'Treadmills',
-    image: Treadmill3,
-    price: 75000,
-    type: 'Commercial',
-    description: 'good'
-  },
-     {
-    id: 4,
-    sku: 'GYM-COM-002',
-    name: 'TreadMill Pro',
-    category: 'Cardio',
-    subcategory: 'Treadmills',
-    image: Treadmill4,
-    price: 75000,
-    type: 'Commercial',
-    description: 'good'
-  },
-     {
-    id: 5,
-    sku: 'GYM-COM-002',
-    name: 'TreadMill Pro',
-    category: 'Cardio',
-    subcategory: 'Treadmills',
-    image: Treadmill5,
-    price: 75000,
-    type: 'Commercial',
-    description: 'good'
-  },
-     {
-    id: 6,
-    sku: 'GYM-COM-002',
-    name: 'TreadMill Pro',
-    category: 'Cardio',
-    subcategory: 'Treadmills',
-    image: Treadmill6,
-    price: 75000,
-    type: 'Commercial',
-    description: 'good'
-  },
-     {
-    id: 7,
-    sku: 'GYM-COM-002',
-    name: 'TreadMill Pro',
-    category: 'Cardio',
-    subcategory: 'Treadmills',
-    image: Treadmill7,
-    price: 75000,
-    type: 'Commercial',
-    description: 'good'
-  },
-     {
-    id: 8,
-    sku: 'GYM-COM-002',
-    name: 'TreadMill Pro',
-    category: 'Cardio',
-    subcategory: 'Treadmills',
-    image: Treadmill8,
-    price: 75000,
-    type: 'Commercial',
-    description: 'good'
-  },
+  // Cardio → Treadmill
+{
+  id: 1,
+  sku: 'GYM-COM-002',
+  name: 'TreadMill Pro 1',
+  category: 'Cardio',
+  subcategory: 'Treadmills',
+  image: Treadmill1,
+  price: 75000,
+  type: 'Commercial',
+  description: 'Built for high-end gyms, this treadmill features a shock-absorbing deck and a powerful motor for long hours of commercial use.'
+},
+{
+  id: 2,
+  sku: 'GYM-COM-003',
+  name: 'TreadMill Pro 2',
+  category: 'Cardio',
+  subcategory: 'Treadmills',
+  image: Treadmill2,
+  price: 75000,
+  type: 'Commercial',
+  description: 'Sleek and sturdy, this treadmill includes advanced display metrics, preset workout programs, and Bluetooth connectivity.'
+},
+{
+  id: 3,
+  sku: 'GYM-COM-004',
+  name: 'TreadMill Pro 3',
+  category: 'Cardio',
+  subcategory: 'Treadmills',
+  image: Treadmill3,
+  price: 75000,
+  type: 'Commercial',
+  description: 'Ideal for intense cardio sessions, this treadmill supports speeds up to 20 km/h and has an automatic incline system.'
+},
+{
+  id: 4,
+  sku: 'GYM-COM-005',
+  name: 'TreadMill Pro 4',
+  category: 'Cardio',
+  subcategory: 'Treadmills',
+  image: Treadmill4,
+  price: 75000,
+  type: 'Commercial',
+  description: 'A premium treadmill with heart-rate sensors, fitness tracking, and noise-reducing motor technology for a quiet workout.'
+},
+{
+  id: 5,
+  sku: 'GYM-COM-006',
+  name: 'TreadMill Pro 5',
+  category: 'Cardio',
+  subcategory: 'Treadmills',
+  image: Treadmill5,
+  price: 75000,
+  type: 'Commercial',
+  description: 'Designed for long durability, this model has a wide running surface and cushioned belt system for joint-friendly running.'
+},
+{
+  id: 6,
+  sku: 'GYM-COM-007',
+  name: 'TreadMill Pro 6',
+  category: 'Cardio',
+  subcategory: 'Treadmills',
+  image: Treadmill6,
+  price: 75000,
+  type: 'Commercial',
+  description: 'Smart treadmill with interactive LED screen, virtual running modes, and personalized training feedback.'
+},
+{
+  id: 7,
+  sku: 'GYM-COM-008',
+  name: 'TreadMill Pro 7',
+  category: 'Cardio',
+  subcategory: 'Treadmills',
+  image: Treadmill7,
+  price: 75000,
+  type: 'Commercial',
+  description: 'Engineered for group fitness centers, it offers Wi-Fi control, emergency stop functions, and calorie tracking.'
+},
+{
+  id: 8,
+  sku: 'GYM-COM-009',
+  name: 'TreadMill Pro 8',
+  category: 'Cardio',
+  subcategory: 'Treadmills',
+  image: Treadmill8,
+  price: 75000,
+  type: 'Commercial',
+  description: 'An elite treadmill designed for performance training, featuring auto incline, shock absorption, and touchscreen display.'
+},
+
 
   
   //Cardio --> Upright
