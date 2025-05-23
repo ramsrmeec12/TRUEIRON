@@ -1,13 +1,13 @@
 import { useParams } from 'react-router-dom';
 import { products } from '../data';
 import { useCart } from '../context/CartContext';
-import { useNavigate } from 'react-router-dom';
+
 
 export default function ProductDetail() {
   const { id } = useParams();
   const product = products.find(p => p.id.toString() === id);
   const { cartItems, addToCart } = useCart();
-  const navigate = useNavigate();
+
 
   // Check if the product is already in the cart
   const isInCart = cartItems.some(item => item.id === product?.id);

@@ -52,6 +52,17 @@ import Chest17 from '../src/assets/commercial/Strength/Chest/Chest17.jpg'
 import Chest18 from '../src/assets/commercial/Strength/Chest/Chest18.jpg'
 
 
+//Strength --> Back
+import Back1 from '../src/assets/commercial/Strength/Back/Back1.jpg'
+import Back2 from '../src/assets/commercial/Strength/Back/Back2.jpg'
+import Back3 from '../src/assets/commercial/Strength/Back/Back3.jpg'
+import Back4 from '../src/assets/commercial/Strength/Back/Back4.jpg'
+import Back5 from '../src/assets/commercial/Strength/Back/Back5.jpg'
+import Back6 from '../src/assets/commercial/Strength/Back/Back6.jpg'
+import Back7 from '../src/assets/commercial/Strength/Back/Back7.jpg'
+
+
+
 export const products = [
   //cardio-->Treadmill
    {
@@ -487,4 +498,84 @@ export const products = [
     description: 'good'
   },
 
+
+  //Strength --> Back
+
+  {
+    id: 39,
+    sku: 'GYM-COM-002',
+    name: 'Back1',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back1,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 40,
+    sku: 'GYM-COM-002',
+    name: 'Back2',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back2,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 41,
+    sku: 'GYM-COM-002',
+    name: 'Back3',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back3,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 42,
+    sku: 'GYM-COM-002',
+    name: 'Back4',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back4,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 43,
+    sku: 'GYM-COM-002',
+    name: 'Back5',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back5,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 44,
+    sku: 'GYM-COM-002',
+    name: 'Back6',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back6,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 45,
+    sku: 'GYM-COM-002',
+    name: 'Back7',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back7,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
 ];
