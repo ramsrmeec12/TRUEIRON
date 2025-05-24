@@ -72,6 +72,22 @@ import Back16 from '../src/assets/commercial/Strength/Back/Back16.png'
 import Back17 from '../src/assets/commercial/Strength/Back/Back17.png'
 
 
+//Strength  --> Shoulder
+import Shoulder1 from '../src/assets/commercial/Strength/Shoulder/Shoulder1.png'
+import Shoulder2 from '../src/assets/commercial/Strength/Shoulder/Shoulder2.png'
+import Shoulder3 from '../src/assets/commercial/Strength/Shoulder/Shoulder3.png'
+import Shoulder4 from '../src/assets/commercial/Strength/Shoulder/Shoulder4.png'
+import Shoulder5 from '../src/assets/commercial/Strength/Shoulder/Shoulder5.png'
+import Shoulder6 from '../src/assets/commercial/Strength/Shoulder/Shoulder6.png'
+
+
+//Strength --> Arms
+import Arms1 from '../src/assets/commercial/Strength/Arms/Arms1.png'
+import Arms2 from '../src/assets/commercial/Strength/Arms/Arms2.png'
+import Arms3 from '../src/assets/commercial/Strength/Arms/Arms3.png'
+import Arms4 from '../src/assets/commercial/Strength/Arms/Arms4.png'
+import Arms5 from '../src/assets/commercial/Strength/Arms/Arms5.png'
+
 
 
 export const products = [
@@ -696,6 +712,134 @@ export const products = [
     category: 'Strength',
     subcategory: 'Back',
     image: Back17,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+
+
+  //Strenth --> Shoulder
+
+  {
+    id: 56,
+    sku: 'GYM-COM-002',
+    name: 'Shoulder1',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder1,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+    {
+    id: 57,
+    sku: 'GYM-COM-002',
+    name: 'Shoulder2',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder2,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+    {
+    id: 58,
+    sku: 'GYM-COM-002',
+    name: 'Shoulder3',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder3,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+    {
+    id: 59,
+    sku: 'GYM-COM-002',
+    name: 'Shoulder4',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder4,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+    {
+    id: 60,
+    sku: 'GYM-COM-002',
+    name: 'Shoulder5',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder5,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+    {
+    id: 61,
+    sku: 'GYM-COM-002',
+    name: 'Shoulder6',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder6,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+
+
+  //Strength --> Arms
+  {
+    id: 62,
+    sku: 'GYM-COM-002',
+    name: 'Arms1',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms1,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 63,
+    sku: 'GYM-COM-002',
+    name: 'Arms2',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms2,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 64,
+    sku: 'GYM-COM-002',
+    name: 'Arms3',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms3,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 65,
+    sku: 'GYM-COM-002',
+    name: 'Arms4',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms4,
+    price: 75000,
+    type: 'Commercial',
+    description: 'good'
+  },
+  {
+    id: 66,
+    sku: 'GYM-COM-002',
+    name: 'Arms5',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms5,
     price: 75000,
     type: 'Commercial',
     description: 'good'
