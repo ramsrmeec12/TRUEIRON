@@ -187,7 +187,7 @@ export const products = [
   {
     id: 8,
     sku: 'GYM-COM-009',
-    name: 'Curve Treadmill Draxfit + - SPT1000BC',
+    name: 'Curve Treadmill Draxfit SPT1000BC',
     category: 'Cardio',
     subcategory: 'Treadmills',
     image: Treadmill8,
@@ -833,14 +833,16 @@ export const products = [
 
   {
     id: 56,
-    sku: 'GYM-COM-002',
-    name: 'Shoulder1',
+    sku: 'GYM-COM-057',
+    name: 'SHOULDER PRESS',
     category: 'Strength',
     subcategory: 'Shoulder',
     image: Shoulder1,
     price: 75000,
     type: 'Commercial',
-    description: 'good'
+    description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
   },
   {
     id: 57,
@@ -855,105 +857,123 @@ export const products = [
   },
   {
     id: 58,
-    sku: 'GYM-COM-002',
-    name: 'Shoulder3',
+    sku: 'GYM-COM-059',
+    name: 'MULTI LINEAR BENCH',
     category: 'Strength',
     subcategory: 'Shoulder',
     image: Shoulder3,
     price: 75000,
     type: 'Commercial',
-    description: 'good'
+    description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
   },
   {
     id: 59,
-    sku: 'GYM-COM-002',
-    name: 'Shoulder4',
+    sku: 'GYM-COM-060',
+    name: 'ISOLATED SEATED LATERAL RAISE',
     category: 'Strength',
     subcategory: 'Shoulder',
     image: Shoulder4,
     price: 75000,
     type: 'Commercial',
-    description: 'good'
+    description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
   },
   {
     id: 60,
-    sku: 'GYM-COM-002',
-    name: 'Shoulder5',
+    sku: 'GYM-COM-061',
+    name: 'SHRUGS/DEADLIFT',
     category: 'Strength',
     subcategory: 'Shoulder',
     image: Shoulder5,
     price: 75000,
     type: 'Commercial',
-    description: 'good'
+    description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
   },
   {
     id: 61,
-    sku: 'GYM-COM-002',
-    name: 'Shoulder6',
+    sku: 'GYM-COM-062',
+    name: 'SEATED/STANDING SHRUGS',
     category: 'Strength',
     subcategory: 'Shoulder',
     image: Shoulder6,
     price: 75000,
     type: 'Commercial',
-    description: 'good'
+    description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
   },
 
 
   //Strength --> Arms
   {
     id: 62,
-    sku: 'GYM-COM-002',
-    name: 'Arms1',
+    sku: 'GYM-COM-063',
+    name: 'TRICEP DIP PLATE LOADED',
     category: 'Strength',
     subcategory: 'Arms',
     image: Arms1,
     price: 75000,
     type: 'Commercial',
-    description: 'good'
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
   },
   {
     id: 63,
-    sku: 'GYM-COM-002',
-    name: 'Arms2',
+    sku: 'GYM-COM-064',
+    name: 'ARM CURL',
     category: 'Strength',
     subcategory: 'Arms',
     image: Arms2,
     price: 75000,
     type: 'Commercial',
-    description: 'good'
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
   },
   {
     id: 64,
-    sku: 'GYM-COM-002',
-    name: 'Arms3',
+    sku: 'GYM-COM-065',
+    name: 'ISOLATERAL BICEP CURL',
     category: 'Strength',
     subcategory: 'Arms',
     image: Arms3,
     price: 75000,
     type: 'Commercial',
-    description: 'good'
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
   },
   {
     id: 65,
-    sku: 'GYM-COM-002',
-    name: 'Arms4',
+    sku: 'GYM-COM-066',
+    name: 'INCLINE TRICEP EXTENSION',
     category: 'Strength',
     subcategory: 'Arms',
     image: Arms4,
     price: 75000,
     type: 'Commercial',
-    description: 'good'
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
   },
   {
     id: 66,
-    sku: 'GYM-COM-002',
-    name: 'Arms5',
+    sku: 'GYM-COM-067',
+    name: 'INCLINE BICEP CURL',
     category: 'Strength',
     subcategory: 'Arms',
     image: Arms5,
     price: 75000,
     type: 'Commercial',
-    description: 'good'
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
   },
 ];
 
