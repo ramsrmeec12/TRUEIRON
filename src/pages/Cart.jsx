@@ -4,13 +4,14 @@ import { useState } from 'react';
 
 export default function Cart() {
   const { cartItems, removeFromCart } = useCart();
-  const whatsappNumber = '919840856756';
+  const whatsappNumber = '916385706756';
 
-  const message =
+const message =
   `Hi, I would like to enquire about the following products:\n\n` +
   cartItems
-    .map(item => `✅ ${item.name} (SKU: ${item.sku}) - ₹${item.price}`)
+    .map((item, index) => `${index + 1}. ${item.name} (SKU: ${item.sku}) - ₹${item.price}`)
     .join('\n');
+
 
   const handleSubmit = () => {
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

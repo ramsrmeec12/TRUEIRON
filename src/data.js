@@ -112,6 +112,9 @@ import Leg19 from '../src/assets/commercial/Strength/Legs/Leg19.png'
 import Leg20 from '../src/assets/commercial/Strength/Legs/Leg20.png'
 import Leg21 from '../src/assets/commercial/Strength/Legs/Leg21.png'
 
+//Strength -- Multipurpose
+import Multipurpose1 from '../src/assets/commercial/Strength/Multipurpose/Multipurpose1.png'
+import Multipurpose2 from '../src/assets/commercial/Strength/Multipurpose/Multipurpose2.png'
 
 export const products = [
   // Cardio → Treadmill
@@ -1017,7 +1020,7 @@ export const products = [
   {
     id: 68,
     sku: 'GYM-COM-069',
-    name: 'Leg2',
+    name: 'SEATED TIBIA TRAINER',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg2,
@@ -1030,7 +1033,7 @@ export const products = [
   {
     id: 69,
     sku: 'GYM-COM-070',
-    name: 'Leg3',
+    name: 'STRENGTH CALF',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg3,
@@ -1041,9 +1044,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 70,
+    sku: 'GYM-COM-071',
+    name: 'BELT SQUAT',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg4,
@@ -1054,9 +1057,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 71,
+    sku: 'GYM-COM-072',
+    name: 'SEATED CALF',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg5,
@@ -1067,9 +1070,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 72,
+    sku: 'GYM-COM-073',
+    name: 'STANDING ABDUCTOR',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg6,
@@ -1080,9 +1083,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 73,
+    sku: 'GYM-COM-074',
+    name: 'HIP THRUST PLATE LOADED',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg7,
@@ -1093,9 +1096,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 74,
+    sku: 'GYM-COM-075',
+    name: 'ISOLATERAL LEG EXTENSION',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg8,
@@ -1106,9 +1109,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 75,
+    sku: 'GYM-COM-076',
+    name: '45° Leg Press',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg9,
@@ -1119,9 +1122,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 76,
+    sku: 'GYM-COM-077',
+    name: 'Leg Press',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg10,
@@ -1132,9 +1135,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 77,
+    sku: 'GYM-COM-078',
+    name: 'ISOLATERAL STANDING LEG CURL',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg11,
@@ -1145,9 +1148,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 78,
+    sku: 'GYM-COM-079',
+    name: 'ISOLATERAL LEG CURL',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg12,
@@ -1158,9 +1161,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 79,
+    sku: 'GYM-COM-080',
+    name: 'HACK SQUAT',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg13,
@@ -1171,9 +1174,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 80,
+    sku: 'GYM-COM-081',
+    name: 'VERTICAL LEG PRESS',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg14,
@@ -1184,9 +1187,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 81,
+    sku: 'GYM-COM-082',
+    name: 'LEG PRESS / HACK SQUAT COMBO',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg15,
@@ -1197,9 +1200,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 82,
+    sku: 'GYM-COM-083',
+    name: 'LYING VERTICAL PRESS',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg16,
@@ -1210,9 +1213,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 83,
+    sku: 'GYM-COM-084',
+    name: 'SEATED CALF',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg17,
@@ -1223,9 +1226,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 84,
+    sku: 'GYM-COM-085',
+    name: 'TIBIA TRAINER',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg18,
@@ -1236,9 +1239,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 85,
+    sku: 'GYM-COM-086',
+    name: 'ANGLED CALF',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg19,
@@ -1249,9 +1252,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 86,
+    sku: 'GYM-COM-087',
+    name: 'HIP THRUST',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg20,
@@ -1262,9 +1265,9 @@ export const products = [
     muscle: 'Legs'
   },
   {
-    id: 69,
-    sku: 'GYM-COM-070',
-    name: 'Leg3',
+    id: 87,
+    sku: 'GYM-COM-088',
+    name: 'POWER SQUAT',
     category: 'Strength',
     subcategory: 'Legs',
     image: Leg21,
@@ -1275,7 +1278,34 @@ export const products = [
     muscle: 'Legs'
   },
 
-  
+
+  //Strength --> Multipurpose
+  {
+    id: 88,
+    sku: 'GYM-COM-089',
+    name: 'POWER SQUAT',
+    category: 'Strength',
+    subcategory: 'Multipurpose',
+    image: Multipurpose1,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.'  ,  
+    specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
+    muscle: 'Full Body'
+  },
+  {
+    id: 89,
+    sku: 'GYM-COM-090',
+    name: 'POWER SQUAT',
+    category: 'Strength',
+    subcategory: 'Multipurpose',
+    image: Multipurpose2,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The innovative design is a fusion of smith and squat rack. Advanced design accommodates lightweights and heavy lifters. Ideal and versatile unit for beginners as well professional builders. Engineered with racking pegs for 10-weight bar adjustment. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows lifting actual weight. The extra bar and rack allows free work outs. Feature of shroud is provided to make the machine dust free and to look elegant.',
+    specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
+    muscle: 'Full Body'
+  },
 
 
 ];
