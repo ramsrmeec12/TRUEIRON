@@ -5,7 +5,6 @@ import { FiSearch, FiMenu, FiX, FiShoppingCart } from 'react-icons/fi';
 import { products } from '../data';
 import { useCart } from '../context/CartContext';
 
-
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
@@ -36,6 +35,13 @@ function Navbar() {
   };
 
   const handleMenuClose = () => setMenuOpen(false);
+
+  const navLinks = [
+    { label: 'Commercial', to: '/commercial' },
+    { label: 'Support', to: '/support' },
+    { label: 'Contact Us', to: '/contact' },
+    { label: 'Store Locater', to: '/location' },
+  ];
 
   return (
     <div className="font-roboto sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
@@ -93,10 +99,10 @@ function Navbar() {
 
         {/* Desktop Nav */}
         <div className='hidden md:flex gap-4 pr-4 items-center'>
-          {['Commercial', 'Support', 'Contact Us'].map((label, i) => (
+          {navLinks.slice(0, 3).map(({ label, to }, i) => (
             <Link
               key={i}
-              to={`/${label.replace(' ', '').toLowerCase()}`}
+              to={to}
               className="hover:text-red-600 transition"
             >
               {label}
@@ -133,8 +139,8 @@ function Navbar() {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="md:hidden bg-gray-100 px-4 py-2 space-y-2 animate-fadeIn slide-in-down transition-all duration-300 ease-in-out">
-          {['Commercial', 'Support', 'Contact Us', 'Store Locater'].map((label, i) => (
-            <Link key={i} to={`/${label.replace(' ', '').toLowerCase()}`} className="block hover:text-red-600 transition" onClick={handleMenuClose}>
+          {navLinks.map(({ label, to }, i) => (
+            <Link key={i} to={to} className="block hover:text-red-600 transition" onClick={handleMenuClose}>
               {label}
             </Link>
           ))}
