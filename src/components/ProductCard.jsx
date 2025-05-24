@@ -31,7 +31,7 @@ export default function ProductCard({ product }) {
   return (
     <div
       ref={cardRef}
-      className={`w-80 h-96 border rounded-lg shadow p-4 flex flex-col items-center bg-white transition-transform transition-opacity duration-700 ease-in-out
+      className={`w-80  border rounded-lg shadow p-4 flex flex-col items-center bg-white transition-transform transition-opacity duration-700 ease-in-out
         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
 
         hover:scale-105 hover:shadow-2xl hover:z-10

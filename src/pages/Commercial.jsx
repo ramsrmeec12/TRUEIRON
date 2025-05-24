@@ -1,10 +1,9 @@
 // src/pages/Commercial.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ProductGrid from '../components/ProductGrid';
 import { products } from '../data';
 import { useCart } from '../context/CartContext';
-import { ShoppingCart } from 'lucide-react';
 
 const categories = {
   Cardio: ['Treadmills', 'Ellipticals', 'Upright Bikes', 'Recumbent Bikes', 'Spinning Bikes'],
@@ -13,25 +12,31 @@ const categories = {
 };
 
 export default function Commercial() {
-  const [activeSubcategory, setActiveSubcategory] = useState(null);
-  const [openCategory, setOpenCategory] = useState(null);
-  const { cartItems } = useCart();
-  const navigate = useNavigate();
   const location = useLocation();
+  const navigate = useNavigate();
+  const { cartItems } = useCart();
 
   const queryParams = new URLSearchParams(location.search);
   const searchTerm = queryParams.get('search')?.toLowerCase() || '';
+  const subcategoryParam = queryParams.get('subcategory') || null;
+
+  const [activeSubcategory, setActiveSubcategory] = useState(subcategoryParam);
+  const [openCategory, setOpenCategory] = useState(null);
+
+  useEffect(() => {
+    // Set activeSubcategory from URL if present
+    setActiveSubcategory(subcategoryParam);
+  }, [subcategoryParam]);
 
   const handleSubcategoryClick = (subcategory) => {
-    setActiveSubcategory(subcategory);
-    setOpenCategory(null);
-
     const newParams = new URLSearchParams(location.search);
+    newParams.set('subcategory', subcategory);
     newParams.delete('search');
     navigate({
       pathname: location.pathname,
       search: newParams.toString(),
     });
+    setOpenCategory(null); // ✅ Close the dropdown
   };
 
   const filteredProducts = products.filter((p) => {
@@ -65,9 +70,8 @@ export default function Commercial() {
                     <button
                       key={sub}
                       onClick={() => handleSubcategoryClick(sub)}
-                      className={`px-4 py-2 text-left hover:bg-gray-100 transition duration-150 ${
-                        activeSubcategory === sub ? 'bg-blue-100 font-semibold' : ''
-                      }`}
+                      className={`px-4 py-2 text-left hover:bg-gray-100 transition duration-150 ${activeSubcategory === sub ? 'bg-blue-100 font-semibold' : ''
+                        }`}
                     >
                       {sub}
                     </button>

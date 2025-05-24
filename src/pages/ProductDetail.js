@@ -55,7 +55,8 @@ export default function ProductDetail() {
         <p className="text-gray-700 mb-4">Subcategory: {product.subcategory}</p>
         <p className="text-gray-600 mb-4">{product.description || 'No description available.'}</p>
         <p className="text-gray-600 mb-4">SKU: {product.sku || 'N/A'}</p>
-
+        <p className="text-gray-600 mb-4">Specification: {product.specification}</p>
+        <p className="text-gray-600 mb-4">Muscles Worked: {product.muscle}</p>
         <button
           onClick={() => addToCart(product)}
           disabled={isInCart}
