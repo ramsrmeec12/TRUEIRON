@@ -89,6 +89,29 @@ import Arms4 from '../src/assets/commercial/Strength/Arms/Arms4.png'
 import Arms5 from '../src/assets/commercial/Strength/Arms/Arms5.png'
 
 
+//Strength --> Legs
+import Leg1 from '../src/assets/commercial/Strength/Legs/Leg1.png'
+import Leg2 from '../src/assets/commercial/Strength/Legs/Leg2.png'
+import Leg3 from '../src/assets/commercial/Strength/Legs/Leg3.png'
+import Leg4 from '../src/assets/commercial/Strength/Legs/Leg4.png'
+import Leg5 from '../src/assets/commercial/Strength/Legs/Leg5.png'
+import Leg6 from '../src/assets/commercial/Strength/Legs/Leg6.png'
+import Leg7 from '../src/assets/commercial/Strength/Legs/Leg7.png'
+import Leg8 from '../src/assets/commercial/Strength/Legs/Leg8.png'
+import Leg9 from '../src/assets/commercial/Strength/Legs/Leg9.png'
+import Leg10 from '../src/assets/commercial/Strength/Legs/Leg10.png'
+import Leg11 from '../src/assets/commercial/Strength/Legs/Leg11.png'
+import Leg12 from '../src/assets/commercial/Strength/Legs/Leg12.png'
+import Leg13 from '../src/assets/commercial/Strength/Legs/Leg13.png'
+import Leg14 from '../src/assets/commercial/Strength/Legs/Leg14.png'
+import Leg15 from '../src/assets/commercial/Strength/Legs/Leg15.png'
+import Leg16 from '../src/assets/commercial/Strength/Legs/Leg16.png'
+import Leg17 from '../src/assets/commercial/Strength/Legs/Leg17.png'
+import Leg18 from '../src/assets/commercial/Strength/Legs/Leg18.png'
+import Leg19 from '../src/assets/commercial/Strength/Legs/Leg19.png'
+import Leg20 from '../src/assets/commercial/Strength/Legs/Leg20.png'
+import Leg21 from '../src/assets/commercial/Strength/Legs/Leg21.png'
+
 
 export const products = [
   // Cardio → Treadmill
@@ -829,7 +852,7 @@ export const products = [
   },
 
 
-  //Strenth --> Shoulder
+  //Strenth --> Shoulder - Load on
 
   {
     id: 56,
@@ -909,7 +932,7 @@ export const products = [
   },
 
 
-  //Strength --> Arms
+  //Strength --> Arms --> Load on
   {
     id: 62,
     sku: 'GYM-COM-063',
@@ -975,5 +998,285 @@ export const products = [
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
     muscle: 'Arms'
   },
+
+
+  //Strength --> Legs - Load on
+  {
+    id: 67,
+    sku: 'GYM-COM-068',
+    name: 'ISOLATERAL LEG PRESS',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg1,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 68,
+    sku: 'GYM-COM-069',
+    name: 'Leg2',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg2,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg3,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg4,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg5,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg6,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg7,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg8,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg9,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg10,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg11,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg12,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg13,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg14,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg15,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg16,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg17,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg18,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg19,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg20,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 69,
+    sku: 'GYM-COM-070',
+    name: 'Leg3',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg21,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+
+  
+
+
 ];
 

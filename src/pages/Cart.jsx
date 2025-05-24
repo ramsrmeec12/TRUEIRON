@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function Cart() {
   const { cartItems, removeFromCart } = useCart();
-  const whatsappNumber = '919025416751';
+  const whatsappNumber = '919840856756';
 
   const message =
   `Hi, I would like to enquire about the following products:\n\n` +
