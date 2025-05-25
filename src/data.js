@@ -70,6 +70,7 @@ import Back14 from '../src/assets/commercial/Strength/Back/Back14.png'
 import Back15 from '../src/assets/commercial/Strength/Back/Back15.png'
 import Back16 from '../src/assets/commercial/Strength/Back/Back16.png'
 import Back17 from '../src/assets/commercial/Strength/Back/Back17.png'
+import Back18 from '../src/assets/commercial/Strength/Back/Back18.png'
 
 
 //Strength  --> Shoulder
@@ -93,6 +94,9 @@ import Arms5 from '../src/assets/commercial/Strength/Arms/Arms5.png'
 import Arms6 from '../src/assets/commercial/Strength/Arms/Arms6.png'
 import Arms7 from '../src/assets/commercial/Strength/Arms/Arms7.png'
 import Arms8 from '../src/assets/commercial/Strength/Arms/Arms8.png'
+import Arms9 from '../src/assets/commercial/Strength/Arms/Arms9.png'
+import Arms10 from '../src/assets/commercial/Strength/Arms/Arms10.png'
+import Arms11 from '../src/assets/commercial/Strength/Arms/Arms11.png'
 
 
 //Strength --> Legs
@@ -158,6 +162,9 @@ import Acc31 from '../src/assets/commercial/Accessories/Acc31.webp'
 import Acc32 from '../src/assets/commercial/Accessories/Acc32.webp'
 import Acc33 from '../src/assets/commercial/Accessories/Acc33.webp'
 import Acc34 from '../src/assets/commercial/Accessories/Acc34.webp'
+
+//Strength --> Abdominal
+import Abdominal1 from '../src/assets/commercial/Strength/Abdominal/Abdominal1.png'
 
 
 export const products = [
@@ -1878,7 +1885,78 @@ export const products = [
     description: 'DIFFERENT WEIGHT AVAILABLE 2.5kg, 5kg, 7.5kg, 10kg, 15kg, 20kg ...',
     specification: 'Commercial-grade material, ideal for strength training support.',
     muscle: 'Varies by use'
-  }
+  },
+
+  //Strength --> Arms (Dumbells and bars)
+  {
+    id: 130,
+    sku: 'GYM-COM-131',
+    name: 'DUMBELLS',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms9,
+    price: 75000,
+    type: 'Commercial',
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
+  },
+  {
+    id: 131,
+    sku: 'GYM-COM-132',
+    name: 'DUMBELLS',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms10,
+    price: 75000,
+    type: 'Commercial',
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
+  },
+  {
+    id: 132,
+    sku: 'GYM-COM-133',
+    name: 'WEIGHTED BARS',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms11,
+    price: 75000,
+    type: 'Commercial',
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
+  },
+
+  //Strength --> Back
+  {
+    id: 133,
+    sku: 'GYM-COM-134',
+    name: 'LINEAR ROW',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back18,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
+
+  //Strength  --> Abdominal
+  {
+    id: 134,
+    sku: 'GYM-COM-135',
+    name: 'Abdominal Machine',
+    category: 'Strength',
+    subcategory: 'Abdominal',
+    image: Abdominal1,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
 
 
 

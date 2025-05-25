@@ -7,7 +7,7 @@ import { useCart } from '../context/CartContext';
 
 const categories = {
   Cardio: ['Treadmills', 'Ellipticals', 'Upright Bikes', 'Recumbent Bikes', 'Spinning Bikes'],
-  Strength: ['Chest', 'Back', 'Shoulder', 'Arms', 'Legs', 'Abdominal', 'Multipurpose'],
+  Strength: ['Chest', 'Back', 'Shoulder', 'Arms', 'Legs', 'Abdominal', 'Multipurpose','Benches & Racks'],
   Accessories: ['Accessories'],
 };
 
