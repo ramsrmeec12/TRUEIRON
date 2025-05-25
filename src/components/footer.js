@@ -33,7 +33,6 @@ function Footer() {
           <h3 className="text-lg font-semibold mb-4">Products</h3>
           <ul className="space-y-2 text-sm">
             <li><Link to={'/commercial'}>Commercial Gym Setup</Link></li>
-            <li><Link to={'/homegym'}>Home Gym Setup</Link></li>
             <li><Link to={'/contact'}>Custom Products</Link></li>
 
           </ul>

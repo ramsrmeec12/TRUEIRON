@@ -15,17 +15,17 @@ import ScrollToTop from "./components/ScrollToTop";
 import { useEffect } from "react";
 
 function App() {
-  useEffect(() => {
-    const disableContextMenu = (e) => {
-      e.preventDefault();
-    };
+//   useEffect(() => {
+//     const disableContextMenu = (e) => {
+//       e.preventDefault();
+//     };
 
-    document.addEventListener('contextmenu', disableContextMenu);
+//     document.addEventListener('contextmenu', disableContextMenu);
 
-    return () => {
-      document.removeEventListener('contextmenu', disableContextMenu);
-    };
-  }, []);
+//     return () => {
+//       document.removeEventListener('contextmenu', disableContextMenu);
+//     };
+//   }, []);
 
   return (
     <CartProvider>

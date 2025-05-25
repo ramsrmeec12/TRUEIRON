@@ -872,7 +872,7 @@ export const products = [
   },
   {
     id: 57,
-    sku: 'GYM-COM-002',
+    sku: 'GYM-COM-058',
     name: 'Shoulder2',
     category: 'Strength',
     subcategory: 'Shoulder',
