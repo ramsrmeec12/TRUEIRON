@@ -79,6 +79,9 @@ import Shoulder3 from '../src/assets/commercial/Strength/Shoulder/Shoulder3.png'
 import Shoulder4 from '../src/assets/commercial/Strength/Shoulder/Shoulder4.png'
 import Shoulder5 from '../src/assets/commercial/Strength/Shoulder/Shoulder5.png'
 import Shoulder6 from '../src/assets/commercial/Strength/Shoulder/Shoulder6.png'
+import Shoulder7 from '../src/assets/commercial/Strength/Shoulder/Shoulder7.png'
+import Shoulder8 from '../src/assets/commercial/Strength/Shoulder/Shoulder8.png'
+import Shoulder9 from '../src/assets/commercial/Strength/Shoulder/Shoulder9.png'
 
 
 //Strength --> Arms
@@ -1307,6 +1310,47 @@ export const products = [
     muscle: 'Full Body'
   },
 
+
+  //Strength --> Shoulder --> New Club line
+  {
+    id: 90,
+    sku: 'GYM-COM-091',
+    name: 'LATERAL RAISE',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder7,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
+  },
+  {
+    id: 91,
+    sku: 'GYM-COM-092',
+    name: 'INCLINE SHOULDER PRESS',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder8,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
+  },
+  {
+    id: 92,
+    sku: 'GYM-COM-093',
+    name: 'SHOULDER PRESS',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder9,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
+  },
 
 ];
 
