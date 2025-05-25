@@ -90,6 +90,9 @@ import Arms2 from '../src/assets/commercial/Strength/Arms/Arms2.png'
 import Arms3 from '../src/assets/commercial/Strength/Arms/Arms3.png'
 import Arms4 from '../src/assets/commercial/Strength/Arms/Arms4.png'
 import Arms5 from '../src/assets/commercial/Strength/Arms/Arms5.png'
+import Arms6 from '../src/assets/commercial/Strength/Arms/Arms6.png'
+import Arms7 from '../src/assets/commercial/Strength/Arms/Arms7.png'
+import Arms8 from '../src/assets/commercial/Strength/Arms/Arms8.png'
 
 
 //Strength --> Legs
@@ -118,6 +121,44 @@ import Leg21 from '../src/assets/commercial/Strength/Legs/Leg21.png'
 //Strength -- Multipurpose
 import Multipurpose1 from '../src/assets/commercial/Strength/Multipurpose/Multipurpose1.png'
 import Multipurpose2 from '../src/assets/commercial/Strength/Multipurpose/Multipurpose2.png'
+
+
+//Strength --> Accessories
+import Acc1 from '../src/assets/commercial/Accessories/Acc1.jpg'
+import Acc2 from '../src/assets/commercial/Accessories/Acc2.jpg'
+import Acc3 from '../src/assets/commercial/Accessories/Acc3.jpg'
+import Acc4 from '../src/assets/commercial/Accessories/Acc4.jpg'
+import Acc5 from '../src/assets/commercial/Accessories/Acc5.webp'
+import Acc6 from '../src/assets/commercial/Accessories/Acc6.webp'
+import Acc7 from '../src/assets/commercial/Accessories/Acc7.webp'
+import Acc8 from '../src/assets/commercial/Accessories/Acc8.webp'
+import Acc9 from '../src/assets/commercial/Accessories/Acc9.webp'
+import Acc10 from '../src/assets/commercial/Accessories/Acc10.webp'
+import Acc11 from '../src/assets/commercial/Accessories/Acc11.webp'
+import Acc12 from '../src/assets/commercial/Accessories/Acc12.webp'
+import Acc13 from '../src/assets/commercial/Accessories/Acc13.webp'
+import Acc14 from '../src/assets/commercial/Accessories/Acc14.webp'
+import Acc15 from '../src/assets/commercial/Accessories/Acc15.webp'
+import Acc16 from '../src/assets/commercial/Accessories/Acc16.webp'
+import Acc17 from '../src/assets/commercial/Accessories/Acc17.webp'
+import Acc18 from '../src/assets/commercial/Accessories/Acc18.webp'
+import Acc19 from '../src/assets/commercial/Accessories/Acc19.webp'
+import Acc20 from '../src/assets/commercial/Accessories/Acc20.webp'
+import Acc21 from '../src/assets/commercial/Accessories/Acc21.webp'
+import Acc22 from '../src/assets/commercial/Accessories/Acc22.webp'
+import Acc23 from '../src/assets/commercial/Accessories/Acc23.webp'
+import Acc24 from '../src/assets/commercial/Accessories/Acc24.webp'
+import Acc25 from '../src/assets/commercial/Accessories/Acc25.webp'
+import Acc26 from '../src/assets/commercial/Accessories/Acc26.webp'
+import Acc27 from '../src/assets/commercial/Accessories/Acc27.webp'
+import Acc28 from '../src/assets/commercial/Accessories/Acc28.webp'
+import Acc29 from '../src/assets/commercial/Accessories/Acc29.webp'
+import Acc30 from '../src/assets/commercial/Accessories/Acc30.webp'
+import Acc31 from '../src/assets/commercial/Accessories/Acc31.webp'
+import Acc32 from '../src/assets/commercial/Accessories/Acc32.webp'
+import Acc33 from '../src/assets/commercial/Accessories/Acc33.webp'
+import Acc34 from '../src/assets/commercial/Accessories/Acc34.webp'
+
 
 export const products = [
   // Cardio → Treadmill
@@ -1292,7 +1333,7 @@ export const products = [
     image: Multipurpose1,
     price: 75000,
     type: 'Commercial',
-    description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.'  ,  
+    description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.',
     specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
     muscle: 'Full Body'
   },
@@ -1351,6 +1392,498 @@ export const products = [
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
     muscle: 'Shoulder'
   },
+
+
+  //Strength --> Arms  --> New club line
+  {
+    id: 93,
+    sku: 'GYM-COM-094',
+    name: 'SEATED TRICEP DIP',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms6,
+    price: 75000,
+    type: 'Commercial',
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
+  },
+  {
+    id: 94,
+    sku: 'GYM-COM-095',
+    name: 'WRIST CURL',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms7,
+    price: 75000,
+    type: 'Commercial',
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
+  },
+  {
+    id: 95,
+    sku: 'GYM-COM-096',
+    name: 'BICEP CURL',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms8,
+    price: 75000,
+    type: 'Commercial',
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
+  },
+
+  //Strength --> Accessories
+
+  {
+    id: 96,
+    sku: 'GYM-COM-097',
+    name: 'DUAL CONNECTOR EZ BAR',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc1,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 97,
+    sku: 'GYM-COM-098',
+    name: 'DUAL CONNECTOR STRAIGHT BAR BLACK',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc2,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 98,
+    sku: 'GYM-COM-099',
+    name: 'DUAL CONNECTOR STARIGHT BAR',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc3,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 99,
+    sku: 'GYM-COM-100',
+    name: 'CONNECTOR PLATE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc4,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 100,
+    sku: 'GYM-COM-101',
+    name: 'CURVED D HANDLE SMALL',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc5,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 101,
+    sku: 'GYM-COM-102',
+    name: 'MAG ROWING HANDLE SMALL',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc6,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 102,
+    sku: 'GYM-COM-103',
+    name: 'MAG ROWING HANDLE MEDIUM',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc7,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 103,
+    sku: 'GYM-COM-104',
+    name: 'MAG ROWING HANDLE LARGE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc8,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 104,
+    sku: 'GYM-COM-105',
+    name: 'LAT PULL DOWN STRAIGHT HANDLE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc9,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 105,
+    sku: 'GYM-COM-106',
+    name: 'STRAIGHT D HANDLE SMALL',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc10,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 106,
+    sku: 'GYM-COM-107',
+    name: 'STRAIGHT D HANDLE LARGE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc11,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 107,
+    sku: 'GYM-COM-108',
+    name: 'SQUARE HANDLE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc12,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 108,
+    sku: 'GYM-COM-109',
+    name: 'D ROWING HANDLE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc13,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 109,
+    sku: 'GYM-COM-110',
+    name: 'CURVE D HANDLE BIG',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc14,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 110,
+    sku: 'GYM-COM-111',
+    name: 'TRICEP ROPE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc15,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 111,
+    sku: 'GYM-COM-112',
+    name: 'ROWING HANDLE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc16,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 112,
+    sku: 'GYM-COM-113',
+    name: 'STRAP HANDLE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc17,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 113,
+    sku: 'GYM-COM-114',
+    name: 'RESISTANCE BAND',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc18,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 114,
+    sku: 'GYM-COM-115',
+    name: 'V TRICEP HANDLE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc19,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 115,
+    sku: 'GYM-COM-116',
+    name: 'EZ CURL HANDLE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc20,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 116,
+    sku: 'GYM-COM-117',
+    name: 'STRAIGHT HANDLE BIG',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc21,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 117,
+    sku: 'GYM-COM-118',
+    name: 'STRAIGHT HANDLE SMALL',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc22,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 118,
+    sku: 'GYM-COM-119',
+    name: 'SINGLE ROPE HANDLE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc23,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 119,
+    sku: 'GYM-COM-120',
+    name: 'TRICEP ROPE MEDIUM',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc24,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 120,
+    sku: 'GYM-COM-121',
+    name: 'BATTLE ROPE HIGH QUALITY',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc25,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 121,
+    sku: 'GYM-COM-122',
+    name: 'SKIPPING ROPE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc26,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 122,
+    sku: 'GYM-COM-123',
+    name: 'PLATES',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc27,
+    price: 0,
+    type: 'Commercial',
+    description: 'DIFFERENT WEIGHT AVAILABLE 2.5kg, 5kg, 7.5kg, 10kg, 15kg, 20kg ...',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 123,
+    sku: 'GYM-COM-124',
+    name: 'KETTLE BELLS',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc28,
+    price: 0,
+    type: 'Commercial',
+    description: 'DIFFERNT WEIGHTS AVAILABLE',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 124,
+    sku: 'GYM-COM-125',
+    name: 'STRAP HANDLE SET',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc29,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 125,
+    sku: 'GYM-COM-126',
+    name: 'TRICEP V HANDLE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc30,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 126,
+    sku: 'GYM-COM-127',
+    name: 'LAT PULL DOWN BAR LARGE',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc31,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 127,
+    sku: 'GYM-COM-128',
+    name: 'FLOOR/GYM MAT',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc32,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 128,
+    sku: 'GYM-COM-129',
+    name: 'DUMBELLS',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc33,
+    price: 0,
+    type: 'Commercial',
+    description: 'DIFFERENT WEIGHT AVAILABLE 2.5kg, 5kg, 7.5kg, 10kg, 15kg, 20kg ...',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 129,
+    sku: 'GYM-COM-130',
+    name: 'WEIGHTED BAR',
+    category: 'Strength',
+    subcategory: 'Accessories',
+    image: Acc34,
+    price: 0,
+    type: 'Commercial',
+    description: 'DIFFERENT WEIGHT AVAILABLE 2.5kg, 5kg, 7.5kg, 10kg, 15kg, 20kg ...',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  }
+
+
+
+
+
 
 ];
 
