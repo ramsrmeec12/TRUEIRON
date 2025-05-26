@@ -167,6 +167,19 @@ import Acc34 from '../src/assets/commercial/Accessories/Acc34.webp'
 import Abdominal1 from '../src/assets/commercial/Strength/Abdominal/Abdominal1.png'
 
 
+//Strength --> Benches and racks
+import BR1 from '../src/assets/commercial/Strength/Benchesandracks/BR1.png'
+import BR2 from '../src/assets/commercial/Strength/Benchesandracks/BR2.png'
+import BR3 from '../src/assets/commercial/Strength/Benchesandracks/BR3.png'
+import BR4 from '../src/assets/commercial/Strength/Benchesandracks/BR4.png'
+import BR5 from '../src/assets/commercial/Strength/Benchesandracks/BR5.png'
+import BR6 from '../src/assets/commercial/Strength/Benchesandracks/BR6.png'
+import BR7 from '../src/assets/commercial/Strength/Benchesandracks/BR7.png'
+import BR8 from '../src/assets/commercial/Strength/Benchesandracks/BR8.png'
+import BR9 from '../src/assets/commercial/Strength/Benchesandracks/BR9.png'
+import BR10 from '../src/assets/commercial/Strength/Benchesandracks/BR10.png'
+
+
 export const products = [
   // Cardio → Treadmill
   {
@@ -1957,6 +1970,140 @@ export const products = [
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
     muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
   },
+
+  //Strength --> Benches and racks
+
+  {
+    id: 135,
+    sku: 'GYM-COM-136',
+    name: '7 HORN VERTICAL PLATE TREE',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR1,
+    price: 24000,
+    type: 'Commercial',
+    description: 'The robust vertical design provides seven weight holders which allows to stack weight ampleweight plates. The elegant design helps to look state of the art gym floor',
+    specification: 'Length: 38 inches, Width: 30 inches, Height: 46 inches, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 136,
+    sku: 'GYM-COM-137',
+    name: 'WEIGHT LIFTING PLATFORM LARGE',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR2,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Our Large Weight Lifting Platform, designed to elevate your training routine with precision and versatility. This spacious platform provides ample room for dynamic movements and heavy lifting, ensuring optimal performance and safety. Engineered with high-quality materials, it offers exceptional durability and stability for intense workouts. The non-slip rubber surface provides superior grip, enhancing traction and reducing the risk of slippage.',
+    specification: 'Length: 101 inches, Width: 62 inches, Height: 45 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 137,
+    sku: 'GYM-COM-138',
+    name: 'WEIGHT LIFTING PLATFORM SMALL',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR3,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Our Large Weight Lifting Platform, designed to elevate your training routine with precision and versatility. This spacious platform provides ample room for dynamic movements and heavy lifting, ensuring optimal performance and safety. Engineered with high-quality materials, it offers exceptional durability and stability for intense workouts. The non-slip rubber surface provides superior grip, enhancing traction and reducing the risk of slippage.',
+    specification: 'Length: 101 inches, Width: 62 inches, Height: 45 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 138,
+    sku: 'GYM-COM-139',
+    name: 'SQUAT RACK ADJUSTABLE',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR4,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Adjustable heavy-duty squat rack with multiple height levels. Suitable for squats, bench press, and overhead lifts with safety spot arms.',
+    specification: 'Length: 101 inches, Width: 62 inches, Height: 45 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 139,
+    sku: 'GYM-COM-140',
+    name: 'STANDING PREACHER BENCH CURL',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR5,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Standing Preacher Curl Bench, meticulously crafted to optimize bicep training with precision and efficiency. This bench features an ergonomic design that promotes proper arm positioning and muscle isolation during curls. With its sturdy construction and adjustable settings, users can customize their workout experience for maximum comfort and effectiveness. The padded armrests provide stability and support, while the sleek design adds a professional touch to any gym space.',
+    specification: 'Length: 101 inches, Width: 62 inches, Height: 45 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 140,
+    sku: 'GYM-COM-141',
+    name: 'POWER CAGE',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR6,
+    price: 24000,
+    type: 'Commercial',
+    description: 'The versatile design offers to perform everything from bench press to squats. The free bar movement allow user to perform the exercise either inside / outside of the cage. Moreover, the power cage offer the multiple positioning of bars and catched are provided for safety.',
+    specification: 'Length: 101 inches, Width: 62 inches, Height: 45 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 141,
+    sku: 'GYM-COM-142',
+    name: 'TOP ACCESSORIES RACK',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR7,
+    price: 24000,
+    type: 'Commercial',
+    description: 'The Top Accessories Rack is a compact, durable, and stable storage solution for gym essentials. With multi-level storage and a sleek design, it keeps accessories organized while saving space. Perfect for home and commercial gyms. ',
+    specification: 'Length: 101 inches, Width: 62 inches, Height: 45 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 142,
+    sku: 'GYM-COM-143',
+    name: 'FUNCTIONAL MAX',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR8,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Advanced design accommodates lightweights and heavy lifters. The advance engineering provides simultaneous bar movement both vertical and horizontal. The functional max rack provides the safety of a smith machine with the exercise diversity of squat rack. The versatile design offer wide range of exercizes',
+    specification: 'Length: 101 inches, Width: 62 inches, Height: 45 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 143,
+    sku: 'GYM-COM-144',
+    name: 'OLYMPIC FLAT BENCH',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR9,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed as per the international standards of power lifting. Ten-inch bench width allows free shoulder movement during bench press. Forty-eight inch bench length allows full stretch of the users body. Two position replaceable bar hold assembly with heavy-duty stainless steel plate for durability.',
+    specification: 'Length: 82 inches, Width: 86 inches, Height: 50 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 144,
+    sku: 'GYM-COM-145',
+    name: 'HALF RACK WITH PLATFORM',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR10,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed as per the international standards of power lifting. Ten-inch bench width allows free shoulder movement during bench press. Forty-eight inch bench length allows full stretch of the users body. Two position replaceable bar hold assembly with heavy-duty stainless steel plate for durability.',
+    specification: 'Length: 136 inches, Width: 128 inches, Height: 94 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+
 
 
 

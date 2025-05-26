@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom'; // <-- Import Link
-import prod1 from '../assets/newarrival/prod1.jpg';
-import prod2 from '../assets/newarrival/prod2.jpg';
-import prod3 from '../assets/newarrival/prod3.jpg';
-import prod4 from '../assets/newarrival/prod4.jpg';
-import prod5 from '../assets/newarrival/prod5.jpg';
-import prod6 from '../assets/newarrival/prod6.jpg';
+
+import prod1 from '../assets/commercial/cardio/Treadmills/Treadmill1.jpg'
+import prod2 from '../assets/commercial/Strength/Chest/Chest1.jpg'
+import prod3 from '../assets/commercial/Strength/Back/Back18.png'
+import prod4 from '../assets/commercial/Strength/Shoulder/Shoulder1.png'
+import prod5 from '../assets/commercial/Strength/Legs/Leg2.png'
+import prod6 from '../assets/commercial/Strength/Arms/Arms8.png'
 
 const products = [
-  { id: 1, img: prod1, desc: 'Product 1', sku: 'SKU001' },
-  { id: 2, img: prod2, desc: 'Product 2', sku: 'SKU002' },
-  { id: 3, img: prod3, desc: 'Product 3', sku: 'SKU003' },
-  { id: 4, img: prod4, desc: 'Product 4', sku: 'SKU004' },
-  { id: 5, img: prod5, desc: 'Product 5', sku: 'SKU005' },
-  { id: 6, img: prod6, desc: 'Product 6', sku: 'SKU006' },
+  { id: 1, img: prod1, desc: 'Treadmill', sku: 'SKU001', subcategory: 'Treadmills' },
+  { id: 2, img: prod2, desc: 'Chest', sku: 'SKU002', subcategory: 'Chest' },
+  { id: 3, img: prod3, desc: 'Back', sku: 'SKU003', subcategory: 'Back' },
+  { id: 4, img: prod4, desc: 'Shoulder', sku: 'SKU004', subcategory: 'Shoulder' },
+  { id: 5, img: prod5, desc: 'Leg', sku: 'SKU005', subcategory: 'Legs' },
+  { id: 6, img: prod6, desc: 'Arms', sku: 'SKU006', subcategory: 'Arms' },
 ];
+
 
 function Newarrival() {
   const [startIndex, setStartIndex] = useState(0);
@@ -64,16 +66,18 @@ function Newarrival() {
         {visibleProducts.map((product) => (
           <Link
             key={product.id}
-            to={'/commercial'} // <-- Navigate to commercial detail page
+            to={`/commercial?subcategory=${encodeURIComponent(product.subcategory)}`}
             className="border rounded shadow p-4 flex flex-col items-center hover:shadow-lg transition cursor-pointer animate-fadeIn"
           >
             <img src={product.img} alt={product.desc} className="h-40 object-cover mb-4" />
-            <p className="font-medium">{product.desc}</p>
-            <p className="text-sm text-gray-500 mb-2">SKU: {product.sku}</p>
+            <p className="text-xl text-black mb-2">{product.desc}</p>
+            
             <button className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">
               View Product
             </button>
           </Link>
+
+
         ))}
       </div>
     </div>

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom'; // <-- Import Link
-import prod1 from '../assets/newarrival/prod1.jpg';
-import prod2 from '../assets/newarrival/prod2.jpg';
-import prod3 from '../assets/newarrival/prod3.jpg';
-import prod4 from '../assets/newarrival/prod4.jpg';
-import prod5 from '../assets/newarrival/prod5.jpg';
-import prod6 from '../assets/newarrival/prod6.jpg';
+import prod1 from '../assets/commercial/cardio/Treadmills/Treadmill1.jpg'
+import prod2 from '../assets/commercial/Strength/Chest/Chest1.jpg'
+import prod3 from '../assets/commercial/Strength/Back/Back18.png'
+import prod4 from '../assets/commercial/Strength/Shoulder/Shoulder1.png'
+import prod5 from '../assets/commercial/Strength/Legs/Leg2.png'
+import prod6 from '../assets/commercial/Strength/Arms/Arms8.png'
 
 const products = [
   { id: 1, img: prod1, desc: 'Product 1', sku: 'SKU001' },
