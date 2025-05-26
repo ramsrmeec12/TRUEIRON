@@ -1,5 +1,5 @@
 // src/pages/Commercial.jsx
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ProductGrid from '../components/ProductGrid';
 import { products } from '../data';
@@ -7,7 +7,7 @@ import { useCart } from '../context/CartContext';
 
 const categories = {
   Cardio: ['Treadmills', 'Ellipticals', 'Upright Bikes', 'Recumbent Bikes', 'Spinning Bikes'],
-  Strength: ['Chest', 'Back', 'Shoulder', 'Arms', 'Legs', 'Abdominal', 'Multipurpose','Benches & Racks'],
+  Strength: ['Chest', 'Back', 'Shoulder', 'Arms', 'Legs', 'Abdominal', 'Multipurpose', 'Benches & Racks'],
   Accessories: ['Accessories'],
 };
 
@@ -23,10 +23,25 @@ export default function Commercial() {
   const [activeSubcategory, setActiveSubcategory] = useState(subcategoryParam);
   const [openCategory, setOpenCategory] = useState(null);
 
+  const dropdownRef = useRef(null);
+
   useEffect(() => {
-    // Set activeSubcategory from URL if present
     setActiveSubcategory(subcategoryParam);
   }, [subcategoryParam]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpenCategory(null);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const handleSubcategoryClick = (subcategory) => {
     const newParams = new URLSearchParams(location.search);
@@ -36,7 +51,7 @@ export default function Commercial() {
       pathname: location.pathname,
       search: newParams.toString(),
     });
-    setOpenCategory(null); // ✅ Close the dropdown
+    setOpenCategory(null); // ✅ Close dropdown after selection
   };
 
   const filteredProducts = products.filter((p) => {
@@ -53,7 +68,7 @@ export default function Commercial() {
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Top Navigation Filter */}
       <div className="bg-white shadow p-4">
-        <div className="flex flex-wrap gap-6 justify-center">
+        <div className="flex flex-wrap gap-6 justify-center" ref={dropdownRef}>
           {Object.entries(categories).map(([category, subcategories]) => (
             <div key={category} className="relative">
               <button
