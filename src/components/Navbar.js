@@ -47,7 +47,7 @@ function Navbar() {
     <div className="font-roboto sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
       {/* Top Bar */}
       <div style={{ backgroundColor: '#353535' }} className="py-2 px-3 text-center md:flex justify-between">
-        <a href="tel:+919840856756" className="text-white pl-5 hover:underline transition">📞 Call Us: +91 98408 56756</a>
+        <a href="tel:+916385706756" className="text-white pl-5 hover:underline transition">📞 Call Us: +91 63857 06756</a>
         <div className="flex gap-3 text-white">
           <Link to="/location" className="hidden md:block hover:underline transition">Store Locater</Link>
           <Link to="/contact" className="hidden md:block hover:underline transition">Contact Us</Link>

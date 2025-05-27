@@ -16,7 +16,7 @@ export default function Contact() {
     const whatsappMessage = `Hi, I'm ${name} (Email: ${email}) ${message}`;
 
     // Replace with your actual WhatsApp number (with country code, no `+` or spaces)
-    const phoneNumber = "919840856756";
+    const phoneNumber = "916385706756";
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappURL, "_blank");
@@ -70,8 +70,8 @@ export default function Contact() {
             <h2 className="text-xl font-semibold mb-2">TrueIron Headquarters</h2>
             <p>18, NSE Bose Nagar, Puthapedu, Porur, Chennai-116</p>
             <p>Email: support@ironlife.com</p>
-            <a href="tel:+919840856756" >
-              +91 98408 56756
+            <a href="tel:+916385706756" >
+              +91 63857 06756
             </a>
             <p>Hours: Mon–Sat, 9am – 6pm</p>
           </div>
