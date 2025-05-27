@@ -2149,7 +2149,7 @@ export const products = [
   {
     id: 148,
     sku: 'GYM-COM-149',
-    name: 'DUMBELL RACK THREE TIER',
+    name: 'BARBELL RACK 6 HOLES',
     category: 'Strength',
     subcategory: 'Benches & Racks',
     image: BR14,
