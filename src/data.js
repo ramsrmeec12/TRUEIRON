@@ -178,7 +178,11 @@ import BR7 from '../src/assets/commercial/Strength/Benchesandracks/BR7.png'
 import BR8 from '../src/assets/commercial/Strength/Benchesandracks/BR8.png'
 import BR9 from '../src/assets/commercial/Strength/Benchesandracks/BR9.png'
 import BR10 from '../src/assets/commercial/Strength/Benchesandracks/BR10.png'
-
+import BR11 from '../src/assets/commercial/Strength/Benchesandracks/BR11.png'
+import BR12 from '../src/assets/commercial/Strength/Benchesandracks/BR12.png'
+import BR13 from '../src/assets/commercial/Strength/Benchesandracks/BR13.png'
+import BR14 from '../src/assets/commercial/Strength/Benchesandracks/BR14.png'
+import BR15 from '../src/assets/commercial/Strength/Benchesandracks/BR15.png'
 
 export const products = [
   // Cardio → Treadmill
@@ -2103,7 +2107,69 @@ export const products = [
     specification: 'Length: 136 inches, Width: 128 inches, Height: 94 mm, Frame: 2.5mm thick steel',
     muscle: 'Depends on Workout'
   },
-
+  {
+    id: 145,
+    sku: 'GYM-COM-146',
+    name: 'VERTICAL DUMBBELL RACK',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR11,
+    price: 24000,
+    type: 'Commercial',
+    description: 'The Vertical Dumbbell rack can hold a total of 20 Dumbbells. The dumbbells are  held securely and are easy to access. The rack also has four hooks in the  centre that can be used to store various attachments or accessories.',
+    specification: 'Length: 136 inches, Width: 128 inches, Height: 94 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 146,
+    sku: 'GYM-COM-147',
+    name: 'DUMBELL RACK THREE TIER',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR12,
+    price: 24000,
+    type: 'Commercial',
+    description: 'The heavy duty three tier dumbbells rack allows to load fifteen pair of dumbbells. The half round rubber saddles provides longer life and safety while placing the dumbbells on the dumbbell rack.',
+    specification: 'Length: 136 inches, Width: 128 inches, Height: 94 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 147,
+    sku: 'GYM-COM-148',
+    name: 'DUMBELL RACK TWIN TIER',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR13,
+    price: 24000,
+    type: 'Commercial',
+    description: 'The heavy duty three tier dumbbells rack allows to load fifteen pair of dumbbells. The half round rubber saddles provides longer life and safety while placing the dumbbells on the dumbbell rack.',
+    specification: 'Length: 136 inches, Width: 128 inches, Height: 94 mm, Frame: 2.5mm thick steel',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 148,
+    sku: 'GYM-COM-149',
+    name: 'DUMBELL RACK THREE TIER',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR14,
+    price: 24000,
+    type: 'Commercial',
+    description: 'The Barbell rack can hold a total of 6 bars. It has a strong and heavy duty base  giving it a low centre of gravity',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 149,
+    sku: 'GYM-COM-150',
+    name: 'BEAUTY BELL RACK',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR15,
+    price: 24000,
+    type: 'Commercial',
+    description: 'The unique and robust design of beautybell rack allows to load the fixed barbells from minimum to maximum range of fixed bars. Having a capacity of ten fixed bards horizontally.',
+    muscle: 'Depends on Workout'
+  },
 
 
 
