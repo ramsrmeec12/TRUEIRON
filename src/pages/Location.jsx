@@ -28,13 +28,12 @@ export default function Location() {
 
 
         <p className="text-lg font-medium mt-4">📞 Phone:</p>
-        <a href="tel:+919840856756" >
-          +91 98408 56756
+        <a href="tel:+916385706756" >
+          +91 63857 06756
         </a>
 
         <p className="text-lg font-medium mt-4">🕒 Store Hours:</p>
-        <p>Mon–Sat: 6 AM – 10 PM</p>
-        <p>Sunday: 8 AM – 1 PM</p>
+        <p>Mon–Sat: 11 AM – 5 PM</p>
       </div>
     </div>
   );
