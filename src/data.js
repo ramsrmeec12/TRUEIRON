@@ -125,6 +125,11 @@ import Leg21 from '../src/assets/commercial/Strength/Legs/Leg21.png'
 //Strength -- Multipurpose
 import Multipurpose1 from '../src/assets/commercial/Strength/Multipurpose/Multipurpose1.png'
 import Multipurpose2 from '../src/assets/commercial/Strength/Multipurpose/Multipurpose2.png'
+import Multipurpose3 from '../src/assets/commercial/Strength/Multipurpose/Multipurpose3.jpg'
+import Multipurpose4 from '../src/assets/commercial/Strength/Multipurpose/Multipurpose4.jpg'
+import Multipurpose5 from '../src/assets/commercial/Strength/Multipurpose/Multipurpose5.jpg'
+import Multipurpose6 from '../src/assets/commercial/Strength/Multipurpose/Multipurpose6.jpg'
+
 
 
 //Strength --> Accessories
@@ -2169,6 +2174,61 @@ export const products = [
     type: 'Commercial',
     description: 'The unique and robust design of beautybell rack allows to load the fixed barbells from minimum to maximum range of fixed bars. Having a capacity of ten fixed bards horizontally.',
     muscle: 'Depends on Workout'
+  },
+
+
+  //Strength --> Multipurpose
+  {
+    id: 150,
+    sku: 'GYM-COM-151',
+    name: 'MULTIPURPOSE 1',
+    category: 'Strength',
+    subcategory: 'Multipurpose',
+    image: Multipurpose3,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.',
+    specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
+    muscle: 'Full Body'
+  },
+  {
+    id: 151,
+    sku: 'GYM-COM-152',
+    name: 'MULTIPURPOSE 2',
+    category: 'Strength',
+    subcategory: 'Multipurpose',
+    image: Multipurpose4,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.',
+    specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
+    muscle: 'Full Body'
+  },
+  {
+    id: 152,
+    sku: 'GYM-COM-153',
+    name: 'MULTIPURPOSE 3',
+    category: 'Strength',
+    subcategory: 'Multipurpose',
+    image: Multipurpose5,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.',
+    specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
+    muscle: 'Full Body'
+  },
+  {
+    id: 153,
+    sku: 'GYM-COM-154',
+    name: 'MULTIPURPOSE 4',
+    category: 'Strength',
+    subcategory: 'Multipurpose',
+    image: Multipurpose6,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.',
+    specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
+    muscle: 'Full Body'
   },
 
 
