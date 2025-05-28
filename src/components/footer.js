@@ -50,6 +50,7 @@ function Footer() {
                 Download Catalogue
               </a>
             </li>
+            <li><Link to={'/terms'}>Terms and Conditions</Link></li>
 
           </ul>
         </nav>

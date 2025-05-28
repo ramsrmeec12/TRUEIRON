@@ -15,6 +15,8 @@ import Elliptical2 from '../src/assets/commercial/cardio/Ellipticals/Elliptical2
 import Elliptical3 from '../src/assets/commercial/cardio/Ellipticals/Elliptical3.jpg'
 import Elliptical4 from '../src/assets/commercial/cardio/Ellipticals/Elliptical4.jpg'
 import Elliptical5 from '../src/assets/commercial/cardio/Ellipticals/Elliptical5.jpg'
+import Elliptical6 from '../src/assets/commercial/cardio/Ellipticals/Elliptical6.jpg'
+import Elliptical7 from '../src/assets/commercial/cardio/Ellipticals/Elliptical7.webp'
 
 
 //CArdio --> UPright
@@ -223,6 +225,9 @@ import air2 from '../src/assets/commercial/cardio/Airbikes/air2.png'
 import Ut1 from '../src/assets/commercial/Utilities/Ut1.png'
 import Ut2 from '../src/assets/commercial/Utilities/Ut2.jpg'
 
+
+//Cardio --> Ski Machines
+import ski1 from '../src/assets/commercial/cardio/skimachine/ski1.png'
 export const products = [
   // Cardio → Treadmill
   {
@@ -405,7 +410,7 @@ export const products = [
   {
     id: 14,
     sku: 'GYM-COM-015',
-    name: 'Elliptical JEP9',
+    name: 'Elliptical SP9',
     category: 'Cardio',
     subcategory: 'Ellipticals',
     image: Upright1,
@@ -416,20 +421,23 @@ export const products = [
     muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
   },
 
+
   //Cardio --> Spinning
   {
-    id: 15,
-    sku: 'GYM-COM-016',
-    name: 'Spinning Bike BS 5',
-    category: 'Cardio',
-    subcategory: 'Spinning Bikes',
-    image: Spinning1,
-    price: 75000,
-    type: 'Commercial',
-    description: 'The BS5 is a spinning bike with a 20kg belt driven flywheel and can be used in both the home and gym. The handle and seat both have 2 way adjustment.',
-    specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
-    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
-  },
+  id: 15,
+  sku: 'GYM-COM-016',
+  name: 'Spinning Bike BS 5',
+  category: 'Cardio',
+  subcategory: 'Spinning Bikes',
+  image: Spinning1,
+  price: 75000,
+  type: 'Commercial',
+  description: 'The BS5 is a spinning bike with a 20kg belt driven flywheel and can be used in both the home and gym. The handle and seat both have 2 way adjustment.',
+  specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
+  muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes',
+ 
+}
+,
 
   //Cardio --> Recumbent
 
@@ -512,7 +520,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Isolateral Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST',
+     colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
   },
   {
     id: 22,
@@ -2493,9 +2502,9 @@ export const products = [
   {
     id: 172,
     sku: 'GYM-COM-173',
-    name: 'Stair Master V1',
+    name: 'Ladder Master V1',
     category: 'Cardio',
-    subcategory: 'Stair Master',
+    subcategory: 'Ladder Master',
     image: Stair1,
     price: 75000,
     type: 'Commercial',
@@ -2506,9 +2515,9 @@ export const products = [
   {
     id: 173,
     sku: 'GYM-COM-174',
-    name: 'Stair Master V2',
+    name: 'Ladder Master V2',
     category: 'Cardio',
-    subcategory: 'Stair Master',
+    subcategory: 'Ladder Master',
     image: Stair2,
     price: 75000,
     type: 'Commercial',
@@ -2557,9 +2566,9 @@ export const products = [
     image: Ut1,
     price: 0,
     type: 'Commercial',
-    description: 'High-quality accessory designed for durability and performance in any gym setup.',
-    specification: 'Commercial-grade material, ideal for strength training support.',
-    muscle: 'Varies by use'
+    description: 'The Gym Fan is designed to keep your workout area cool and comfortable. With high-speed airflow and adjustable angles, it helps improve ventilation and reduce heat during intense training sessions. Ideal for home gyms, studios, and commercial fitness centers, it ensures better air circulation and a more refreshing workout environment.',
+    specification: 'High power and spacious air delivery',
+    muscle: 'Nil'
   },
   {
     id: 177,
@@ -2570,9 +2579,50 @@ export const products = [
     image: Ut2,
     price: 0,
     type: 'Commercial',
-    description: 'High-quality accessory designed for durability and performance in any gym setup.',
-    specification: 'Commercial-grade material, ideal for strength training support.',
+    description: 'The Gym Fan is designed to keep your workout area cool and comfortable. With high-speed airflow and adjustable angles, it helps improve ventilation and reduce heat during intense training sessions. Ideal for home gyms, studios, and commercial fitness centers, it ensures better air circulation and a more refreshing workout environment.',
+    specification: 'High power and spacious air delivery',
+    muscle: 'Nil'
+  },
+
+  //Cardio --> Ski Machine
+
+  {
+    id: 178,
+    sku: 'GYM-COM-179',
+    name: 'Ski Machine',
+    category: 'Cardio',
+    subcategory: 'Ski Machine',
+    image: ski1,
+    price: 0,
+    type: 'Commercial',
+    description: 'The Ski Machine provides a full-body workout by mimicking the motion of cross-country skiing. It is great for improving endurance, burning calories, and strengthening both the upper and lower body. The resistance can be adjusted to match different fitness levels, and the display shows time, distance, and calories burned. Perfect for home or gym use, it’s compact, smooth, and easy to use.',
+    specification: 'Boosts your calorie loss',
     muscle: 'Varies by use'
+  },
+  {
+    id: 179,
+    sku: 'GYM-COM-180',
+    name: 'ELLIPTICAL S1',
+    category: 'Cardio',
+    subcategory: 'Ellipticals',
+    image: Elliptical6,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The JEP 9 elliptical comes with a rear crank system with a protective housing and oversized footpads for ease of use. The JEP 9 elliptical includes added comfort features of a reading rack, USB charging and afan.',
+    specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
+    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
+  },{
+    id: 180,
+    sku: 'GYM-COM-181',
+    name: 'ELLIPTICAL S2',
+    category: 'Cardio',
+    subcategory: 'Ellipticals',
+    image: Elliptical7,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The JEP 9 elliptical comes with a rear crank system with a protective housing and oversized footpads for ease of use. The JEP 9 elliptical includes added comfort features of a reading rack, USB charging and afan.',
+    specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
+    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
   },
 
 

@@ -9,7 +9,7 @@ export default function Cart() {
 const message =
   `Hi, I would like to enquire about the following products:\n\n` +
   cartItems
-    .map((item, index) => `${index + 1}. ${item.name} (SKU: ${item.sku}) - ₹${item.price}`)
+    .map((item, index) => `${index + 1}. ${item.name} (SKU: ${item.sku}). (Color:${item.selectedColor})`)
     .join('\n');
 
 
@@ -50,6 +50,7 @@ const message =
                 <div>
                   <p className="font-semibold text-gray-800">{item.name}</p>
                   <p className="text-sm text-gray-500">SKU: {item.sku}</p>
+                  <p>Color: {item.selectedColor}</p>
                   <p className="text-green-700 font-medium">Customisable as per requirement</p>
                 </div>
               </Link>

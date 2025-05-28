@@ -9,9 +9,11 @@ export default function ProductDetail() {
   const { cartItems, addToCart } = useCart();
 
   const [isVisible, setIsVisible] = useState(false);
+  const [selectedColor, setSelectedColor] = useState(null);
 
   useEffect(() => {
     setIsVisible(false);
+    setSelectedColor(null); // reset color on product change
     const timeout = setTimeout(() => {
       setIsVisible(true);
     }, 50);
@@ -43,6 +45,7 @@ export default function ProductDetail() {
           className="max-w-full max-h-[400px] object-contain rounded"
         />
       </div>
+
       <div
         className={`w-full md:w-1/2
           transition-all duration-700 ease-in-out
@@ -57,8 +60,32 @@ export default function ProductDetail() {
         <p className="text-gray-600 mb-4">SKU: {product.sku || 'N/A'}</p>
         <p className="text-gray-600 mb-4">Specification: {product.specification}</p>
         <p className="text-gray-600 mb-4">Muscles Worked: {product.muscle}</p>
+
+        {/* Color selection - show only if colorOptions exist */}
+        {product.colorOptions?.length > 0 && (
+          <div className="mb-4">
+            <p className="font-medium mb-2">Color Options Available:</p>
+            <div className="flex gap-3">
+              {product.colorOptions.map(color => (
+                <button
+                  key={color}
+                  onClick={() => setSelectedColor(color)}
+                  className={`w-6 h-6 rounded-full border-2 border-gray-400 
+                    ${selectedColor === color ? 'ring-2 ring-black' : ''}
+                  `}
+                  style={{
+                    background: color === 'Choose Own Color'
+                      ? 'linear-gradient(45deg, red, yellow, gray)'
+                      : color
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
         <button
-          onClick={() => addToCart(product)}
+          onClick={() => addToCart({ ...product, selectedColor: selectedColor || 'nil' })}
           disabled={isInCart}
           className={`px-6 py-2 rounded transition transform
             ${

@@ -13,6 +13,7 @@ import CertifiedProducts from "./pages/Certifiedproducts";
 import ProductDetail from './pages/ProductDetail';
 import ScrollToTop from "./components/ScrollToTop";
 import { useEffect } from "react";
+import TermsAndConditions from "./pages/termsandcond";
 
 function App() {
   useEffect(() => {
@@ -61,6 +62,7 @@ function App() {
                 <Route path="/support" element={<SupportComplaint />} />
                 <Route path="/certifiedproducts" element={<CertifiedProducts />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
+                <Route path="/terms" element={<TermsAndConditions></TermsAndConditions>}></Route>
               </Routes>
             </main>
 

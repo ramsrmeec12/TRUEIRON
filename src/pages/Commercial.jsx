@@ -6,10 +6,11 @@ import { products } from '../data';
 import { useCart } from '../context/CartContext';
 
 const categories = {
-  Cardio: ['Treadmills', 'Ellipticals', 'Upright Bikes', 'Recumbent Bikes', 'Spinning Bikes','Stair Master','Air Rower'],
+  Cardio: ['Treadmills', 'Ellipticals', 'Upright Bikes', 'Recumbent Bikes', 'Spinning Bikes','Ladder Master','Air Rower','Ski Machine'],
   Strength: ['Chest', 'Back', 'Shoulder', 'Arms', 'Legs', 'Abdominal', 'Multipurpose','Dumbells & Plates' ,'Benches & Racks'],
   Accessories: ['Accessories'],
-  Utilities: ['Utilities']
+  Utilities: ['Utilities'],
+  Unique_Equipments:['Unique Equipments']
 };
 
 export default function Commercial() {

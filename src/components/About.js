@@ -25,7 +25,7 @@ function AboutUs() {
       </p>
 
       <p className="text-gray-700 text-lg mb-4">
-        Founded in 2024, our mission is simple: to make fitness accessible and effective for everyone. Whether you're building a home gym or managing a commercial fitness center, our expert team is here to guide you with honest advice and top-tier support.
+        Founded in 2015, our mission is simple: to make fitness accessible and effective for everyone. Whether you're building a home gym or managing a commercial fitness center, our expert team is here to guide you with honest advice and top-tier support.
       </p>
 
       <p className="text-gray-700 text-lg">
