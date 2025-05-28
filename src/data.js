@@ -22,6 +22,8 @@ import Upright1 from '../src/assets/commercial/cardio/Upright/Upright1.jpg'
 
 //Cardio --> Spinning
 import Spinning1 from '../src/assets/commercial/cardio/Spinning/Spinning1.jpg'
+import Spinning2 from '../src/assets/commercial/cardio/Spinning/Spinning2.jpg.png'
+import Spinning3 from '../src/assets/commercial/cardio/Spinning/Spinning3.jpg.png'
 
 //Cardio --> recumbent
 import Recumbent1 from '../src/assets/commercial/cardio/Recumbent/Recumbent1.jpg'
@@ -168,6 +170,7 @@ import Acc32 from '../src/assets/commercial/Accessories/Acc32.webp'
 import Acc33 from '../src/assets/commercial/Accessories/Acc33.webp'
 import Acc34 from '../src/assets/commercial/Accessories/Acc34.webp'
 
+
 //Strength --> Abdominal
 import Abdominal1 from '../src/assets/commercial/Strength/Abdominal/Abdominal1.png'
 
@@ -188,6 +191,37 @@ import BR12 from '../src/assets/commercial/Strength/Benchesandracks/BR12.png'
 import BR13 from '../src/assets/commercial/Strength/Benchesandracks/BR13.png'
 import BR14 from '../src/assets/commercial/Strength/Benchesandracks/BR14.png'
 import BR15 from '../src/assets/commercial/Strength/Benchesandracks/BR15.png'
+import BR16 from '../src/assets/commercial/Strength/Benchesandracks/BR16.png'
+import BR17 from '../src/assets/commercial/Strength/Benchesandracks/BR17.png'
+import BR18 from '../src/assets/commercial/Strength/Benchesandracks/BR18.png'
+import BR19 from '../src/assets/commercial/Strength/Benchesandracks/BR19.png'
+import BR20 from '../src/assets/commercial/Strength/Benchesandracks/BR20.png'
+import BR21 from '../src/assets/commercial/Strength/Benchesandracks/BR21.png'
+import BR22 from '../src/assets/commercial/Strength/Benchesandracks/BR22.png'
+import BR23 from '../src/assets/commercial/Strength/Benchesandracks/BR23.png'
+import BR24 from '../src/assets/commercial/Strength/Benchesandracks/BR24.png'
+import BR25 from '../src/assets/commercial/Strength/Benchesandracks/BR25.png'
+import BR26 from '../src/assets/commercial/Strength/Benchesandracks/BR26.png'
+
+//Strength --> Dumbells and plates
+import D1 from '../src/assets/commercial/Strength/Dumbells and plates/D1.jpg'
+import D2 from '../src/assets/commercial/Strength/Dumbells and plates/D2.jpg'
+import D3 from '../src/assets/commercial/Strength/Dumbells and plates/D3.jpg'
+import D4 from '../src/assets/commercial/Strength/Dumbells and plates/D4.png'
+import D5 from '../src/assets/commercial/Strength/Dumbells and plates/D5.png'
+
+//Cardio --> Stair Master
+import Stair1 from '../src/assets/commercial/cardio/Stairmaster/Stair1.png'
+import Stair2 from '../src/assets/commercial/cardio/Stairmaster/Stair2.png'
+
+//Cardio --> Air Bikes
+import air1 from '../src/assets/commercial/cardio/Airbikes/air1.png'
+import air2 from '../src/assets/commercial/cardio/Airbikes/air2.png'
+
+
+//Utilities
+import Ut1 from '../src/assets/commercial/Utilities/Ut1.png'
+import Ut2 from '../src/assets/commercial/Utilities/Ut2.jpg'
 
 export const products = [
   // Cardio → Treadmill
@@ -1929,7 +1963,7 @@ export const products = [
     name: 'DUMBELLS',
     category: 'Strength',
     subcategory: 'Arms',
-    image: Arms10,
+    image: D4,
     price: 75000,
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
@@ -2230,6 +2264,323 @@ export const products = [
     specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
     muscle: 'Full Body'
   },
+
+  //Strength --> benches and racks
+  {
+    id: 154,
+    sku: 'GYM-COM-155',
+    name: 'BACK EXTENSION',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR16,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed for stability and versatility, our benches and racks provide a solid foundation for a wide range of strength training exercises. Built with heavy-duty steel and high-density padding, they ensure maximum safety, comfort, and performance—perfect for both beginner and advanced athletes in commercial gym settings.',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 155,
+    sku: 'GYM-COM-156',
+    name: 'POWER BENCH',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR17,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed for stability and versatility, our benches and racks provide a solid foundation for a wide range of strength training exercises. Built with heavy-duty steel and high-density padding, they ensure maximum safety, comfort, and performance—perfect for both beginner and advanced athletes in commercial gym settings.',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 156,
+    sku: 'GYM-COM-157',
+    name: 'UTILITY BENCH',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR18,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed for stability and versatility, our benches and racks provide a solid foundation for a wide range of strength training exercises. Built with heavy-duty steel and high-density padding, they ensure maximum safety, comfort, and performance—perfect for both beginner and advanced athletes in commercial gym settings.',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 157,
+    sku: 'GYM-COM-158',
+    name: 'GLUTE HAM DEVELOPER',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR19,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed for stability and versatility, our benches and racks provide a solid foundation for a wide range of strength training exercises. Built with heavy-duty steel and high-density padding, they ensure maximum safety, comfort, and performance—perfect for both beginner and advanced athletes in commercial gym settings.',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 158,
+    sku: 'GYM-COM-159',
+    name: 'POWER BENCH ADJUSTABLE',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR20,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed for stability and versatility, our benches and racks provide a solid foundation for a wide range of strength training exercises. Built with heavy-duty steel and high-density padding, they ensure maximum safety, comfort, and performance—perfect for both beginner and advanced athletes in commercial gym settings.',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 159,
+    sku: 'GYM-COM-160',
+    name: 'OLYMPIC DECLINE BENCH',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR21,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed for stability and versatility, our benches and racks provide a solid foundation for a wide range of strength training exercises. Built with heavy-duty steel and high-density padding, they ensure maximum safety, comfort, and performance—perfect for both beginner and advanced athletes in commercial gym settings.',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 160,
+    sku: 'GYM-COM-161',
+    name: 'SUPER BENCH',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR22,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed for stability and versatility, our benches and racks provide a solid foundation for a wide range of strength training exercises. Built with heavy-duty steel and high-density padding, they ensure maximum safety, comfort, and performance—perfect for both beginner and advanced athletes in commercial gym settings.',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 161,
+    sku: 'GYM-COM-162',
+    name: 'WORK BENCH',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR23,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed for stability and versatility, our benches and racks provide a solid foundation for a wide range of strength training exercises. Built with heavy-duty steel and high-density padding, they ensure maximum safety, comfort, and performance—perfect for both beginner and advanced athletes in commercial gym settings.',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 162,
+    sku: 'GYM-COM-163',
+    name: 'POWER BENCH ADJUSTABLE',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR24,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed for stability and versatility, our benches and racks provide a solid foundation for a wide range of strength training exercises. Built with heavy-duty steel and high-density padding, they ensure maximum safety, comfort, and performance—perfect for both beginner and advanced athletes in commercial gym settings.',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 163,
+    sku: 'GYM-COM-164',
+    name: 'ABDOMINAL BOARD ADJUSTABLE',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR25,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed for stability and versatility, our benches and racks provide a solid foundation for a wide range of strength training exercises. Built with heavy-duty steel and high-density padding, they ensure maximum safety, comfort, and performance—perfect for both beginner and advanced athletes in commercial gym settings.',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 164,
+    sku: 'GYM-COM-165',
+    name: 'OLYMPIC FLAT BENCH ',
+    category: 'Strength',
+    subcategory: 'Benches & Racks',
+    image: BR26,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Designed for stability and versatility, our benches and racks provide a solid foundation for a wide range of strength training exercises. Built with heavy-duty steel and high-density padding, they ensure maximum safety, comfort, and performance—perfect for both beginner and advanced athletes in commercial gym settings.',
+    muscle: 'Depends on Workout'
+  },
+
+  //Strenght --> Dumbell and Plates
+  {
+    id: 165,
+    sku: 'GYM-COM-166',
+    name: 'WEIGHTED PLATED V1',
+    category: 'Strength',
+    subcategory: 'Dumbells & Plates',
+    image: D1,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Crafted with durability and precision, our plates and dumbbells are ideal for both free weight training and functional fitness routines. With anti-slip grip handles, balanced weight distribution, and a sleek, rust-resistant finish, they’re built to withstand intense daily use in any commercial gym environment',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 166,
+    sku: 'GYM-COM-167',
+    name: 'WEIGHTED PLATED V2',
+    category: 'Strength',
+    subcategory: 'Dumbells & Plates',
+    image: D2,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Crafted with durability and precision, our plates and dumbbells are ideal for both free weight training and functional fitness routines. With anti-slip grip handles, balanced weight distribution, and a sleek, rust-resistant finish, they’re built to withstand intense daily use in any commercial gym environment',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 167,
+    sku: 'GYM-COM-168',
+    name: 'WEIGHTED PLATES V3',
+    category: 'Strength',
+    subcategory: 'Dumbells & Plates',
+    image: D3,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Crafted with durability and precision, our plates and dumbbells are ideal for both free weight training and functional fitness routines. With anti-slip grip handles, balanced weight distribution, and a sleek, rust-resistant finish, they’re built to withstand intense daily use in any commercial gym environment',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 168,
+    sku: 'GYM-COM-169',
+    name: 'DUMBELL V1',
+    category: 'Strength',
+    subcategory: 'Dumbells & Plates',
+    image: D4,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Crafted with durability and precision, our plates and dumbbells are ideal for both free weight training and functional fitness routines. With anti-slip grip handles, balanced weight distribution, and a sleek, rust-resistant finish, they’re built to withstand intense daily use in any commercial gym environment',
+    muscle: 'Depends on Workout'
+  },
+  {
+    id: 169,
+    sku: 'GYM-COM-170',
+    name: 'DUMBELL V2',
+    category: 'Strength',
+    subcategory: 'Dumbells & Plates',
+    image: D5,
+    price: 24000,
+    type: 'Commercial',
+    description: 'Crafted with durability and precision, our plates and dumbbells are ideal for both free weight training and functional fitness routines. With anti-slip grip handles, balanced weight distribution, and a sleek, rust-resistant finish, they’re built to withstand intense daily use in any commercial gym environment',
+    muscle: 'Depends on Workout'
+  },
+
+  //Cardio --> Spinning bike
+  {
+    id: 170,
+    sku: 'GYM-COM-171',
+    name: 'Spinning Bike BS 6',
+    category: 'Cardio',
+    subcategory: 'Spinning Bikes',
+    image: Spinning2,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The BS5 is a spinning bike with a 20kg belt driven flywheel and can be used in both the home and gym. The handle and seat both have 2 way adjustment.',
+    specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
+    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
+  },
+  {
+    id: 171,
+    sku: 'GYM-COM-172',
+    name: 'Spinning Bike BS 7',
+    category: 'Cardio',
+    subcategory: 'Spinning Bikes',
+    image: Spinning3,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The BS5 is a spinning bike with a 20kg belt driven flywheel and can be used in both the home and gym. The handle and seat both have 2 way adjustment.',
+    specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
+    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
+  },
+
+  //Cardio --> Stair Master
+  {
+    id: 172,
+    sku: 'GYM-COM-173',
+    name: 'Stair Master V1',
+    category: 'Cardio',
+    subcategory: 'Stair Master',
+    image: Stair1,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Stair-type cardio machines simulate real stair climbing, providing a high-intensity, low-impact workout that targets the glutes, quads, hamstrings, and calves. Designed for commercial use, they offer adjustable resistance levels, stable handrails, and smooth, quiet operation—making them ideal for endurance training and lower-body sculpting.',
+    specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
+    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
+  },
+  {
+    id: 173,
+    sku: 'GYM-COM-174',
+    name: 'Stair Master V2',
+    category: 'Cardio',
+    subcategory: 'Stair Master',
+    image: Stair2,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Stair-type cardio machines simulate real stair climbing, providing a high-intensity, low-impact workout that targets the glutes, quads, hamstrings, and calves. Designed for commercial use, they offer adjustable resistance levels, stable handrails, and smooth, quiet operation—making them ideal for endurance training and lower-body sculpting.',
+    specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
+    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
+  },
+
+  //Cardio --> air bikes
+  {
+    id: 174,
+    sku: 'GYM-COM-175',
+    name: 'Air Rower V1',
+    category: 'Cardio',
+    subcategory: 'Air Rower',
+    image: air1,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Air bikes use wind resistance to provide a dynamic, full-body cardio workout. The harder you pedal, the greater the resistance, making them ideal for HIIT, endurance training, and calorie burning. With moving handles and a fan-based resistance system, air bikes effectively engage both upper and lower body muscles while offering a smooth and customizable ride.',
+    specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
+    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
+  },
+  {
+    id: 175,
+    sku: 'GYM-COM-176',
+    name: 'Air Rower V2',
+    category: 'Cardio',
+    subcategory: 'Air Rower',
+    image: air2,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Air bikes use wind resistance to provide a dynamic, full-body cardio workout. The harder you pedal, the greater the resistance, making them ideal for HIIT, endurance training, and calorie burning. With moving handles and a fan-based resistance system, air bikes effectively engage both upper and lower body muscles while offering a smooth and customizable ride.',
+    specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
+    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
+  },
+
+
+  //accessories
+
+  {
+    id: 176,
+    sku: 'GYM-COM-177',
+    name: 'GYM FAN M1',
+    category: 'Utilities',
+    subcategory: 'Utilities',
+    image: Ut1,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+  {
+    id: 177,
+    sku: 'GYM-COM-178',
+    name: 'GYM FAN M2',
+    category: 'Utilities',
+    subcategory: 'Utilities',
+    image: Ut2,
+    price: 0,
+    type: 'Commercial',
+    description: 'High-quality accessory designed for durability and performance in any gym setup.',
+    specification: 'Commercial-grade material, ideal for strength training support.',
+    muscle: 'Varies by use'
+  },
+
+
+
+
+
+
+
 
 
 
