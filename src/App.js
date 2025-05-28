@@ -14,6 +14,8 @@ import ProductDetail from './pages/ProductDetail';
 import ScrollToTop from "./components/ScrollToTop";
 import { useEffect } from "react";
 import TermsAndConditions from "./pages/termsandcond";
+import Login from "./pages/Login";
+import ProfessionalsHandler from "./ProfessionalsHandler";
 
 function App() {
   useEffect(() => {
@@ -46,6 +48,8 @@ function App() {
               <meta property="og:image" content="https://trueiron.shop/favicon.ico" />
               <meta property="og:url" content="https://trueiron.shop" />
               <meta name="twitter:card" content="summary_large_image" />
+              
+
             </Helmet>
 
             <Navbar />
@@ -63,6 +67,8 @@ function App() {
                 <Route path="/certifiedproducts" element={<CertifiedProducts />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/terms" element={<TermsAndConditions></TermsAndConditions>}></Route>
+                <Route path="login" element={<Login></Login>}></Route>
+                <Route path="/professionals" element={<ProfessionalsHandler />} />
               </Routes>
             </main>
 

@@ -1,16 +1,21 @@
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { generateQuotationPDF } from './generatePDF';
+import auth from "../config"
+import { useEffect } from 'react';
 
 export default function Cart() {
   const { cartItems, removeFromCart } = useCart();
   const whatsappNumber = '916385706756';
+  const [blogs, setBlogs] = useState([]);
+    const [admin, setadmin] = useState(false);
 
-const message =
-  `Hi, I would like to enquire about the following products:\n\n` +
-  cartItems
-    .map((item, index) => `${index + 1}. ${item.name} (SKU: ${item.sku}). (Color:${item.selectedColor})`)
-    .join('\n');
+  const message =
+    `Hi, I would like to enquire about the following products:\n\n` +
+    cartItems
+      .map((item, index) => `${index + 1}. ${item.name} (SKU: ${item.sku}). (Color:${item.selectedColor})`)
+      .join('\n');
 
 
   const handleSubmit = () => {
@@ -27,6 +32,21 @@ const message =
       setRemovingId(null);
     }, 300); // Match this with the transition duration
   };
+
+  useEffect(() => {
+
+
+        auth.onAuthStateChanged(function(user){
+            if(user){
+                if(user.uid === 'W8mdeLQYrZfbugze4YTIgdyuFPY2'){
+                    setadmin(true)
+                }
+            } else {
+                setadmin(false)
+            }
+        })
+
+    }, [])
 
   return (
     <div className="p-4">
@@ -70,6 +90,13 @@ const message =
           >
             Submit Order via WhatsApp
           </button>
+          {admin?<button
+            onClick={() => generateQuotationPDF(cartItems)}
+            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+          >
+            Download Quotation PDF
+          </button>:''}
+          
         </div>
       )}
     </div>
