@@ -261,6 +261,22 @@ import Ut2 from '../src/assets/commercial/Utilities/Ut2.jpg'
 
 //Cardio --> Ski Machines
 import ski1 from '../src/assets/commercial/cardio/skimachine/ski1.png'
+
+
+//Unique --> Unique Equipments
+import Unique1 from '../src/assets/commercial/unique/Unique1.jpg'
+import Unique2 from '../src/assets/commercial/unique/Unique2.jpg'
+import Unique3 from '../src/assets/commercial/unique/Unique3.jpg'
+import Unique4 from '../src/assets/commercial/unique/Unique4.jpg'
+import Unique5 from '../src/assets/commercial/unique/Unique5.jpg'
+import Unique6 from '../src/assets/commercial/unique/Unique6.jpg'
+import Unique7 from '../src/assets/commercial/unique/Unique7.jpg'
+import Unique8 from '../src/assets/commercial/unique/Unique8.jpg'
+import Unique9 from '../src/assets/commercial/unique/Unique9.jpg'
+import Unique10 from '../src/assets/commercial/unique/Unique10.jpg'
+import Unique11 from '../src/assets/commercial/unique/Unique11.jpg'
+import Unique12 from '../src/assets/commercial/unique/Unique12.jpg'
+
 export const products = [
   // Cardio → Treadmill
   {
@@ -3132,6 +3148,169 @@ export const products = [
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
     muscle: 'Shoulder'
   },
+
+
+  //Unique --> Unique Equipments
+  {
+    id: 217,
+    sku: 'GYM-COM-218',
+    name: 'HYPER LAT PULLDOWN',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique1,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Hyper Lat Pull Down machine targets the latissimus dorsi (lats), helping to build a wide and strong back. It allows controlled, isolated movement, improving upper body strength and posture while minimizing strain on the lower back.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'LATS'
+  },
+{
+    id: 218,
+    sku: 'GYM-COM-219',
+    name: 'ABDOMINAL MACHINE',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique2,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Abdominal machine is designed to isolate and strengthen the core muscles, especially the rectus abdominis. It provides resistance for crunch-like movements, helping users tone their abs and improve overall core stability.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'ABDOMEN'
+  },
+  {
+    id: 219,
+    sku: 'GYM-COM-220',
+    name: 'GLUTE HAM DEVELOPER',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique3,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Glute Ham Developer targets the glutes, hamstrings, and lower back. Its ideal for strengthening the posterior chain, improving athletic performance, and enhancing core stability through exercises like glute-ham raises, back extensions, and sit-ups.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'GLUTES'
+  },
+  {
+    id: 220,
+    sku: 'GYM-COM-221',
+    name: 'SQUAT BENCH',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique4,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Squat Bench is designed to support proper form during squats by guiding depth and posture. It helps users maintain consistent squat range, improves safety, and is especially useful for beginners learning correct technique or for rehab-focused training.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
+  },
+{
+    id: 221,
+    sku: 'GYM-COM-222',
+    name: 'BODY BUILDING TANK',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique5,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Body Building Tank, also known as a Tank Push Sled, is a heavy-duty sled used for full-body strength and conditioning workouts. It builds explosive power, endurance, and muscle by engaging the legs, core, and upper body during pushing or pulling exercises. Great for functional training and cardio bursts.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'LEGS'
+  },
+
+
+  {
+    id: 222,
+    sku: 'GYM-COM-223',
+    name: 'HIP THRUST',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique6,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Hip Thrust machine targets the glutes, helping to build strength, size, and power in the lower body. It supports proper form and stability, making it a safe and effective way to isolate the glute muscles while reducing strain on the lower back. Ideal for athletes and fitness enthusiasts focused on lower body development.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'LEGS'
+  },
+{
+    id: 223,
+    sku: 'GYM-COM-224',
+    name: 'FLIP TYRE',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique7,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Flip Tyre is a functional training tool used for full-body strength and conditioning. It mimics the motion of lifting and flipping a heavy object, engaging the legs, back, arms, and core. Great for building explosive power, grip strength, and endurance—often used in strongman and high-intensity workouts.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'LEGS'
+  },
+{
+    id: 224,
+    sku: 'GYM-COM-225',
+    name: 'COMMERCIAL CROSSFIT 360',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique8,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Commercial CrossFit 360 is a versatile functional training station designed for group workouts and circuit training. It includes multiple workout stations like monkey bars, battle rope anchors, suspension trainers, dip bars, and more. Ideal for strength, agility, and endurance training, it supports high-intensity CrossFit routines in a compact, all-in-one setup',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'LEGS'
+  },
+{
+    id: 225,
+    sku: 'GYM-COM-226',
+    name: 'DEAD LIFT',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique9,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Deadlift station is built for performing one of the most effective compound lifts—deadlifts. It targets multiple muscle groups including the hamstrings, glutes, back, and core. The platform ensures safety and stability, reduces floor damage, and helps lifters maintain proper form during heavy lifts. Ideal for strength building and power training.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'LEGS'
+  },
+{
+    id: 226,
+    sku: 'GYM-COM-227',
+    name: 'LEG PRESS 90 deg',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique10,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Leg Press 90° machine targets the lower body muscles—mainly the quadriceps, hamstrings, and glutes. With a 90-degree seated angle, it allows users to press weights upward using their legs, providing a safe and controlled alternative to squats while reducing strain on the spine. Great for building leg strength and mass.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'LEGS'
+  },
+{
+    id: 227,
+    sku: 'GYM-COM-228',
+    name: 'ROPE MASTER',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique11,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Rope Master (Rope Pull Machine)The Rope Master, also known as a rope pull machine, is a versatile fitness device designed to simulate the action of rope climbing. It provides a continuous loop of rope that users pull against adjustable resistance, offering a comprehensive workout that targets the upper body, core, and cardiovascular system.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'LEGS'
+  },
+{
+    id: 228,
+    sku: 'GYM-COM-229',
+    name: 'SISSY SQUAT',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique12,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Sissy Squat machine is designed to isolate and strengthen the quadriceps while also engaging the core. It supports the lower legs and keeps the body in position, allowing users to perform deep squats safely without stressing the knees or back. Great for sculpting the thighs and improving squat form.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'LEGS'
+  },
+
+
 
 
 
