@@ -456,7 +456,7 @@ export const products = [
   },
   {
     id: 17,
-    sku: 'GYM-COM-0018',
+    sku: 'GYM-COM-018',
     name: 'Recumbent BIKE DX6R',
     category: 'Cardio',
     subcategory: 'Recumbent Bikes',

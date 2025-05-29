@@ -10,6 +10,12 @@ export default function Cart() {
   const [admin, setAdmin] = useState(false);
   const [editableItems, setEditableItems] = useState([]);
 
+  const [customName, setCustomName] = useState('');
+  const [customSku, setCustomSku] = useState('');
+  const [customQty, setCustomQty] = useState(1);
+  const [customPrice, setCustomPrice] = useState(0);
+  const [customImage, setCustomImage] = useState(null);
+
   useEffect(() => {
     auth.onAuthStateChanged(user => {
       if (user && user.uid === 'W8mdeLQYrZfbugze4YTIgdyuFPY2') {
@@ -43,18 +49,49 @@ export default function Cart() {
     );
   };
 
-  const message =
-    `Hi, I would like to enquire about the following products:\n\n` +
-    cartItems
-      .map(
-        (item, index) =>
-          `${index + 1}. ${item.name} (SKU: ${item.sku}). (Color: ${item.selectedColor})`
-      )
-      .join('\n');
+  const handleImageUpload = e => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setCustomImage(reader.result);
+    };
+    if (file) reader.readAsDataURL(file);
+  };
+
+  const handleAddCustomProduct = () => {
+    if (!customName || customQty < 1) {
+      alert('Please enter at least a name and valid quantity');
+      return;
+    }
+
+    const newCustomItem = {
+      id: Date.now().toString(),
+      name: customName,
+      sku: customSku || 'N/A',
+      quantity: customQty,
+      price: customPrice,
+      image: customImage || '/default-custom.webp',
+      selectedColor: 'N/A',
+    };
+
+    setEditableItems(prev => [...prev, newCustomItem]);
+
+    // Clear inputs
+    setCustomName('');
+    setCustomSku('');
+    setCustomQty(1);
+    setCustomPrice(0);
+    setCustomImage(null);
+  };
 
   const handleSubmit = () => {
-    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappLink, '_blank');
+    const message = `Hi, I would like to enquire about the following products:\n\n` +
+      cartItems
+        .map((item, i) => `${i + 1}. ${item.name} (SKU: ${item.sku}). Color: ${item.selectedColor}`)
+        .join('\n');
+
+    const link = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(link, '_blank');
   };
 
   const [removingId, setRemovingId] = useState(null);
@@ -71,9 +108,9 @@ export default function Cart() {
 
   return (
     <div className="p-4">
-      <h2 className="text-2xl mb-4 font-bold animate-fade-in">🛒 Your Cart</h2>
+      <h2 className="text-2xl mb-4 font-bold">🛒 Your Cart</h2>
 
-      {cartItems.length === 0 ? (
+      {dataSource.length === 0 ? (
         <p className="text-gray-500">No items added.</p>
       ) : (
         <div className="space-y-4">
@@ -81,28 +118,27 @@ export default function Cart() {
             <div
               key={item.id}
               className={`flex flex-col md:flex-row justify-between items-start border p-4 rounded transition-all duration-300 ease-in-out transform 
-                ${removingId === item.id ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}
-                bg-white shadow hover:shadow-md`}
+              ${removingId === item.id ? 'opacity-0 scale-95' : 'opacity-100 scale-100'} 
+              bg-white shadow`}
             >
-              
-              <Link
-                to={`/product/${item.id}`}
-                className="flex items-center space-x-4 hover:bg-gray-50 rounded p-2 transition"
-              >
-                <img src={item.image} alt={item.name} className="h-16 rounded" />
+              <div className="flex items-center space-x-4">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="h-16 w-16 object-cover rounded"
+                />
                 <div>
-                  <p className="font-semibold text-gray-800">{item.name}</p>
+                  <p className="font-semibold">{item.name}</p>
                   <p className="text-sm text-gray-500">SKU: {item.sku}</p>
                 </div>
-              </Link>
+              </div>
 
               <div className="mt-2 flex flex-col gap-1 ml-4">
                 <p>Color: {item.selectedColor}</p>
-                <p className="text-green-700 font-medium">Customisable as per requirement</p>
 
                 {admin && (
                   <div className="flex gap-4 mt-2">
-                    <label className="text-sm">
+                    <label>
                       Qty:
                       <input
                         type="number"
@@ -112,7 +148,7 @@ export default function Cart() {
                         className="ml-1 border p-1 w-16"
                       />
                     </label>
-                    <label className="text-sm">
+                    <label>
                       Price:
                       <input
                         type="number"
@@ -127,28 +163,80 @@ export default function Cart() {
 
               <button
                 onClick={() => handleRemove(item.id)}
-                className="text-red-500 mt-2 md:mt-0 md:ml-4 hover:text-red-700 transition"
+                className="text-red-500 mt-2 md:mt-0 md:ml-4 hover:text-red-700"
               >
                 Remove
               </button>
+
             </div>
           ))}
 
+          {admin && (
+            <>
+              <div className="mt-8 border-t pt-4">
+                <h3 className="text-lg font-semibold mb-2">Add Custom Product</h3>
+                <div className="flex flex-col md:flex-row items-center gap-4">
+                  <input
+                    type="text"
+                    placeholder="Product Name"
+                    value={customName}
+                    onChange={e => setCustomName(e.target.value)}
+                    className="border px-3 py-2 rounded w-full md:w-1/4"
+                  />
+                  <input
+                    type="text"
+                    placeholder="SKU (Optional)"
+                    value={customSku}
+                    onChange={e => setCustomSku(e.target.value)}
+                    className="border px-3 py-2 rounded w-full md:w-1/4"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Qty"
+                    min="1"
+                    value={customQty}
+                    onChange={e => setCustomQty(Number(e.target.value))}
+                    className="border px-3 py-2 rounded w-full md:w-1/6"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Price"
+                    min="0"
+                    step="0.01"
+                    value={customPrice}
+                    onChange={e => setCustomPrice(Number(e.target.value))}
+                    className="border px-3 py-2 rounded w-full md:w-1/6"
+                  />
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleImageUpload}
+                    className="border px-3 py-2 rounded w-full md:w-1/4"
+                  />
+                  <button
+                    onClick={handleAddCustomProduct}
+                    className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+
+              <button
+                onClick={() => generateQuotationPDF(editableItems)}
+                className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >
+                Download Quotation PDF
+              </button>
+            </>
+          )}
+
           <button
             onClick={handleSubmit}
-            className="mt-6 bg-black hover:bg-red-600 text-white px-6 py-3 rounded shadow-md transition-transform transform hover:scale-105"
+            className="mt-6 bg-black hover:bg-red-600 text-white px-6 py-3 rounded shadow-md"
           >
             Submit Order via WhatsApp
           </button>
-
-          {admin && (
-            <button
-              onClick={() => generateQuotationPDF(editableItems)}
-              className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-            >
-              Download Quotation PDF
-            </button>
-          )}
         </div>
       )}
     </div>
