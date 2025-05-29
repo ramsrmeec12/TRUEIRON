@@ -276,6 +276,8 @@ import Unique9 from '../src/assets/commercial/unique/Unique9.jpg'
 import Unique10 from '../src/assets/commercial/unique/Unique10.jpg'
 import Unique11 from '../src/assets/commercial/unique/Unique11.jpg'
 import Unique12 from '../src/assets/commercial/unique/Unique12.jpg'
+import Unique13 from '../src/assets/commercial/unique/Unique13.jpg'
+import Unique14 from '../src/assets/commercial/unique/Unique14.jpg'
 
 export const products = [
   // Cardio → Treadmill
@@ -290,7 +292,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Marathon features a 9" LCD display featuring a blue backlight. This display offers a range of functions including speed adjustments, incline settings, and a variety of workout programs designed to improve user satisfaction and experience.',
     specification: 'Length: 86 inches, Width: 38 inches, Height: 63 inches',
-    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
+    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes',
+
   },
   {
     id: 2,
@@ -473,20 +476,20 @@ export const products = [
 
   //Cardio --> Spinning
   {
-  id: 15,
-  sku: 'GYM-COM-016',
-  name: 'Spinning Bike BS 5',
-  category: 'Cardio',
-  subcategory: 'Spinning Bikes',
-  image: Spinning1,
-  price: 75000,
-  type: 'Commercial',
-  description: 'The BS5 is a spinning bike with a 20kg belt driven flywheel and can be used in both the home and gym. The handle and seat both have 2 way adjustment.',
-  specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
-  muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes',
- 
-}
-,
+    id: 15,
+    sku: 'GYM-COM-016',
+    name: 'Spinning Bike BS 5',
+    category: 'Cardio',
+    subcategory: 'Spinning Bikes',
+    image: Spinning1,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The BS5 is a spinning bike with a 20kg belt driven flywheel and can be used in both the home and gym. The handle and seat both have 2 way adjustment.',
+    specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
+    muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes',
+
+  }
+  ,
 
   //Cardio --> Recumbent
 
@@ -570,7 +573,7 @@ export const products = [
     description: 'The Isolateral Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
     muscle: 'UPPER, LOWER, MIDDLE CHEST',
-     colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+    colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
   },
   {
     id: 22,
@@ -583,7 +586,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Isolateral DECLINE Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 23,
@@ -596,7 +600,8 @@ export const products = [
     type: 'Commercial',
     description: 'The VERTICAL Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['gray', 'black']
+
   },
   {
     id: 24,
@@ -609,7 +614,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Isolateral DECLINE Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 25,
@@ -622,7 +628,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Isolateral DECLINE Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 26,
@@ -635,7 +642,8 @@ export const products = [
     type: 'Commercial',
     description: 'The PEC FLIES MACHINE is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['gray', 'black']
+
   },
   {
     id: 27,
@@ -648,7 +656,8 @@ export const products = [
     type: 'Commercial',
     description: 'The FLAT Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['gray', 'black']
+
   },
   {
     id: 28,
@@ -661,7 +670,8 @@ export const products = [
     type: 'Commercial',
     description: 'The MULTI Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['gray', 'black']
+
   },
   {
     id: 29,
@@ -674,7 +684,8 @@ export const products = [
     type: 'Commercial',
     description: 'The INCLINE Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['gray', 'black']
+
   },
   {
     id: 30,
@@ -687,7 +698,8 @@ export const products = [
     type: 'Commercial',
     description: 'The PEC Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['gray', 'black']
+
   },
   {
     id: 31,
@@ -700,7 +712,8 @@ export const products = [
     type: 'Commercial',
     description: 'The VERTICAL Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['gray', 'black']
+
   },
   {
     id: 32,
@@ -713,7 +726,8 @@ export const products = [
     type: 'Commercial',
     description: 'The PEC Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['gray', 'black']
+
   },
   {
     id: 33,
@@ -726,7 +740,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Isolateral DECLINE Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 34,
@@ -739,7 +754,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Isolateral DECLINE Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 35,
@@ -752,7 +768,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Isolateral DECLINE Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 36,
@@ -765,7 +782,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Isolateral INCLINE Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 37,
@@ -791,7 +809,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Isolateral INCLINE Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
 
 
@@ -808,7 +827,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 40,
@@ -821,7 +841,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 41,
@@ -834,7 +855,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 42,
@@ -847,7 +869,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 43,
@@ -860,7 +883,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 44,
@@ -873,7 +897,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 45,
@@ -886,7 +911,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 46,
@@ -899,7 +925,8 @@ export const products = [
     type: 'Commercial',
     description: 'A meticulously crafted machine designed to enhance your back muscle training. This machine allows each arm to move independently, ensuring balanced muscle development. With a targeted focus on distributing load to the back muscles, users can effectively isolate and challenge their muscles. Its adjustable seat and handles offer versatility and optimal biomechanical alignment for personalized workouts.',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 47,
@@ -912,7 +939,8 @@ export const products = [
     type: 'Commercial',
     description: 'A meticulously crafted machine designed to enhance your back muscle training. This machine allows each arm to move independently, ensuring balanced muscle development. With a targeted focus on distributing load to the back muscles, users can effectively isolate and challenge their muscles. Its adjustable seat and handles offer versatility and optimal biomechanical alignment for personalized workouts.',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 48,
@@ -925,7 +953,8 @@ export const products = [
     type: 'Commercial',
     description: 'A meticulously crafted machine designed to enhance your back muscle training. This machine allows each arm to move independently, ensuring balanced muscle development. With a targeted focus on distributing load to the back muscles, users can effectively isolate and challenge their muscles. Its adjustable seat and handles offer versatility and optimal biomechanical alignment for personalized workouts.',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 49,
@@ -938,7 +967,8 @@ export const products = [
     type: 'Commercial',
     description: 'A meticulously crafted machine designed to enhance your back muscle training. This machine allows each arm to move independently, ensuring balanced muscle development. With a targeted focus on distributing load to the back muscles, users can effectively isolate and challenge their muscles. Its adjustable seat and handles offer versatility and optimal biomechanical alignment for personalized workouts.',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 50,
@@ -951,7 +981,8 @@ export const products = [
     type: 'Commercial',
     description: 'A meticulously crafted machine designed to enhance your back muscle training. This machine allows each arm to move independently, ensuring balanced muscle development. With a targeted focus on distributing load to the back muscles, users can effectively isolate and challenge their muscles. Its adjustable seat and handles offer versatility and optimal biomechanical alignment for personalized workouts.',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 51,
@@ -964,7 +995,8 @@ export const products = [
     type: 'Commercial',
     description: 'A meticulously crafted machine designed to enhance your back muscle training. This machine allows each arm to move independently, ensuring balanced muscle development. With a targeted focus on distributing load to the back muscles, users can effectively isolate and challenge their muscles. Its adjustable seat and handles offer versatility and optimal biomechanical alignment for personalized workouts.',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 52,
@@ -977,7 +1009,8 @@ export const products = [
     type: 'Commercial',
     description: 'A meticulously crafted machine designed to enhance your back muscle training. This machine allows each arm to move independently, ensuring balanced muscle development. With a targeted focus on distributing load to the back muscles, users can effectively isolate and challenge their muscles. Its adjustable seat and handles offer versatility and optimal biomechanical alignment for personalized workouts.',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 53,
@@ -990,7 +1023,8 @@ export const products = [
     type: 'Commercial',
     description: 'A meticulously crafted machine designed to enhance your back muscle training. This machine allows each arm to move independently, ensuring balanced muscle development. With a targeted focus on distributing load to the back muscles, users can effectively isolate and challenge their muscles. Its adjustable seat and handles offer versatility and optimal biomechanical alignment for personalized workouts.',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 54,
@@ -1003,7 +1037,8 @@ export const products = [
     type: 'Commercial',
     description: 'A meticulously crafted machine designed to enhance your back muscle training. This machine allows each arm to move independently, ensuring balanced muscle development. With a targeted focus on distributing load to the back muscles, users can effectively isolate and challenge their muscles. Its adjustable seat and handles offer versatility and optimal biomechanical alignment for personalized workouts.',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 55,
@@ -1016,7 +1051,8 @@ export const products = [
     type: 'Commercial',
     description: 'A meticulously crafted machine designed to enhance your back muscle training. This machine allows each arm to move independently, ensuring balanced muscle development. With a targeted focus on distributing load to the back muscles, users can effectively isolate and challenge their muscles. Its adjustable seat and handles offer versatility and optimal biomechanical alignment for personalized workouts.',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
 
 
@@ -1033,7 +1069,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 57,
@@ -1044,7 +1081,8 @@ export const products = [
     image: Shoulder2,
     price: 75000,
     type: 'Commercial',
-    description: 'good'
+    description: 'good', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 58,
@@ -1057,7 +1095,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 59,
@@ -1070,7 +1109,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 60,
@@ -1083,7 +1123,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 61,
@@ -1096,7 +1137,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
 
 
@@ -1112,7 +1154,8 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 63,
@@ -1125,7 +1168,8 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 64,
@@ -1138,7 +1182,8 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 65,
@@ -1151,7 +1196,8 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 66,
@@ -1164,7 +1210,8 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
 
 
@@ -1180,7 +1227,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 68,
@@ -1193,7 +1241,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 69,
@@ -1206,7 +1255,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 70,
@@ -1219,7 +1269,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 71,
@@ -1232,7 +1283,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 72,
@@ -1245,7 +1297,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 73,
@@ -1258,7 +1311,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 74,
@@ -1271,7 +1325,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 75,
@@ -1284,7 +1339,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 76,
@@ -1297,7 +1353,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 77,
@@ -1310,7 +1367,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 78,
@@ -1323,7 +1381,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 79,
@@ -1336,7 +1395,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 80,
@@ -1349,7 +1409,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 81,
@@ -1362,7 +1423,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 82,
@@ -1375,7 +1437,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 83,
@@ -1388,7 +1451,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 84,
@@ -1401,7 +1465,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 85,
@@ -1414,7 +1479,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 86,
@@ -1427,7 +1493,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 87,
@@ -1440,7 +1507,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
 
 
@@ -1456,7 +1524,8 @@ export const products = [
     type: 'Commercial',
     description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.',
     specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
-    muscle: 'Full Body'
+    muscle: 'Full Body', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 89,
@@ -1469,7 +1538,8 @@ export const products = [
     type: 'Commercial',
     description: 'The innovative design is a fusion of smith and squat rack. Advanced design accommodates lightweights and heavy lifters. Ideal and versatile unit for beginners as well professional builders. Engineered with racking pegs for 10-weight bar adjustment. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows lifting actual weight. The extra bar and rack allows free work outs. Feature of shroud is provided to make the machine dust free and to look elegant.',
     specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
-    muscle: 'Full Body'
+    muscle: 'Full Body', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
 
 
@@ -1485,7 +1555,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['gray', 'black']
+
   },
   {
     id: 91,
@@ -1498,7 +1569,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['gray', 'black']
+
   },
   {
     id: 92,
@@ -1511,7 +1583,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['gray', 'black']
+
   },
 
 
@@ -1527,7 +1600,8 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['gray', 'black']
+
   },
   {
     id: 94,
@@ -1540,7 +1614,8 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['gray', 'black']
+
   },
   {
     id: 95,
@@ -1553,7 +1628,8 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['gray', 'black']
+
   },
 
   //Strength --> Accessories
@@ -2054,7 +2130,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
 
   //Strength  --> Abdominal
@@ -2069,7 +2146,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
 
   //Strength --> Benches and racks
@@ -2281,7 +2359,8 @@ export const products = [
     type: 'Commercial',
     description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.',
     specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
-    muscle: 'Full Body'
+    muscle: 'Full Body', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 151,
@@ -2294,7 +2373,8 @@ export const products = [
     type: 'Commercial',
     description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.',
     specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
-    muscle: 'Full Body'
+    muscle: 'Full Body', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 152,
@@ -2307,7 +2387,8 @@ export const products = [
     type: 'Commercial',
     description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.',
     specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
-    muscle: 'Full Body'
+    muscle: 'Full Body', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 153,
@@ -2320,7 +2401,8 @@ export const products = [
     type: 'Commercial',
     description: 'Ideal and versatile unit for beginners as well as professional bodybuilders. Engineered with racking pegs for 10-weight bar adjustments. Olympic bar travels on linear bearings for smooth operation. Counterbalance system allows for lifting of actual weight. Extra feature of shroud is provided to make the machine dust free and to look elegant.',
     specification: 'Length: 56 inches, Width: 86 inches, Height: 90 inches',
-    muscle: 'Full Body'
+    muscle: 'Full Body', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
 
   //Strength --> benches and racks
@@ -2660,7 +2742,7 @@ export const products = [
     description: 'The JEP 9 elliptical comes with a rear crank system with a protective housing and oversized footpads for ease of use. The JEP 9 elliptical includes added comfort features of a reading rack, USB charging and afan.',
     specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
     muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
-  },{
+  }, {
     id: 180,
     sku: 'GYM-COM-181',
     name: 'ELLIPTICAL S2',
@@ -2687,7 +2769,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 182,
@@ -2700,7 +2783,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 183,
@@ -2713,7 +2797,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 184,
@@ -2727,7 +2812,7 @@ export const products = [
     description: 'The Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
     muscle: 'UPPER, LOWER, MIDDLE CHEST',
-     colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+    colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
   },
   {
     id: 185,
@@ -2741,7 +2826,7 @@ export const products = [
     description: 'The Incline Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
     muscle: 'UPPER, LOWER, MIDDLE CHEST',
-     colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+    colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
   },
   {
     id: 186,
@@ -2755,7 +2840,7 @@ export const products = [
     description: 'The WIDE Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
     muscle: 'UPPER, LOWER, MIDDLE CHEST',
-     colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+    colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
   },
   {
     id: 187,
@@ -2768,7 +2853,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 188,
@@ -2781,9 +2867,10 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-   {
+  {
     id: 189,
     sku: 'GYM-COM-190',
     name: 'CALF MACHINE',
@@ -2794,9 +2881,10 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-   {
+  {
     id: 190,
     sku: 'GYM-COM-191',
     name: 'LEG PRESS',
@@ -2807,7 +2895,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 191,
@@ -2820,7 +2909,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 192,
@@ -2833,7 +2923,8 @@ export const products = [
     type: 'Commercial',
     description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 193,
@@ -2846,9 +2937,10 @@ export const products = [
     type: 'Commercial',
     description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-   {
+  {
     id: 194,
     sku: 'GYM-COM-195',
     name: 'BICEPS CURL',
@@ -2859,9 +2951,10 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-   {
+  {
     id: 195,
     sku: 'GYM-COM-196',
     name: 'SEATED DIP FOR TRICEPS',
@@ -2872,7 +2965,8 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 196,
@@ -2885,7 +2979,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 197,
@@ -2898,9 +2993,10 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
-   {
+  {
     id: 198,
     sku: 'GYM-COM-199',
     name: 'BICEP CURLS',
@@ -2911,9 +3007,10 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['gray', 'black']
+
   },
-{
+  {
     id: 199,
     sku: 'GYM-COM-200',
     name: 'CAMPER CURL AND TRICEPS',
@@ -2924,7 +3021,8 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['gray', 'black']
+
   },
   {
     id: 200,
@@ -2937,7 +3035,8 @@ export const products = [
     type: 'Commercial',
     description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
     specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
-    muscle: 'Arms'
+    muscle: 'Arms', colorOptions: ['gray', 'black']
+
   },
   {
     id: 201,
@@ -2950,7 +3049,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 202,
@@ -2963,7 +3063,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 203,
@@ -2976,7 +3077,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 204,
@@ -2989,7 +3091,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 205,
@@ -3002,7 +3105,8 @@ export const products = [
     type: 'Commercial',
     description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
     specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
-    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps', colorOptions: ['gray', 'black']
+
   },
   {
     id: 206,
@@ -3015,7 +3119,8 @@ export const products = [
     type: 'Commercial',
     description: 'The SEATED CHEST PRESS MACHINE is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['gray', 'black']
+
   },
   {
     id: 207,
@@ -3028,7 +3133,8 @@ export const products = [
     type: 'Commercial',
     description: 'The INCLINE CHEST PRESS MACHINE is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['gray', 'black']
+
   },
   {
     id: 208,
@@ -3041,7 +3147,8 @@ export const products = [
     type: 'Commercial',
     description: 'The PEC FLIES MACHINE is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
     specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
-    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+    muscle: 'UPPER, LOWER, MIDDLE CHEST', colorOptions: ['gray', 'black']
+
   },
   {
     id: 209,
@@ -3054,7 +3161,8 @@ export const products = [
     type: 'Commercial',
     description: 'Unlock precision and versatility with our Leg Cable Machine, designed to target every major muscle group in your lower body. Whether youre focusing on leg extensions, hamstring curls, hip abductions, or glute kickbacks, this machine delivers smooth, controlled movements with adjustable resistance for all fitness levels.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['gray', 'black']
+
   },
   {
     id: 210,
@@ -3067,7 +3175,8 @@ export const products = [
     type: 'Commercial',
     description: 'Unlock precision and versatility with our Leg Cable Machine, designed to target every major muscle group in your lower body. Whether youre focusing on leg extensions, hamstring curls, hip abductions, or glute kickbacks, this machine delivers smooth, controlled movements with adjustable resistance for all fitness levels.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['gray', 'black']
+
   },
   {
     id: 211,
@@ -3080,9 +3189,10 @@ export const products = [
     type: 'Commercial',
     description: 'Unlock precision and versatility with our Leg Cable Machine, designed to target every major muscle group in your lower body. Whether youre focusing on leg extensions, hamstring curls, hip abductions, or glute kickbacks, this machine delivers smooth, controlled movements with adjustable resistance for all fitness levels.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['gray', 'black']
+
   },
-   {
+  {
     id: 212,
     sku: 'GYM-COM-213',
     name: 'LEG EXTENSION',
@@ -3093,10 +3203,11 @@ export const products = [
     type: 'Commercial',
     description: 'Unlock precision and versatility with our Leg Cable Machine, designed to target every major muscle group in your lower body. Whether youre focusing on leg extensions, hamstring curls, hip abductions, or glute kickbacks, this machine delivers smooth, controlled movements with adjustable resistance for all fitness levels.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['gray', 'black']
+
   },
 
-   {
+  {
     id: 213,
     sku: 'GYM-COM-214',
     name: 'LEG EXTENSION',
@@ -3107,9 +3218,10 @@ export const products = [
     type: 'Commercial',
     description: 'Unlock precision and versatility with our Leg Cable Machine, designed to target every major muscle group in your lower body. Whether youre focusing on leg extensions, hamstring curls, hip abductions, or glute kickbacks, this machine delivers smooth, controlled movements with adjustable resistance for all fitness levels.',
     specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
-    muscle: 'Legs'
+    muscle: 'Legs', colorOptions: ['gray', 'black']
+
   },
-   {
+  {
     id: 214,
     sku: 'GYM-COM-215',
     name: 'LATERAL RAISE MACHINE',
@@ -3120,7 +3232,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['gray', 'black']
+
   },
   {
     id: 215,
@@ -3133,9 +3246,10 @@ export const products = [
     type: 'Commercial',
     description: 'The PECTORAL machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['gray', 'black']
+
   },
-{
+  {
     id: 216,
     sku: 'GYM-COM-217',
     name: 'SHOULDER PRESS MACHINE',
@@ -3146,7 +3260,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['gray', 'black']
+
   },
 
 
@@ -3162,9 +3277,10 @@ export const products = [
     type: 'Commercial',
     description: 'The Hyper Lat Pull Down machine targets the latissimus dorsi (lats), helping to build a wide and strong back. It allows controlled, isolated movement, improving upper body strength and posture while minimizing strain on the lower back.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LATS'
+    muscle: 'LATS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-{
+  {
     id: 218,
     sku: 'GYM-COM-219',
     name: 'ABDOMINAL MACHINE',
@@ -3175,7 +3291,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Abdominal machine is designed to isolate and strengthen the core muscles, especially the rectus abdominis. It provides resistance for crunch-like movements, helping users tone their abs and improve overall core stability.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'ABDOMEN'
+    muscle: 'ABDOMEN', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 219,
@@ -3188,7 +3305,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Glute Ham Developer targets the glutes, hamstrings, and lower back. Its ideal for strengthening the posterior chain, improving athletic performance, and enhancing core stability through exercises like glute-ham raises, back extensions, and sit-ups.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'GLUTES'
+    muscle: 'GLUTES', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
   {
     id: 220,
@@ -3201,9 +3319,10 @@ export const products = [
     type: 'Commercial',
     description: 'The Squat Bench is designed to support proper form during squats by guiding depth and posture. It helps users maintain consistent squat range, improves safety, and is especially useful for beginners learning correct technique or for rehab-focused training.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'Shoulder'
+    muscle: 'Shoulder', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-{
+  {
     id: 221,
     sku: 'GYM-COM-222',
     name: 'BODY BUILDING TANK',
@@ -3214,7 +3333,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Body Building Tank, also known as a Tank Push Sled, is a heavy-duty sled used for full-body strength and conditioning workouts. It builds explosive power, endurance, and muscle by engaging the legs, core, and upper body during pushing or pulling exercises. Great for functional training and cardio bursts.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LEGS'
+    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
 
 
@@ -3229,9 +3349,10 @@ export const products = [
     type: 'Commercial',
     description: 'The Hip Thrust machine targets the glutes, helping to build strength, size, and power in the lower body. It supports proper form and stability, making it a safe and effective way to isolate the glute muscles while reducing strain on the lower back. Ideal for athletes and fitness enthusiasts focused on lower body development.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LEGS'
+    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-{
+  {
     id: 223,
     sku: 'GYM-COM-224',
     name: 'FLIP TYRE',
@@ -3242,9 +3363,10 @@ export const products = [
     type: 'Commercial',
     description: 'The Flip Tyre is a functional training tool used for full-body strength and conditioning. It mimics the motion of lifting and flipping a heavy object, engaging the legs, back, arms, and core. Great for building explosive power, grip strength, and endurance—often used in strongman and high-intensity workouts.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LEGS'
+    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-{
+  {
     id: 224,
     sku: 'GYM-COM-225',
     name: 'COMMERCIAL CROSSFIT 360',
@@ -3255,9 +3377,10 @@ export const products = [
     type: 'Commercial',
     description: 'The Commercial CrossFit 360 is a versatile functional training station designed for group workouts and circuit training. It includes multiple workout stations like monkey bars, battle rope anchors, suspension trainers, dip bars, and more. Ideal for strength, agility, and endurance training, it supports high-intensity CrossFit routines in a compact, all-in-one setup',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LEGS'
+    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-{
+  {
     id: 225,
     sku: 'GYM-COM-226',
     name: 'DEAD LIFT',
@@ -3268,9 +3391,10 @@ export const products = [
     type: 'Commercial',
     description: 'The Deadlift station is built for performing one of the most effective compound lifts—deadlifts. It targets multiple muscle groups including the hamstrings, glutes, back, and core. The platform ensures safety and stability, reduces floor damage, and helps lifters maintain proper form during heavy lifts. Ideal for strength building and power training.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LEGS'
+    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-{
+  {
     id: 226,
     sku: 'GYM-COM-227',
     name: 'LEG PRESS 90 deg',
@@ -3281,9 +3405,10 @@ export const products = [
     type: 'Commercial',
     description: 'The Leg Press 90° machine targets the lower body muscles—mainly the quadriceps, hamstrings, and glutes. With a 90-degree seated angle, it allows users to press weights upward using their legs, providing a safe and controlled alternative to squats while reducing strain on the spine. Great for building leg strength and mass.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LEGS'
+    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-{
+  {
     id: 227,
     sku: 'GYM-COM-228',
     name: 'ROPE MASTER',
@@ -3294,9 +3419,10 @@ export const products = [
     type: 'Commercial',
     description: 'Rope Master (Rope Pull Machine)The Rope Master, also known as a rope pull machine, is a versatile fitness device designed to simulate the action of rope climbing. It provides a continuous loop of rope that users pull against adjustable resistance, offering a comprehensive workout that targets the upper body, core, and cardiovascular system.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LEGS'
+    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
-{
+  {
     id: 228,
     sku: 'GYM-COM-229',
     name: 'SISSY SQUAT',
@@ -3307,7 +3433,36 @@ export const products = [
     type: 'Commercial',
     description: 'The Sissy Squat machine is designed to isolate and strengthen the quadriceps while also engaging the core. It supports the lower legs and keeps the body in position, allowing users to perform deep squats safely without stressing the knees or back. Great for sculpting the thighs and improving squat form.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LEGS'
+    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
+  },
+  {
+    id: 229,
+    sku: 'GYM-COM-230',
+    name: 'ISOLATERAL STANDING RAISE',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique13,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Isolateral Standing Calf Raise machine targets the calf muscles—specifically the gastrocnemius—by allowing users to perform standing raises one leg at a time (isolaterally). This improves muscle balance, enhances lower leg strength, and supports better ankle stability and performance in activities like running and jumping.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
+  },
+  {
+    id: 230,
+    sku: 'GYM-COM-231',
+    name: 'ISOLATERAL STANDING CHEST FLY',
+    category: 'Unique_Equipments',
+    subcategory: 'Unique Equipments',
+    image: Unique14,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Isolateral Standing Chest Fly machine is designed to target the pectoral muscles through a controlled, standing fly motion. It allows independent arm movement (isolateral), helping to correct muscle imbalances while enhancing chest definition and strength. The standing position also engages the core and stabilizing muscles, adding functional strength benefits.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+
   },
 
 

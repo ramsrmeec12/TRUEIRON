@@ -79,14 +79,15 @@ export default function Contact() {
           {/* Google Maps Embed */}
           <div className="rounded overflow-hidden shadow">
             <iframe
-              title="IronLife Gym Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9211.65691931359!2d80.18800848354034!3d13.02823551749613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260d5b4f309af%3A0x27d76f9eb46c8ca!2sIron%20Life%20gym!5e1!3m2!1sen!2sin!4v1747324394404!5m2!1sen!2sin"              width="100%"
-              height="250"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d575.7249085607243!2d80.17004171228159!3d13.029804799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260ded5da7349%3A0x4941cebeb5a616f3!2s18-7%2C%20NSC%20Bose%20Nagar%2C%20Ramapuram%2C%20Chennai%2C%20Tamil%20Nadu%20600089!5e1!3m2!1sen!2sin!4v1748526733035!5m2!1sen!2sin"
+  width="100%"
+  height="250"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Map Location"
+/>
           </div>
         </div>
       </div>

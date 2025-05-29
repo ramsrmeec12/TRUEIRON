@@ -1,4 +1,3 @@
-// src/pages/Commercial.jsx
 import { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ProductGrid from '../components/ProductGrid';
@@ -6,11 +5,11 @@ import { products } from '../data';
 import { useCart } from '../context/CartContext';
 
 const categories = {
-  Cardio: ['Treadmills', 'Ellipticals', 'Upright Bikes', 'Recumbent Bikes', 'Spinning Bikes','Ladder Master','Air Rower','Ski Machine'],
-  Strength: ['Chest', 'Back', 'Shoulder', 'Arms', 'Legs', 'Abdominal', 'Multipurpose','Dumbells & Plates' ,'Benches & Racks'],
+  Cardio: ['Treadmills', 'Ellipticals', 'Upright Bikes', 'Recumbent Bikes', 'Spinning Bikes', 'Ladder Master', 'Air Rower', 'Ski Machine'],
+  Strength: ['Chest', 'Back', 'Shoulder', 'Arms', 'Legs', 'Abdominal', 'Multipurpose', 'Dumbells & Plates', 'Benches & Racks'],
   Accessories: ['Accessories'],
   Utilities: ['Utilities'],
-  Unique_Equipments:['Unique Equipments']
+  Unique_Equipments: ['Unique Equipments']
 };
 
 export default function Commercial() {
@@ -31,7 +30,7 @@ export default function Commercial() {
     setActiveSubcategory(subcategoryParam);
   }, [subcategoryParam]);
 
-  // Close dropdown when clicking outside
+  // Close dropdown on outside click
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -48,21 +47,23 @@ export default function Commercial() {
   const handleSubcategoryClick = (subcategory) => {
     const newParams = new URLSearchParams(location.search);
     newParams.set('subcategory', subcategory);
-    newParams.delete('search');
+    newParams.delete('search'); // Reset search on subcategory change
     navigate({
       pathname: location.pathname,
       search: newParams.toString(),
     });
-    setOpenCategory(null); // ✅ Close dropdown after selection
+    setOpenCategory(null); // Close dropdown
   };
 
   const filteredProducts = products.filter((p) => {
     if (p.type !== 'Commercial') return false;
     if (activeSubcategory && p.subcategory !== activeSubcategory) return false;
+
     if (searchTerm) {
-      const combined = `${p.name} ${p.category} ${p.subcategory}`.toLowerCase();
+      const combined = `${p.name} ${p.category} ${p.subcategory} ${p.sku || ''}`.toLowerCase();
       if (!combined.includes(searchTerm)) return false;
     }
+
     return true;
   });
 

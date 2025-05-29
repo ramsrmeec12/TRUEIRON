@@ -40,7 +40,7 @@ export async function generateQuotationPDF(cartItems) {
   }
 
   drawText('Phone: +91-63857 06576', margin, y - 60, { size: 11 });
-  drawText('GST No: 33AABCU9603R1Z2', margin, y - 75, { size: 11 });
+  drawText('GST No: ', margin, y - 75, { size: 11 });
   drawText('Quotation', pageWidth - margin - 100, y - 60, { size: 16 });
   y -= 90;
 
@@ -191,7 +191,7 @@ export async function generateQuotationPDF(cartItems) {
 
   // Existing single line note
   drawText(
-    'Please refer to terms and conditions on our website: https://trueirongym.com/terms',
+    'Please refer to terms and conditions on our website: https://trueiron.shop/terms',
     margin,
     y - 20,
     {
@@ -214,16 +214,18 @@ export async function generateQuotationPDF(cartItems) {
     '',
     '1. GST 18% extra. Full payment in advance. Transportation charges apply.',
     '2. Orders cannot be canceled or refunded once placed.',
-    '3. Prices valid for 10 days. One-year warranty for manufacturing defects.',
-    '4. Use stabilizers with cardio machines to maintain warranty.',
-    '5. Product info is indicative and may change without notice.',
+    '3. Delivery period for imported equipments is 15 days or depends on stock availability',
+    '4. Delivery period for indian stations is 6-10 weeks or extra',
+    '5. Prices valid for 10 days. One-year warranty for manufacturing defects.',
     '6. Shipping timelines provided at payment; Courier delays not our responsibility.',
     '7. No returns or refunds except in exceptional cases (customer bears return shipping).',
     '8. Use equipment safely; we are not liable for misuse.',
     '9. Your data is private and not shared with third parties.',
     '10. Content is for personal use only; no copying or redistribution allowed.',
-    '11. Governed by Indian law; disputes resolved in Indian courts.',
-    '12. For queries, contact us via WhatsApp.',
+    '11. Use stabilizers with cardio machines to maintain warranty.',
+    '12. Product info is indicative and may change without notice.',
+    '13. Governed by Indian law; disputes resolved in Indian courts.',
+    '14. For queries, contact us via WhatsApp.',
   ];
 
   // Function to wrap text for terms page (same as before)
@@ -244,9 +246,8 @@ export async function generateQuotationPDF(cartItems) {
     return lines;
   }
 
-  // Draw terms lines on the separate page
+
   for (let line of termsText) {
-    // Check if need new page - if so add a new page to pdfDoc (rare but just in case)
     if (ty - termsLineHeight < margin) {
       ty = pageHeight - margin;
       const newTermsPage = pdfDoc.addPage([pageWidth, pageHeight]);
