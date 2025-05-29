@@ -54,8 +54,12 @@ import Chest15 from '../src/assets/commercial/Strength/Chest/Chest15.jpg'
 import Chest16 from '../src/assets/commercial/Strength/Chest/Chest16.jpg'
 import Chest17 from '../src/assets/commercial/Strength/Chest/Chest17.jpg'
 import Chest18 from '../src/assets/commercial/Strength/Chest/Chest18.jpg'
-
-
+import Chest19 from '../src/assets/commercial/Strength/Chest/Chest19.jpg'
+import Chest20 from '../src/assets/commercial/Strength/Chest/Chest20.jpg'
+import Chest21 from '../src/assets/commercial/Strength/Chest/Chest21.jpg'
+import Chest22 from '../src/assets/commercial/Strength/Chest/Chest22.jpg'
+import Chest23 from '../src/assets/commercial/Strength/Chest/Chest23.jpg'
+import Chest24 from '../src/assets/commercial/Strength/Chest/Chest24.jpg'
 //Strength --> Back
 import Back1 from '../src/assets/commercial/Strength/Back/Back1.jpg'
 import Back2 from '../src/assets/commercial/Strength/Back/Back2.jpg'
@@ -75,6 +79,15 @@ import Back15 from '../src/assets/commercial/Strength/Back/Back15.png'
 import Back16 from '../src/assets/commercial/Strength/Back/Back16.png'
 import Back17 from '../src/assets/commercial/Strength/Back/Back17.png'
 import Back18 from '../src/assets/commercial/Strength/Back/Back18.png'
+import Back19 from '../src/assets/commercial/Strength/Back/Back19.jpg'
+import Back20 from '../src/assets/commercial/Strength/Back/Back20.jpg'
+import Back21 from '../src/assets/commercial/Strength/Back/Back21.jpg'
+import Back22 from '../src/assets/commercial/Strength/Back/Back22.jpg'
+import Back23 from '../src/assets/commercial/Strength/Back/Back23.jpg'
+import Back24 from '../src/assets/commercial/Strength/Back/Back24.jpg'
+import Back25 from '../src/assets/commercial/Strength/Back/Back25.jpg'
+import Back26 from '../src/assets/commercial/Strength/Back/Back26.jpg'
+
 
 
 //Strength  --> Shoulder
@@ -87,7 +100,10 @@ import Shoulder6 from '../src/assets/commercial/Strength/Shoulder/Shoulder6.png'
 import Shoulder7 from '../src/assets/commercial/Strength/Shoulder/Shoulder7.png'
 import Shoulder8 from '../src/assets/commercial/Strength/Shoulder/Shoulder8.png'
 import Shoulder9 from '../src/assets/commercial/Strength/Shoulder/Shoulder9.png'
-
+import Shoulder10 from '../src/assets/commercial/Strength/Shoulder/Shoulder10.jpg'
+import Shoulder11 from '../src/assets/commercial/Strength/Shoulder/Shoulder11.jpg'
+import Shoulder12 from '../src/assets/commercial/Strength/Shoulder/Shoulder12.jpg'
+import Shoulder13 from '../src/assets/commercial/Strength/Shoulder/Shoulder13.jpg'
 
 //Strength --> Arms
 import Arms1 from '../src/assets/commercial/Strength/Arms/Arms1.png'
@@ -101,7 +117,11 @@ import Arms8 from '../src/assets/commercial/Strength/Arms/Arms8.png'
 import Arms9 from '../src/assets/commercial/Strength/Arms/Arms9.png'
 import Arms10 from '../src/assets/commercial/Strength/Arms/Arms10.png'
 import Arms11 from '../src/assets/commercial/Strength/Arms/Arms11.png'
-
+import Arms12 from '../src/assets/commercial/Strength/Arms/Arms12.jpg'
+import Arms13 from '../src/assets/commercial/Strength/Arms/Arms13.jpg'
+import Arms14 from '../src/assets/commercial/Strength/Arms/Arms14.jpg'
+import Arms15 from '../src/assets/commercial/Strength/Arms/Arms15.jpg'
+import Arms16 from '../src/assets/commercial/Strength/Arms/Arms16.jpg'
 
 //Strength --> Legs
 import Leg1 from '../src/assets/commercial/Strength/Legs/Leg1.png'
@@ -125,6 +145,17 @@ import Leg18 from '../src/assets/commercial/Strength/Legs/Leg18.png'
 import Leg19 from '../src/assets/commercial/Strength/Legs/Leg19.png'
 import Leg20 from '../src/assets/commercial/Strength/Legs/Leg20.png'
 import Leg21 from '../src/assets/commercial/Strength/Legs/Leg21.png'
+import Leg22 from '../src/assets/commercial/Strength/Legs/Leg22.jpg'
+import Leg23 from '../src/assets/commercial/Strength/Legs/Leg23.jpg'
+import Leg24 from '../src/assets/commercial/Strength/Legs/Leg24.jpg'
+import Leg25 from '../src/assets/commercial/Strength/Legs/Leg25.jpg'
+import Leg26 from '../src/assets/commercial/Strength/Legs/Leg26.jpg'
+import Leg27 from '../src/assets/commercial/Strength/Legs/Leg27.jpg'
+import Leg28 from '../src/assets/commercial/Strength/Legs/Leg28.jpg'
+import Leg29 from '../src/assets/commercial/Strength/Legs/Leg29.jpg'
+import Leg30 from '../src/assets/commercial/Strength/Legs/Leg30.jpg'
+import Leg31 from '../src/assets/commercial/Strength/Legs/Leg31.jpg'
+import Leg32 from '../src/assets/commercial/Strength/Legs/Leg32.jpg'
 
 //Strength -- Multipurpose
 import Multipurpose1 from '../src/assets/commercial/Strength/Multipurpose/Multipurpose1.png'
@@ -175,6 +206,8 @@ import Acc34 from '../src/assets/commercial/Accessories/Acc34.webp'
 
 //Strength --> Abdominal
 import Abdominal1 from '../src/assets/commercial/Strength/Abdominal/Abdominal1.png'
+import Abdominal2 from '../src/assets/commercial/Strength/Abdominal/Abdominal2.jpg'
+import Abdominal3 from '../src/assets/commercial/Strength/Abdominal/Abdominal3.jpg'
 
 
 //Strength --> Benches and racks
@@ -2624,6 +2657,482 @@ export const products = [
     specification: 'Length: 48 inches, Width: 26 inches, Height: 57 inches',
     muscle: 'Thighs, Quadriceps, Hamstrings, Calves, Glutes'
   },
+
+
+  //Strength --> New from dhz web site
+  {
+    id: 181,
+    sku: 'GYM-COM-182',
+    name: 'LAT PULLDOWN',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back19,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
+  {
+    id: 182,
+    sku: 'GYM-COM-183',
+    name: 'LOW ROW',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back20,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
+  {
+    id: 183,
+    sku: 'GYM-COM-184',
+    name: 'ROW MACHINE',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back21,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
+  {
+    id: 184,
+    sku: 'GYM-COM-185',
+    name: 'CHEST PRESS - LOAD ON',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest19,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
+    specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
+    muscle: 'UPPER, LOWER, MIDDLE CHEST',
+     colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+  },
+  {
+    id: 185,
+    sku: 'GYM-COM-186',
+    name: 'INCLINE CHEST PRESS - LOAD ON',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest21,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Incline Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
+    specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
+    muscle: 'UPPER, LOWER, MIDDLE CHEST',
+     colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+  },
+  {
+    id: 186,
+    sku: 'GYM-COM-187',
+    name: 'WIDE CHEST PRESS - LOAD ON',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest20,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The WIDE Chest Press is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
+    specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
+    muscle: 'UPPER, LOWER, MIDDLE CHEST',
+     colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+  },
+  {
+    id: 187,
+    sku: 'GYM-COM-188',
+    name: 'STANDING ABDUCTOR',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg22,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 188,
+    sku: 'GYM-COM-189',
+    name: 'REAR KICK MACHINE',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg23,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+   {
+    id: 189,
+    sku: 'GYM-COM-190',
+    name: 'CALF MACHINE',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg24,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+   {
+    id: 190,
+    sku: 'GYM-COM-191',
+    name: 'LEG PRESS',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg25,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 191,
+    sku: 'GYM-COM-192',
+    name: 'STANDING LEG CURL',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg26,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 192,
+    sku: 'GYM-COM-193',
+    name: 'LEG EXTENSION',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg27,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Featuring independent leg platforms, the isolateral design ensures balanced muscle development and reduces strength imbalances. The overhead floating pivot facilitates a natural and biomechanically correct leg pressing motion, minimizing stress on joints. With adjustable footplates and seat position, users can customize their workout for optimal comfort and targeting specific muscle groups.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 193,
+    sku: 'GYM-COM-194',
+    name: 'SHOULDER PRESS',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder10,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
+  },
+   {
+    id: 194,
+    sku: 'GYM-COM-195',
+    name: 'BICEPS CURL',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms12,
+    price: 75000,
+    type: 'Commercial',
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
+  },
+   {
+    id: 195,
+    sku: 'GYM-COM-196',
+    name: 'SEATED DIP FOR TRICEPS',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms13,
+    price: 75000,
+    type: 'Commercial',
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
+  },
+  {
+    id: 196,
+    sku: 'GYM-COM-197',
+    name: 'Abdominal Isolater',
+    category: 'Strength',
+    subcategory: 'Abdominal',
+    image: Abdominal2,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
+  {
+    id: 197,
+    sku: 'GYM-COM-198',
+    name: 'Abdominal and back Extension',
+    category: 'Strength',
+    subcategory: 'Abdominal',
+    image: Abdominal3,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
+   {
+    id: 198,
+    sku: 'GYM-COM-199',
+    name: 'BICEP CURLS',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms14,
+    price: 75000,
+    type: 'Commercial',
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
+  },
+{
+    id: 199,
+    sku: 'GYM-COM-200',
+    name: 'CAMPER CURL AND TRICEPS',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms15,
+    price: 75000,
+    type: 'Commercial',
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
+  },
+  {
+    id: 200,
+    sku: 'GYM-COM-201',
+    name: 'SEATED TRICEP DIP',
+    category: 'Strength',
+    subcategory: 'Arms',
+    image: Arms16,
+    price: 75000,
+    type: 'Commercial',
+    description: 'This machine is designed to isolate and strengthen the one or more of ARMS muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the muscles from various angles, promoting balanced muscle development and overall ARMS strength.',
+    specification: 'Length: 68 inches, Width: 70 inches, Height: 45 inches',
+    muscle: 'Arms'
+  },
+  {
+    id: 201,
+    sku: 'GYM-COM-202',
+    name: 'BACK EXTENSION',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back22,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
+  {
+    id: 202,
+    sku: 'GYM-COM-203',
+    name: 'DIP CHIN ASSIST',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back23,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
+  {
+    id: 203,
+    sku: 'GYM-COM-204',
+    name: 'BACK ROW MACHINE',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back24,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
+  {
+    id: 204,
+    sku: 'GYM-COM-205',
+    name: 'LONG PULL ROW PULLEY TYPE',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back25,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
+  {
+    id: 205,
+    sku: 'GYM-COM-206',
+    name: 'VERTICAL ROW',
+    category: 'Strength',
+    subcategory: 'Back',
+    image: Back26,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The leg lock is adjustable to make a comfortable sitting positing for an effective workout. Dual strap grips and pull-down bars can be used for isolateral & bilateral movements respectively. The Jerai Fitness Lat Pull Down provides a maximum weight of up to 220 lbs',
+    specification: 'Length: 62 inches, Width: 40 inches, Height: 92 inches, Weight Stack: 100 kg',
+    muscle: ' Erector Spine, Trapezius, Latissimus Dorsi, Rear Deltoids & Biceps'
+  },
+  {
+    id: 206,
+    sku: 'GYM-COM-207',
+    name: 'SEATED CHEST PRESS',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest22,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The SEATED CHEST PRESS MACHINE is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
+    specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
+    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+  },
+  {
+    id: 207,
+    sku: 'GYM-COM-208',
+    name: 'INCLINE CHEST PRESS',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest23,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The INCLINE CHEST PRESS MACHINE is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
+    specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
+    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+  },
+  {
+    id: 208,
+    sku: 'GYM-COM-209',
+    name: 'PEC/REAR FLIES',
+    category: 'Strength',
+    subcategory: 'Chest',
+    image: Chest24,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The PEC FLIES MACHINE is designed to target and strengthen the chest muscles in an efficient manner. Featuring a plate-loaded system, it allows users to seamlessly adjust resistance levels to suit their unique strength and fitness objectives. This machine offers a stable and controlled platform for executing chest pressing movements, ensuring optimal muscle engagement and development.',
+    specification: 'Length: 49 inches, Width: 58 inches, Height: 73 inches',
+    muscle: 'UPPER, LOWER, MIDDLE CHEST'
+  },
+  {
+    id: 209,
+    sku: 'GYM-COM-210',
+    name: 'LEG EXTENSION',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg28,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Unlock precision and versatility with our Leg Cable Machine, designed to target every major muscle group in your lower body. Whether youre focusing on leg extensions, hamstring curls, hip abductions, or glute kickbacks, this machine delivers smooth, controlled movements with adjustable resistance for all fitness levels.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 210,
+    sku: 'GYM-COM-211',
+    name: 'LEG EXTENSION',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg29,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Unlock precision and versatility with our Leg Cable Machine, designed to target every major muscle group in your lower body. Whether youre focusing on leg extensions, hamstring curls, hip abductions, or glute kickbacks, this machine delivers smooth, controlled movements with adjustable resistance for all fitness levels.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+  {
+    id: 211,
+    sku: 'GYM-COM-212',
+    name: 'LEG EXTENSION',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg30,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Unlock precision and versatility with our Leg Cable Machine, designed to target every major muscle group in your lower body. Whether youre focusing on leg extensions, hamstring curls, hip abductions, or glute kickbacks, this machine delivers smooth, controlled movements with adjustable resistance for all fitness levels.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+   {
+    id: 212,
+    sku: 'GYM-COM-213',
+    name: 'LEG EXTENSION',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg31,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Unlock precision and versatility with our Leg Cable Machine, designed to target every major muscle group in your lower body. Whether youre focusing on leg extensions, hamstring curls, hip abductions, or glute kickbacks, this machine delivers smooth, controlled movements with adjustable resistance for all fitness levels.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+
+   {
+    id: 213,
+    sku: 'GYM-COM-214',
+    name: 'LEG EXTENSION',
+    category: 'Strength',
+    subcategory: 'Legs',
+    image: Leg32,
+    price: 75000,
+    type: 'Commercial',
+    description: 'Unlock precision and versatility with our Leg Cable Machine, designed to target every major muscle group in your lower body. Whether youre focusing on leg extensions, hamstring curls, hip abductions, or glute kickbacks, this machine delivers smooth, controlled movements with adjustable resistance for all fitness levels.',
+    specification: 'Length: 72 inches, Width: 60 inches, Height: 64 inches',
+    muscle: 'Legs'
+  },
+   {
+    id: 214,
+    sku: 'GYM-COM-215',
+    name: 'LATERAL RAISE MACHINE',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder11,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
+  },
+  {
+    id: 215,
+    sku: 'GYM-COM-216',
+    name: 'PECTORAL MACHINE',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder12,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The PECTORAL machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
+  },
+{
+    id: 216,
+    sku: 'GYM-COM-217',
+    name: 'SHOULDER PRESS MACHINE',
+    category: 'Strength',
+    subcategory: 'Shoulder',
+    image: Shoulder13,
+    price: 75000,
+    type: 'Commercial',
+    description: 'The Shoulder Press machine is designed to isolate and strengthen the shoulder muscles effectively. With its angled handles, users can perform both unilateral and bilateral movements, providing versatility in their workout routine. This allows for targeted engagement of the shoulder muscles from various angles, promoting balanced muscle development and overall shoulder strength.',
+    specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
+    muscle: 'Shoulder'
+  },
+
 
 
 
