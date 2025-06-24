@@ -32,6 +32,8 @@ export default function Cart() {
             quantity: saved?.quantity ?? item.quantity ?? 1,
             originalPrice: saved?.originalPrice ?? item.originalPrice ?? item.price ?? 0,
             discountedPrice: saved?.discountedPrice ?? item.discountedPrice ?? item.price ?? 0,
+            name: saved?.name ?? item.name,
+            image: saved?.image ?? item.image,
           };
         });
 
@@ -78,6 +80,28 @@ export default function Cart() {
         item.id === id ? { ...item, discountedPrice: parseFloat(value) || 0 } : item
       )
     );
+  };
+
+  const handleNameChange = (id, value) => {
+    setEditableItems(items =>
+      items.map(item =>
+        item.id === id ? { ...item, name: value } : item
+      )
+    );
+  };
+
+  const handleImageChange = (id, e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setEditableItems(items =>
+        items.map(item =>
+          item.id === id ? { ...item, image: reader.result } : item
+        )
+      );
+    };
+    reader.readAsDataURL(file);
   };
 
   const handleImageUpload = e => {
@@ -162,7 +186,16 @@ export default function Cart() {
                   className="h-16 w-16 object-cover rounded"
                 />
                 <div>
-                  <p className="font-semibold">{item.name}</p>
+                  {admin ? (
+                    <input
+                      type="text"
+                      value={item.name}
+                      onChange={e => handleNameChange(item.id, e.target.value)}
+                      className="font-semibold border-b focus:outline-none"
+                    />
+                  ) : (
+                    <p className="font-semibold">{item.name}</p>
+                  )}
                   <p className="text-sm text-gray-500">SKU: {item.sku}</p>
                 </div>
               </div>
@@ -198,6 +231,15 @@ export default function Cart() {
                         value={item.discountedPrice}
                         onChange={e => handleDiscountedPriceChange(item.id, e.target.value)}
                         className="ml-1 border p-1 w-20"
+                      />
+                    </label>
+                    <label>
+                      Change Image:
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={e => handleImageChange(item.id, e)}
+                        className="ml-1"
                       />
                     </label>
                   </div>
