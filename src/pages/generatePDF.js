@@ -24,31 +24,32 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
     });
   };
 
-  try {
-   const logoUrl = `${window.location.origin}/assets/weblogo.jpg`;
-
-
+   try {
+    const logoUrl = 'https://trueiron.shop/static/media/logo.1e18293906268e6ff6e1.png';
     const logoBytes = await fetch(logoUrl).then(res => res.arrayBuffer());
     const logoImage = await pdfDoc.embedPng(logoBytes);
-    const logoDims = logoImage.scaleToFit(100, 50);
+    const logoDims = logoImage.scaleToFit(60, 50);
+    const logoY = y - logoDims.height;
     page.drawImage(logoImage, {
       x: margin,
-      y: y - logoDims.height,
+      y: logoY,
       width: logoDims.width,
       height: logoDims.height,
+    });
+    drawText('True Iron Gym Equipments', margin + logoDims.width + 10, logoY + (logoDims.height / 2) - 6, {
+      size: 18,
     });
   } catch (err) {
     drawText('True Iron Gym Equipments - Quotation', margin, y, { size: 18 });
   }
 
-  drawText('18, NSE Bose Nagar, Puthapedu, Porur, Chennai-116', margin, y - 40);
-  drawText('30, Loha Market Main Rd, New Seelampur, Delhi, 110053', margin, y - 55);
-  drawText('Phone: +91 63857 06756', margin, y - 70);
-  drawText('GST No: ', margin, y - 85);
+  drawText('18, NSE Bose Nagar, Puthapedu, Porur, Chennai-116', margin, y - 50);
+  drawText('30, Loha Market Main Rd, New Seelampur, Delhi, 110053', margin, y - 65);
+  drawText('Phone: +91 63857 06756', margin, y - 80);
+  drawText('GST No: ', margin, y - 95);
 
   drawText('Client Details: ', margin, y - 120);
   y -= 130;
-  
 
   // Draw client info in row-wise table
   const rowHeightClient = 20;
