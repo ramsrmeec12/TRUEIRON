@@ -1,6 +1,7 @@
 import { useCart } from '../context/CartContext';
 import { useState, useEffect } from 'react';
 import { generateQuotationPDF } from './generatePDF';
+import { generateOrderPDF } from './generateOrderPDF';
 import auth from '../config';
 
 export default function Cart() {
@@ -33,6 +34,7 @@ export default function Cart() {
             quantity: saved?.quantity ?? item.quantity ?? 1,
             originalPrice: saved?.originalPrice ?? item.originalPrice ?? item.price ?? 0,
             discountedPrice: saved?.discountedPrice ?? item.discountedPrice ?? item.price ?? 0,
+            image: saved?.image ?? item.image ?? '/default-custom.webp',
           };
         });
         const customOnly = parsed.filter(item => !cartItems.some(cartItem => cartItem.id === item.id));
@@ -143,6 +145,10 @@ export default function Cart() {
     generateQuotationPDF(editableItems, { name: clientName, phone: clientPhone, address: clientAddress });
   };
 
+  const handleGenerateOrderPDF = () => {
+    generateOrderPDF(editableItems, { name: clientName, phone: clientPhone, address: clientAddress });
+  };
+
   const [removingId, setRemovingId] = useState(null);
   const handleRemove = id => {
     setRemovingId(id);
@@ -159,12 +165,14 @@ export default function Cart() {
     <div className="p-4">
       <h2 className="text-2xl mb-4 font-bold">🛒 Your Cart</h2>
 
-      <div className="mb-6 space-y-2">
-        <h3 className="text-lg font-semibold">Client Info</h3>
-        <input type="text" placeholder="Name" value={clientName} onChange={e => setClientName(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/2" />
-        <input type="text" placeholder="Phone" value={clientPhone} onChange={e => setClientPhone(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/2" />
-        <textarea placeholder="Address" value={clientAddress} onChange={e => setClientAddress(e.target.value)} className="border px-3 py-2 rounded w-full md:w-2/3"></textarea>
-      </div>
+      {admin && (
+        <div className="mb-6 space-y-2">
+          <h3 className="text-lg font-semibold">Client Info</h3>
+          <input type="text" placeholder="Name" value={clientName} onChange={e => setClientName(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/2" />
+          <input type="text" placeholder="Phone" value={clientPhone} onChange={e => setClientPhone(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/2" />
+          <textarea placeholder="Address" value={clientAddress} onChange={e => setClientAddress(e.target.value)} className="border px-3 py-2 rounded w-full md:w-2/3"></textarea>
+        </div>
+      )}
 
       {dataSource.length === 0 ? (
         <p className="text-gray-500">No items added.</p>
@@ -210,22 +218,25 @@ export default function Cart() {
             </div>
           ))}
 
+          {admin && dataSource.length > 0 && (
+            <div className="mt-8 border-t pt-4">
+              <h3 className="text-lg font-semibold mb-2">Add Custom Product</h3>
+              <div className="flex flex-col md:flex-row items-center gap-4">
+                <input type="text" placeholder="Product Name" value={customName} onChange={e => setCustomName(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/4" />
+                <input type="text" placeholder="SKU (Optional)" value={customSku} onChange={e => setCustomSku(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/4" />
+                <input type="number" placeholder="Qty" min="1" value={customQty} onChange={e => setCustomQty(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
+                <input type="number" placeholder="Original Price" min="0" value={customOriginalPrice} onChange={e => setCustomOriginalPrice(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
+                <input type="number" placeholder="Discounted Price" min="0" value={customDiscountedPrice} onChange={e => setCustomDiscountedPrice(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
+                <input type="file" accept="image/*" onChange={handleImageUpload} className="border px-3 py-2 rounded w-full md:w-1/4" />
+                <button onClick={handleAddCustomProduct} className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Add</button>
+              </div>
+            </div>
+          )}
+
           {admin && (
             <>
-              <div className="mt-8 border-t pt-4">
-                <h3 className="text-lg font-semibold mb-2">Add Custom Product</h3>
-                <div className="flex flex-col md:flex-row items-center gap-4">
-                  <input type="text" placeholder="Product Name" value={customName} onChange={e => setCustomName(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/4" />
-                  <input type="text" placeholder="SKU (Optional)" value={customSku} onChange={e => setCustomSku(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/4" />
-                  <input type="number" placeholder="Qty" min="1" value={customQty} onChange={e => setCustomQty(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
-                  <input type="number" placeholder="Original Price" min="0" value={customOriginalPrice} onChange={e => setCustomOriginalPrice(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
-                  <input type="number" placeholder="Discounted Price" min="0" value={customDiscountedPrice} onChange={e => setCustomDiscountedPrice(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
-                  <input type="file" accept="image/*" onChange={handleImageUpload} className="border px-3 py-2 rounded w-full md:w-1/4" />
-                  <button onClick={handleAddCustomProduct} className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Add</button>
-                </div>
-              </div>
-
               <button onClick={handleGeneratePDF} className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Download Quotation PDF</button>
+              <button onClick={handleGenerateOrderPDF} className="ml-4 mt-4 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">Download Order PDF</button>
             </>
           )}
 

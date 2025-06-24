@@ -24,7 +24,7 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
     });
   };
 
-   try {
+  try {
     const logoUrl = 'https://trueiron.shop/static/media/logo.1e18293906268e6ff6e1.png';
     const logoBytes = await fetch(logoUrl).then(res => res.arrayBuffer());
     const logoImage = await pdfDoc.embedPng(logoBytes);
@@ -43,15 +43,14 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
     drawText('True Iron Gym Equipments - Quotation', margin, y, { size: 18 });
   }
 
-  drawText('18, NSE Bose Nagar, Puthapedu, Porur, Chennai-116', margin, y - 50);
-  drawText('30, Loha Market Main Rd, New Seelampur, Delhi, 110053', margin, y - 65);
-  drawText('Phone: +91 63857 06756', margin, y - 80);
-  drawText('GST No: ', margin, y - 95);
+  drawText('18, NSE Bose Nagar, Puthapedu, Porur, Chennai-116', margin, y - 40);
+  drawText('30, Loha Market Main Rd, New Seelampur, Delhi, 110053', margin, y - 55);
+  drawText('Phone: +91 63857 06756', margin, y - 70);
+  drawText('GST No: ', margin, y - 85);
 
   drawText('Client Details: ', margin, y - 120);
   y -= 130;
 
-  // Draw client info in row-wise table
   const rowHeightClient = 20;
   const labelWidth = 60;
   const valueWidth = pageWidth - margin * 2 - labelWidth;
@@ -86,7 +85,7 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
   y -= 40;
 
   const colWidths = [40, 80, 230, 60, 80];
-  const colTitles = ['Sl. No', 'Image', 'Product Name (SKU)', 'Qty', 'Price'];
+  const colTitles = ['Sl. No', 'Image', 'Product Name ', 'Qty', 'Price'];
 
   const drawTableHeader = () => {
     let x = margin;
@@ -134,7 +133,7 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
     const total = discountedPrice * quantity;
     totalPrice += total;
 
-    const productText = `${item.name} (${item.sku})`;
+    const productText = `${item.name} `;
     const wrappedName = wrapText(productText, colWidths[2] - 10);
     const textHeight = wrappedName.length * 14;
     const actualRowHeight = Math.max(textHeight + 20, rowHeight);
@@ -182,7 +181,21 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
     });
 
     drawText(`${quantity}`, margin + colWidths[0] + colWidths[1] + colWidths[2] + 5, y - 20);
-    drawText(`Rs. ${discountedPrice}`, margin + colWidths[0] + colWidths[1] + colWidths[2] + colWidths[3] + 5, y - 20);
+
+    const priceX = margin + colWidths[0] + colWidths[1] + colWidths[2] + colWidths[3] + 5;
+    const originalPriceText = `Rs. ${originalPrice}`;
+    const discountedPriceText = `Rs. ${discountedPrice}`;
+    const originalTextWidth = font.widthOfTextAtSize(originalPriceText, fontSize);
+
+    drawText(originalPriceText, priceX, y - 10);
+    page.drawLine({
+      start: { x: priceX, y: y - 10 + fontSize / 2 },
+      end: { x: priceX + originalTextWidth, y: y - 10 + fontSize / 2 },
+      thickness: 1,
+      color: rgb(1, 0, 0),
+    });
+
+    drawText(discountedPriceText, priceX, y - 30, { size: fontSize + 1 });
 
     y -= actualRowHeight;
   }
