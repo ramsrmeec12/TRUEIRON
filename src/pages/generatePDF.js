@@ -1,6 +1,6 @@
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 
-export async function generateQuotationPDF(cartItems) {
+export async function generateQuotationPDF(cartItems, clientInfo) {
   const pdfDoc = await PDFDocument.create();
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const pageWidth = 595;
@@ -25,8 +25,10 @@ export async function generateQuotationPDF(cartItems) {
   };
 
   try {
-    const logoUrl = 'https://trueiron.shop/assets/weblogo.jpg';
-    const logoBytes = await fetch(logoUrl).then((res) => res.arrayBuffer());
+   const logoUrl = `${window.location.origin}/assets/weblogo.jpg`;
+
+
+    const logoBytes = await fetch(logoUrl).then(res => res.arrayBuffer());
     const logoImage = await pdfDoc.embedPng(logoBytes);
     const logoDims = logoImage.scaleToFit(100, 50);
     page.drawImage(logoImage, {
@@ -36,13 +38,51 @@ export async function generateQuotationPDF(cartItems) {
       height: logoDims.height,
     });
   } catch (err) {
-    drawText('True Iron Gym Equipments', margin, y, { size: 18 });
+    drawText('True Iron Gym Equipments - Quotation', margin, y, { size: 18 });
   }
 
-  drawText('Phone: +91-63857 06576', margin, y - 60, { size: 11 });
-  drawText('GST No: ', margin, y - 75, { size: 11 });
-  drawText('Quotation', pageWidth - margin - 100, y - 60, { size: 16 });
-  y -= 90;
+  drawText('18, NSE Bose Nagar, Puthapedu, Porur, Chennai-116', margin, y - 40);
+  drawText('30, Loha Market Main Rd, New Seelampur, Delhi, 110053', margin, y - 55);
+  drawText('Phone: +91 63857 06756', margin, y - 70);
+  drawText('GST No: ', margin, y - 85);
+
+  drawText('Client Details: ', margin, y - 120);
+  y -= 130;
+  
+
+  // Draw client info in row-wise table
+  const rowHeightClient = 20;
+  const labelWidth = 60;
+  const valueWidth = pageWidth - margin * 2 - labelWidth;
+
+  const drawClientRow = (label, value, rowY) => {
+    page.drawRectangle({
+      x: margin,
+      y: rowY - rowHeightClient,
+      width: labelWidth,
+      height: rowHeightClient,
+      borderColor: rgb(0, 0, 0),
+      borderWidth: 1,
+    });
+    drawText(label, margin + 5, rowY - 14);
+
+    page.drawRectangle({
+      x: margin + labelWidth,
+      y: rowY - rowHeightClient,
+      width: valueWidth,
+      height: rowHeightClient,
+      borderColor: rgb(0, 0, 0),
+      borderWidth: 1,
+    });
+    drawText(value, margin + labelWidth + 5, rowY - 14);
+  };
+
+  drawClientRow('Name:', clientInfo.name || '', y);
+  y -= rowHeightClient;
+  drawClientRow('Phone:', clientInfo.phone || '', y);
+  y -= rowHeightClient;
+  drawClientRow('Address:', clientInfo.address || '', y);
+  y -= 40;
 
   const colWidths = [40, 80, 230, 60, 80];
   const colTitles = ['Sl. No', 'Image', 'Product Name (SKU)', 'Qty', 'Price'];
@@ -82,13 +122,14 @@ export async function generateQuotationPDF(cartItems) {
   };
 
   drawTableHeader();
+
   let totalPrice = 0;
 
   for (let i = 0; i < cartItems.length; i++) {
     const item = cartItems[i];
     const quantity = item.quantity || 1;
-    const originalPrice = item.originalPrice || item.price || 0;
-    const discountedPrice = item.discountedPrice || item.price || 0;
+    const originalPrice = item.originalPrice || 0;
+    const discountedPrice = item.discountedPrice || originalPrice;
     const total = discountedPrice * quantity;
     totalPrice += total;
 
@@ -119,7 +160,7 @@ export async function generateQuotationPDF(cartItems) {
     drawText(`${i + 1}`, margin + 5, y - 20);
 
     try {
-      const imageBytes = await fetch(item.image).then((res) => res.arrayBuffer());
+      const imageBytes = await fetch(item.image).then(res => res.arrayBuffer());
       const ext = item.image.split('.').pop().toLowerCase();
       const embeddedImage =
         ext === 'png' ? await pdfDoc.embedPng(imageBytes) : await pdfDoc.embedJpg(imageBytes);
@@ -140,27 +181,7 @@ export async function generateQuotationPDF(cartItems) {
     });
 
     drawText(`${quantity}`, margin + colWidths[0] + colWidths[1] + colWidths[2] + 5, y - 20);
-
-    const priceX = margin + colWidths.slice(0, 4).reduce((a, b) => a + b, 0) + 5;
-    const originalPriceText = `Rs. ${originalPrice * quantity}`;
-    const discountedPriceText = `Rs. ${discountedPrice * quantity}`;
-
-    drawText(originalPriceText, priceX, y - 15, {
-      size: fontSize - 1,
-      color: rgb(0.6, 0.6, 0.6),
-    });
-    const textWidth = font.widthOfTextAtSize(originalPriceText, fontSize - 1);
-    page.drawLine({
-      start: { x: priceX, y: y - 12 },
-      end: { x: priceX + textWidth, y: y - 12 },
-      thickness: 1,
-      color: rgb(0.6, 0.6, 0.6),
-    });
-    drawText(discountedPriceText, priceX, y - 30, {
-      size: fontSize + 1,
-      font,
-      color: rgb(0, 0, 0),
-    });
+    drawText(`Rs. ${discountedPrice}`, margin + colWidths[0] + colWidths[1] + colWidths[2] + colWidths[3] + 5, y - 20);
 
     y -= actualRowHeight;
   }
@@ -194,6 +215,7 @@ export async function generateQuotationPDF(cartItems) {
   });
 
   drawText(`Rs. ${totalPrice}`, margin + colWidths.slice(0, 4).reduce((a, b) => a + b, 0) + 5, y - 20);
+
   y -= totalRowHeight;
 
   drawText(
@@ -206,12 +228,6 @@ export async function generateQuotationPDF(cartItems) {
       color: rgb(0.4, 0.4, 0.4),
     }
   );
-
-  const termsPage = pdfDoc.addPage([pageWidth, pageHeight]);
-  let ty = pageHeight - margin;
-  const termsFontSize = 10;
-  const termsLineHeight = 14;
-  const maxWidth = pageWidth - 2 * margin;
 
   const termsText = [
     'Terms and Conditions:',
@@ -232,12 +248,12 @@ export async function generateQuotationPDF(cartItems) {
     '14. For queries, contact us via WhatsApp.',
   ];
 
-  const wrapTextTerms = (text, maxWidth) => {
+  function wrapTextTerms(text, maxWidth) {
     const words = text.split(' ');
     let lines = [];
     let currentLine = '';
     for (const word of words) {
-      const width = font.widthOfTextAtSize(currentLine + (currentLine ? ' ' : '') + word, termsFontSize);
+      const width = font.widthOfTextAtSize(currentLine + (currentLine ? ' ' : '') + word, 10);
       if (width > maxWidth && currentLine) {
         lines.push(currentLine);
         currentLine = word;
@@ -247,15 +263,20 @@ export async function generateQuotationPDF(cartItems) {
     }
     if (currentLine) lines.push(currentLine);
     return lines;
-  };
+  }
+
+  let termsPage = pdfDoc.addPage([pageWidth, pageHeight]);
+  let ty = pageHeight - margin;
+  const termsFontSize = 10;
+  const termsLineHeight = 14;
+  const maxWidth = pageWidth - 2 * margin;
 
   for (let line of termsText) {
     const wrappedLines = wrapTextTerms(line, maxWidth);
     for (const wrappedLine of wrappedLines) {
       if (ty - termsLineHeight < margin) {
+        termsPage = pdfDoc.addPage([pageWidth, pageHeight]);
         ty = pageHeight - margin;
-        const newTermsPage = pdfDoc.addPage([pageWidth, pageHeight]);
-        termsPage = newTermsPage;
       }
       termsPage.drawText(wrappedLine, {
         x: margin,

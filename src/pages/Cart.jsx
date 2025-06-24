@@ -1,5 +1,4 @@
 import { useCart } from '../context/CartContext';
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { generateQuotationPDF } from './generatePDF';
 import auth from '../config';
@@ -17,14 +16,16 @@ export default function Cart() {
   const [customDiscountedPrice, setCustomDiscountedPrice] = useState(0);
   const [customImage, setCustomImage] = useState(null);
 
+  const [clientName, setClientName] = useState('');
+  const [clientPhone, setClientPhone] = useState('');
+  const [clientAddress, setClientAddress] = useState('');
+
   useEffect(() => {
     auth.onAuthStateChanged(user => {
       if (user && user.uid === 'W8mdeLQYrZfbugze4YTIgdyuFPY2') {
         setAdmin(true);
-
         const savedCustomItems = localStorage.getItem('customItems');
         const parsed = savedCustomItems ? JSON.parse(savedCustomItems) : [];
-
         const combinedItems = cartItems.map(item => {
           const saved = parsed.find(savedItem => savedItem.id === item.id);
           return {
@@ -32,15 +33,9 @@ export default function Cart() {
             quantity: saved?.quantity ?? item.quantity ?? 1,
             originalPrice: saved?.originalPrice ?? item.originalPrice ?? item.price ?? 0,
             discountedPrice: saved?.discountedPrice ?? item.discountedPrice ?? item.price ?? 0,
-            name: saved?.name ?? item.name,
-            image: saved?.image ?? item.image,
           };
         });
-
-        const customOnly = parsed.filter(item =>
-          !cartItems.some(cartItem => cartItem.id === item.id)
-        );
-
+        const customOnly = parsed.filter(item => !cartItems.some(cartItem => cartItem.id === item.id));
         setEditableItems([...combinedItems, ...customOnly]);
       } else {
         setAdmin(false);
@@ -90,21 +85,7 @@ export default function Cart() {
     );
   };
 
-  const handleImageChange = (id, e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setEditableItems(items =>
-        items.map(item =>
-          item.id === id ? { ...item, image: reader.result } : item
-        )
-      );
-    };
-    reader.readAsDataURL(file);
-  };
-
-  const handleImageUpload = e => {
+  const handleImageUpload = (e, id = null) => {
     const file = e.target.files[0];
     if (file.size > 5 * 1024 * 1024) {
       alert('Please upload an image less than 5MB. Compress it here: https://imageresizer.com/image-compressor');
@@ -112,7 +93,15 @@ export default function Cart() {
     }
     const reader = new FileReader();
     reader.onloadend = () => {
-      setCustomImage(reader.result);
+      if (id) {
+        setEditableItems(items =>
+          items.map(item =>
+            item.id === id ? { ...item, image: reader.result } : item
+          )
+        );
+      } else {
+        setCustomImage(reader.result);
+      }
     };
     if (file) reader.readAsDataURL(file);
   };
@@ -145,12 +134,13 @@ export default function Cart() {
 
   const handleSubmit = () => {
     const message = `Hi, I would like to enquire about the following products:\n\n` +
-      editableItems
-        .map((item, i) => `${i + 1}. ${item.name} (SKU: ${item.sku}). Color: ${item.selectedColor}`)
-        .join('\n');
-
+      editableItems.map((item, i) => `${i + 1}. ${item.name} (SKU: ${item.sku}). Color: ${item.selectedColor}`).join('\n');
     const link = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(link, '_blank');
+  };
+
+  const handleGeneratePDF = () => {
+    generateQuotationPDF(editableItems, { name: clientName, phone: clientPhone, address: clientAddress });
   };
 
   const [removingId, setRemovingId] = useState(null);
@@ -168,31 +158,25 @@ export default function Cart() {
   return (
     <div className="p-4">
       <h2 className="text-2xl mb-4 font-bold">🛒 Your Cart</h2>
+
+      <div className="mb-6 space-y-2">
+        <h3 className="text-lg font-semibold">Client Info</h3>
+        <input type="text" placeholder="Name" value={clientName} onChange={e => setClientName(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/2" />
+        <input type="text" placeholder="Phone" value={clientPhone} onChange={e => setClientPhone(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/2" />
+        <textarea placeholder="Address" value={clientAddress} onChange={e => setClientAddress(e.target.value)} className="border px-3 py-2 rounded w-full md:w-2/3"></textarea>
+      </div>
+
       {dataSource.length === 0 ? (
         <p className="text-gray-500">No items added.</p>
       ) : (
         <div className="space-y-4">
           {dataSource.map(item => (
-            <div
-              key={item.id}
-              className={`flex flex-col md:flex-row justify-between items-start border p-4 rounded transition-all duration-300 ease-in-out transform 
-              ${removingId === item.id ? 'opacity-0 scale-95' : 'opacity-100 scale-100'} 
-              bg-white shadow`}
-            >
+            <div key={item.id} className={`flex flex-col md:flex-row justify-between items-start border p-4 rounded transition-all duration-300 ease-in-out transform ${removingId === item.id ? 'opacity-0 scale-95' : 'opacity-100 scale-100'} bg-white shadow`}>
               <div className="flex items-center space-x-4">
-                <img
-                  src={item.image || '/default-custom.webp'}
-                  alt={item.name}
-                  className="h-16 w-16 object-cover rounded"
-                />
+                <img src={item.image || '/default-custom.webp'} alt={item.name} className="h-16 w-16 object-cover rounded" />
                 <div>
                   {admin ? (
-                    <input
-                      type="text"
-                      value={item.name}
-                      onChange={e => handleNameChange(item.id, e.target.value)}
-                      className="font-semibold border-b focus:outline-none"
-                    />
+                    <input type="text" value={item.name} onChange={e => handleNameChange(item.id, e.target.value)} className="font-semibold border p-1 rounded" />
                   ) : (
                     <p className="font-semibold">{item.name}</p>
                   )}
@@ -207,51 +191,22 @@ export default function Cart() {
                   <div className="flex gap-4 mt-2">
                     <label>
                       Qty:
-                      <input
-                        type="number"
-                        min="1"
-                        value={item.quantity}
-                        onChange={e => handleQuantityChange(item.id, e.target.value)}
-                        className="ml-1 border p-1 w-16"
-                      />
+                      <input type="number" min="1" value={item.quantity} onChange={e => handleQuantityChange(item.id, e.target.value)} className="ml-1 border p-1 w-16" />
                     </label>
                     <label>
                       Original:
-                      <input
-                        type="number"
-                        value={item.originalPrice}
-                        onChange={e => handleOriginalPriceChange(item.id, e.target.value)}
-                        className="ml-1 border p-1 w-20"
-                      />
+                      <input type="number" value={item.originalPrice} onChange={e => handleOriginalPriceChange(item.id, e.target.value)} className="ml-1 border p-1 w-20" />
                     </label>
                     <label>
                       Discounted:
-                      <input
-                        type="number"
-                        value={item.discountedPrice}
-                        onChange={e => handleDiscountedPriceChange(item.id, e.target.value)}
-                        className="ml-1 border p-1 w-20"
-                      />
+                      <input type="number" value={item.discountedPrice} onChange={e => handleDiscountedPriceChange(item.id, e.target.value)} className="ml-1 border p-1 w-20" />
                     </label>
-                    <label>
-                      Change Image:
-                      <input
-                        type="file"
-                        accept="image/*"
-                        onChange={e => handleImageChange(item.id, e)}
-                        className="ml-1"
-                      />
-                    </label>
+                    <input type="file" accept="image/*" onChange={e => handleImageUpload(e, item.id)} className="border px-3 py-2 rounded w-1/4" />
                   </div>
                 )}
               </div>
 
-              <button
-                onClick={() => handleRemove(item.id)}
-                className="text-red-500 mt-2 md:mt-0 md:ml-4 hover:text-red-700"
-              >
-                Remove
-              </button>
+              <button onClick={() => handleRemove(item.id)} className="text-red-500 mt-2 md:mt-0 md:ml-4 hover:text-red-700">Remove</button>
             </div>
           ))}
 
@@ -270,18 +225,11 @@ export default function Cart() {
                 </div>
               </div>
 
-              <button onClick={() => generateQuotationPDF(editableItems)} className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                Download Quotation PDF
-              </button>
+              <button onClick={handleGeneratePDF} className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Download Quotation PDF</button>
             </>
           )}
 
-          <button
-            onClick={handleSubmit}
-            className="mt-6 bg-black hover:bg-red-600 text-white px-6 py-3 rounded shadow-md"
-          >
-            Submit Order via WhatsApp
-          </button>
+          <button onClick={handleSubmit} className="mt-6 bg-black hover:bg-red-600 text-white px-6 py-3 rounded shadow-md">Submit Order via WhatsApp</button>
         </div>
       )}
     </div>
