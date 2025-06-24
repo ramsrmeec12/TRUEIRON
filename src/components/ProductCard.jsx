@@ -1,29 +1,75 @@
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
+import auth from '../config';
 
 export default function ProductCard({ product }) {
   const { addToCart, cartItems } = useCart();
   const isInCart = cartItems.some(item => item.id === product.id);
+
+  const [admin, setAdmin] = useState(false);
+  const [clients, setClients] = useState([]);
+  const [showClientMenu, setShowClientMenu] = useState(false);
 
   const cardRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
-  // Selected color state
   const [selectedColor, setSelectedColor] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry.isIntersecting),
       { threshold: 0.1 }
-    );
+    ); 
     if (cardRef.current) observer.observe(cardRef.current);
     return () => {
       if (cardRef.current) observer.unobserve(cardRef.current);
     };
   }, []);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (user && user.uid === 'W8mdeLQYrZfbugze4YTIgdyuFPY2') {
+        setAdmin(true);
+        const storedClients = JSON.parse(localStorage.getItem('clients') || '[]');
+        setClients(storedClients);
+      }
+    });
+    return () => unsubscribe();
+  }, []);
+
+  const handleAddToClient = (clientId) => {
+    const storedClients = JSON.parse(localStorage.getItem('clients') || '[]');
+    const updatedClients = storedClients.map(client => {
+      if (client.id === clientId) {
+        const alreadyInCart = client.items.some(item => item.id === product.id);
+        if (!alreadyInCart) {
+          return {
+            ...client,
+            items: [
+              ...client.items,
+              {
+                id: product.id,
+                name: product.name,
+                sku: product.sku || 'N/A',
+                quantity: 1,
+                originalPrice: product.originalPrice || product.price || 0,
+                discountedPrice: product.discountedPrice || product.price || 0,
+                image: product.image || '/default-custom.webp',
+                selectedColor: selectedColor || 'N/A'
+              }
+            ]
+          };
+        }
+      }
+      return client;
+    });
+    localStorage.setItem('clients', JSON.stringify(updatedClients));
+    setClients(updatedClients);
+    setShowClientMenu(false);
+  };
 
   const getColorClass = (color) => {
     const base = 'h-5 w-5 rounded-full border-2 cursor-pointer';
@@ -75,7 +121,6 @@ export default function ProductCard({ product }) {
         </p>
       </Link>
 
-      {/* Color Options */}
       {product.colorOptions?.length > 0 && (
         <div className="flex gap-2 mt-3">
           {product.colorOptions.map((color, idx) => (
@@ -89,17 +134,45 @@ export default function ProductCard({ product }) {
         </div>
       )}
 
-      <button
-        onClick={() => addToCart({ ...product, selectedColor: selectedColor || 'nil' })}
-        className={`px-4 py-2 mt-4 rounded transition ${isInCart
+      {!admin ? (
+        <button
+          onClick={() => addToCart({ ...product, selectedColor: selectedColor || 'nil' })}
+          className={`px-4 py-2 mt-4 rounded transition ${isInCart
             ? 'bg-gray-400 cursor-not-allowed text-white'
             : 'bg-green-500 hover:bg-green-600 text-white'
           }`}
-        disabled={isInCart}
-      >
-        {isInCart ? 'Added to Cart' : 'Add to Cart'}
-      </button>
-
+          disabled={isInCart}
+        >
+          {isInCart ? 'Added to Cart' : 'Add to Cart'}
+        </button>
+      ) : (
+        <div className="relative mt-4 w-full flex flex-col items-center">
+          <button
+            onClick={() => setShowClientMenu(prev => !prev)}
+            className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 w-full"
+          >
+            Add to Client
+          </button>
+          {showClientMenu && (
+            <div className="absolute top-12 w-full z-20 bg-white border shadow-lg rounded">
+              {clients.length === 0 ? (
+                <div className="p-2 text-center text-sm text-gray-500">No clients</div>
+              ) : (
+                clients.map((client, index) => (
+                  <button
+                    key={client.id}
+                    onClick={() => handleAddToClient(client.id)}
+                    disabled={client.items.some(i => i.id === product.id)}
+                    className={`w-full px-4 py-2 text-left hover:bg-gray-100 ${client.items.some(i => i.id === product.id) ? 'text-gray-400 cursor-not-allowed' : 'text-black'}`}
+                  >
+                    Client {index + 1} - {client.name || 'Unnamed'}
+                  </button>
+                ))
+              )}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

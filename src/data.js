@@ -3435,7 +3435,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Sissy Squat machine is designed to isolate and strengthen the quadriceps while also engaging the core. It supports the lower legs and keeps the body in position, allowing users to perform deep squats safely without stressing the knees or back. Great for sculpting the thighs and improving squat form.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+    muscle: 'LEGS', 
+    colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
 
   },
   {
@@ -3449,7 +3450,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Isolateral Standing Calf Raise machine targets the calf muscles—specifically the gastrocnemius—by allowing users to perform standing raises one leg at a time (isolaterally). This improves muscle balance, enhances lower leg strength, and supports better ankle stability and performance in activities like running and jumping.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+    muscle: 'LEGS', 
+    colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
 
   },
   {
@@ -3463,7 +3465,8 @@ export const products = [
     type: 'Commercial',
     description: 'The Isolateral Standing Chest Fly machine is designed to target the pectoral muscles through a controlled, standing fly motion. It allows independent arm movement (isolateral), helping to correct muscle imbalances while enhancing chest definition and strength. The standing position also engages the core and stabilizing muscles, adding functional strength benefits.',
     specification: 'Length: 64 inches, Width: 84 inches, Height: 60 inches',
-    muscle: 'LEGS', colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color']
+    muscle: 'LEGS', 
+    colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color'],
 
   },
 
