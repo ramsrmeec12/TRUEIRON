@@ -1,3 +1,4 @@
+// Cart.jsx
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -5,7 +6,7 @@ import { generateQuotationPDF } from './generatePDF';
 import auth from '../config';
 
 export default function Cart() {
-  const { cartItems, removeFromCart } = useCart();
+  const { cartItems, removeFromCart, addToCart } = useCart();
   const whatsappNumber = '916385706756';
   const [admin, setAdmin] = useState(false);
   const [editableItems, setEditableItems] = useState([]);
@@ -20,8 +21,10 @@ export default function Cart() {
     auth.onAuthStateChanged(user => {
       if (user && user.uid === 'W8mdeLQYrZfbugze4YTIgdyuFPY2') {
         setAdmin(true);
+        const savedCustomItems = localStorage.getItem('customItems');
+        const parsed = savedCustomItems ? JSON.parse(savedCustomItems) : [];
         setEditableItems(
-          cartItems.map(item => ({
+          [...cartItems, ...parsed].map(item => ({
             ...item,
             quantity: item.quantity || 1,
             price: item.price || 0,
@@ -32,6 +35,16 @@ export default function Cart() {
       }
     });
   }, [cartItems]);
+
+  useEffect(() => {
+    if (admin) {
+      try {
+        localStorage.setItem('customItems', JSON.stringify(editableItems.filter(item => item.id.toString().length > 6)));
+      } catch (err) {
+        console.error('Could not save custom items:', err);
+      }
+    }
+  }, [editableItems, admin]);
 
   const handleQuantityChange = (id, value) => {
     setEditableItems(items =>
@@ -75,8 +88,6 @@ export default function Cart() {
     };
 
     setEditableItems(prev => [...prev, newCustomItem]);
-
-    // Clear inputs
     setCustomName('');
     setCustomSku('');
     setCustomQty(1);
@@ -86,7 +97,7 @@ export default function Cart() {
 
   const handleSubmit = () => {
     const message = `Hi, I would like to enquire about the following products:\n\n` +
-      cartItems
+      editableItems
         .map((item, i) => `${i + 1}. ${item.name} (SKU: ${item.sku}). Color: ${item.selectedColor}`)
         .join('\n');
 
@@ -95,10 +106,10 @@ export default function Cart() {
   };
 
   const [removingId, setRemovingId] = useState(null);
-
   const handleRemove = id => {
     setRemovingId(id);
     setTimeout(() => {
+      setEditableItems(prev => prev.filter(item => item.id !== id));
       removeFromCart(id);
       setRemovingId(null);
     }, 300);
@@ -109,7 +120,6 @@ export default function Cart() {
   return (
     <div className="p-4">
       <h2 className="text-2xl mb-4 font-bold">🛒 Your Cart</h2>
-
       {dataSource.length === 0 ? (
         <p className="text-gray-500">No items added.</p>
       ) : (
@@ -123,7 +133,7 @@ export default function Cart() {
             >
               <div className="flex items-center space-x-4">
                 <img
-                  src={item.image}
+                  src={item.image || '/default-custom.webp'}
                   alt={item.name}
                   className="h-16 w-16 object-cover rounded"
                 />
@@ -167,7 +177,6 @@ export default function Cart() {
               >
                 Remove
               </button>
-
             </div>
           ))}
 
@@ -176,56 +185,16 @@ export default function Cart() {
               <div className="mt-8 border-t pt-4">
                 <h3 className="text-lg font-semibold mb-2">Add Custom Product</h3>
                 <div className="flex flex-col md:flex-row items-center gap-4">
-                  <input
-                    type="text"
-                    placeholder="Product Name"
-                    value={customName}
-                    onChange={e => setCustomName(e.target.value)}
-                    className="border px-3 py-2 rounded w-full md:w-1/4"
-                  />
-                  <input
-                    type="text"
-                    placeholder="SKU (Optional)"
-                    value={customSku}
-                    onChange={e => setCustomSku(e.target.value)}
-                    className="border px-3 py-2 rounded w-full md:w-1/4"
-                  />
-                  <input
-                    type="number"
-                    placeholder="Qty"
-                    min="1"
-                    value={customQty}
-                    onChange={e => setCustomQty(Number(e.target.value))}
-                    className="border px-3 py-2 rounded w-full md:w-1/6"
-                  />
-                  <input
-                    type="number"
-                    placeholder="Price"
-                    min="0"
-                    step="0.01"
-                    value={customPrice}
-                    onChange={e => setCustomPrice(Number(e.target.value))}
-                    className="border px-3 py-2 rounded w-full md:w-1/6"
-                  />
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={handleImageUpload}
-                    className="border px-3 py-2 rounded w-full md:w-1/4"
-                  />
-                  <button
-                    onClick={handleAddCustomProduct}
-                    className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-                  >
-                    Add
-                  </button>
+                  <input type="text" placeholder="Product Name" value={customName} onChange={e => setCustomName(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/4" />
+                  <input type="text" placeholder="SKU (Optional)" value={customSku} onChange={e => setCustomSku(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/4" />
+                  <input type="number" placeholder="Qty" min="1" value={customQty} onChange={e => setCustomQty(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
+                  <input type="number" placeholder="Price" min="0" step="0.01" value={customPrice} onChange={e => setCustomPrice(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
+                  <input type="file" accept="image/*" onChange={handleImageUpload} className="border px-3 py-2 rounded w-full md:w-1/4" />
+                  <button onClick={handleAddCustomProduct} className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Add</button>
                 </div>
               </div>
 
-              <button
-                onClick={() => generateQuotationPDF(editableItems)}
-                className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-              >
+              <button onClick={() => generateQuotationPDF(editableItems)} className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
                 Download Quotation PDF
               </button>
             </>

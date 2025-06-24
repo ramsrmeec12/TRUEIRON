@@ -105,6 +105,8 @@ import Shoulder11 from '../src/assets/commercial/Strength/Shoulder/Shoulder11.jp
 import Shoulder12 from '../src/assets/commercial/Strength/Shoulder/Shoulder12.jpg'
 import Shoulder13 from '../src/assets/commercial/Strength/Shoulder/Shoulder13.jpg'
 
+
+
 //Strength --> Arms
 import Arms1 from '../src/assets/commercial/Strength/Arms/Arms1.png'
 import Arms2 from '../src/assets/commercial/Strength/Arms/Arms2.png'
