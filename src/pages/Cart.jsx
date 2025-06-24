@@ -1,4 +1,3 @@
-// Cart.jsx
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -6,7 +5,7 @@ import { generateQuotationPDF } from './generatePDF';
 import auth from '../config';
 
 export default function Cart() {
-  const { cartItems, removeFromCart, addToCart } = useCart();
+  const { cartItems, removeFromCart } = useCart();
   const whatsappNumber = '916385706756';
   const [admin, setAdmin] = useState(false);
   const [editableItems, setEditableItems] = useState([]);
@@ -14,22 +13,33 @@ export default function Cart() {
   const [customName, setCustomName] = useState('');
   const [customSku, setCustomSku] = useState('');
   const [customQty, setCustomQty] = useState(1);
-  const [customPrice, setCustomPrice] = useState(0);
+  const [customOriginalPrice, setCustomOriginalPrice] = useState(0);
+  const [customDiscountedPrice, setCustomDiscountedPrice] = useState(0);
   const [customImage, setCustomImage] = useState(null);
 
   useEffect(() => {
     auth.onAuthStateChanged(user => {
       if (user && user.uid === 'W8mdeLQYrZfbugze4YTIgdyuFPY2') {
         setAdmin(true);
+
         const savedCustomItems = localStorage.getItem('customItems');
         const parsed = savedCustomItems ? JSON.parse(savedCustomItems) : [];
-        setEditableItems(
-          [...cartItems, ...parsed].map(item => ({
+
+        const combinedItems = cartItems.map(item => {
+          const saved = parsed.find(savedItem => savedItem.id === item.id);
+          return {
             ...item,
-            quantity: item.quantity || 1,
-            price: item.price || 0,
-          }))
+            quantity: saved?.quantity ?? item.quantity ?? 1,
+            originalPrice: saved?.originalPrice ?? item.originalPrice ?? item.price ?? 0,
+            discountedPrice: saved?.discountedPrice ?? item.discountedPrice ?? item.price ?? 0,
+          };
+        });
+
+        const customOnly = parsed.filter(item =>
+          !cartItems.some(cartItem => cartItem.id === item.id)
         );
+
+        setEditableItems([...combinedItems, ...customOnly]);
       } else {
         setAdmin(false);
       }
@@ -39,7 +49,7 @@ export default function Cart() {
   useEffect(() => {
     if (admin) {
       try {
-        localStorage.setItem('customItems', JSON.stringify(editableItems.filter(item => item.id.toString().length > 6)));
+        localStorage.setItem('customItems', JSON.stringify(editableItems));
       } catch (err) {
         console.error('Could not save custom items:', err);
       }
@@ -54,16 +64,28 @@ export default function Cart() {
     );
   };
 
-  const handlePriceChange = (id, value) => {
+  const handleOriginalPriceChange = (id, value) => {
     setEditableItems(items =>
       items.map(item =>
-        item.id === id ? { ...item, price: parseFloat(value) || 0 } : item
+        item.id === id ? { ...item, originalPrice: parseFloat(value) || 0 } : item
+      )
+    );
+  };
+
+  const handleDiscountedPriceChange = (id, value) => {
+    setEditableItems(items =>
+      items.map(item =>
+        item.id === id ? { ...item, discountedPrice: parseFloat(value) || 0 } : item
       )
     );
   };
 
   const handleImageUpload = e => {
     const file = e.target.files[0];
+    if (file.size > 5 * 1024 * 1024) {
+      alert('Please upload an image less than 5MB. Compress it here: https://imageresizer.com/image-compressor');
+      return;
+    }
     const reader = new FileReader();
     reader.onloadend = () => {
       setCustomImage(reader.result);
@@ -82,7 +104,8 @@ export default function Cart() {
       name: customName,
       sku: customSku || 'N/A',
       quantity: customQty,
-      price: customPrice,
+      originalPrice: customOriginalPrice,
+      discountedPrice: customDiscountedPrice,
       image: customImage || '/default-custom.webp',
       selectedColor: 'N/A',
     };
@@ -91,7 +114,8 @@ export default function Cart() {
     setCustomName('');
     setCustomSku('');
     setCustomQty(1);
-    setCustomPrice(0);
+    setCustomOriginalPrice(0);
+    setCustomDiscountedPrice(0);
     setCustomImage(null);
   };
 
@@ -159,12 +183,21 @@ export default function Cart() {
                       />
                     </label>
                     <label>
-                      Price:
+                      Original:
                       <input
                         type="number"
-                        value={item.price}
-                        onChange={e => handlePriceChange(item.id, e.target.value)}
-                        className="ml-1 border p-1 w-24"
+                        value={item.originalPrice}
+                        onChange={e => handleOriginalPriceChange(item.id, e.target.value)}
+                        className="ml-1 border p-1 w-20"
+                      />
+                    </label>
+                    <label>
+                      Discounted:
+                      <input
+                        type="number"
+                        value={item.discountedPrice}
+                        onChange={e => handleDiscountedPriceChange(item.id, e.target.value)}
+                        className="ml-1 border p-1 w-20"
                       />
                     </label>
                   </div>
@@ -188,7 +221,8 @@ export default function Cart() {
                   <input type="text" placeholder="Product Name" value={customName} onChange={e => setCustomName(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/4" />
                   <input type="text" placeholder="SKU (Optional)" value={customSku} onChange={e => setCustomSku(e.target.value)} className="border px-3 py-2 rounded w-full md:w-1/4" />
                   <input type="number" placeholder="Qty" min="1" value={customQty} onChange={e => setCustomQty(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
-                  <input type="number" placeholder="Price" min="0" step="0.01" value={customPrice} onChange={e => setCustomPrice(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
+                  <input type="number" placeholder="Original Price" min="0" value={customOriginalPrice} onChange={e => setCustomOriginalPrice(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
+                  <input type="number" placeholder="Discounted Price" min="0" value={customDiscountedPrice} onChange={e => setCustomDiscountedPrice(Number(e.target.value))} className="border px-3 py-2 rounded w-full md:w-1/6" />
                   <input type="file" accept="image/*" onChange={handleImageUpload} className="border px-3 py-2 rounded w-full md:w-1/4" />
                   <button onClick={handleAddCustomProduct} className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Add</button>
                 </div>

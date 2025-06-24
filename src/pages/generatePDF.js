@@ -6,8 +6,8 @@ export async function generateQuotationPDF(cartItems) {
   const pageWidth = 595;
   const pageHeight = 842;
   const margin = 50;
-  const rowHeight = 100; // Row height for product rows
-  const headerHeight = 30; // Height for table headers
+  const rowHeight = 100;
+  const headerHeight = 30;
   const fontSize = 11;
 
   let y = pageHeight - margin;
@@ -44,7 +44,6 @@ export async function generateQuotationPDF(cartItems) {
   drawText('Quotation', pageWidth - margin - 100, y - 60, { size: 16 });
   y -= 90;
 
-  // Table Columns: Sl. No | Image | Name | Qty | Price
   const colWidths = [40, 80, 230, 60, 80];
   const colTitles = ['Sl. No', 'Image', 'Product Name (SKU)', 'Qty', 'Price'];
 
@@ -83,14 +82,14 @@ export async function generateQuotationPDF(cartItems) {
   };
 
   drawTableHeader();
-
   let totalPrice = 0;
 
   for (let i = 0; i < cartItems.length; i++) {
     const item = cartItems[i];
     const quantity = item.quantity || 1;
-    const price = item.price || 0;
-    const total = price * quantity;
+    const originalPrice = item.originalPrice || item.price || 0;
+    const discountedPrice = item.discountedPrice || item.price || 0;
+    const total = discountedPrice * quantity;
     totalPrice += total;
 
     const productText = `${item.name} (${item.sku})`;
@@ -104,7 +103,6 @@ export async function generateQuotationPDF(cartItems) {
       drawTableHeader();
     }
 
-    // Draw cell borders
     let x = margin;
     for (let j = 0; j < colWidths.length; j++) {
       page.drawRectangle({
@@ -118,10 +116,8 @@ export async function generateQuotationPDF(cartItems) {
       x += colWidths[j];
     }
 
-    // Sl. No
     drawText(`${i + 1}`, margin + 5, y - 20);
 
-    // Image
     try {
       const imageBytes = await fetch(item.image).then((res) => res.arrayBuffer());
       const ext = item.image.split('.').pop().toLowerCase();
@@ -139,19 +135,36 @@ export async function generateQuotationPDF(cartItems) {
       drawText('Image error', margin + colWidths[0] + 5, y - 20);
     }
 
-    // Name + SKU
     wrappedName.forEach((line, idx) => {
       drawText(line, margin + colWidths[0] + colWidths[1] + 5, y - 20 - idx * 14);
     });
 
-    // Qty & Price
     drawText(`${quantity}`, margin + colWidths[0] + colWidths[1] + colWidths[2] + 5, y - 20);
-    drawText(`Rs. ${total}`, margin + colWidths[0] + colWidths[1] + colWidths[2] + colWidths[3] + 5, y - 20);
+
+    const priceX = margin + colWidths.slice(0, 4).reduce((a, b) => a + b, 0) + 5;
+    const originalPriceText = `Rs. ${originalPrice * quantity}`;
+    const discountedPriceText = `Rs. ${discountedPrice * quantity}`;
+
+    drawText(originalPriceText, priceX, y - 15, {
+      size: fontSize - 1,
+      color: rgb(0.6, 0.6, 0.6),
+    });
+    const textWidth = font.widthOfTextAtSize(originalPriceText, fontSize - 1);
+    page.drawLine({
+      start: { x: priceX, y: y - 12 },
+      end: { x: priceX + textWidth, y: y - 12 },
+      thickness: 1,
+      color: rgb(0.6, 0.6, 0.6),
+    });
+    drawText(discountedPriceText, priceX, y - 30, {
+      size: fontSize + 1,
+      font,
+      color: rgb(0, 0, 0),
+    });
 
     y -= actualRowHeight;
   }
 
-  // Add Grand Total Row
   const totalRowHeight = 30;
   if (y - totalRowHeight < 60) {
     page = pdfDoc.addPage([pageWidth, pageHeight]);
@@ -159,7 +172,6 @@ export async function generateQuotationPDF(cartItems) {
     drawTableHeader();
   }
 
-  // Draw cell borders for total row
   let x = margin;
   for (let j = 0; j < colWidths.length; j++) {
     page.drawRectangle({
@@ -173,23 +185,17 @@ export async function generateQuotationPDF(cartItems) {
     x += colWidths[j];
   }
 
-  // Merge first four columns for "Grand Total" label
-  const totalLabelX = margin + 5;
-  const totalLabelWidth = colWidths.slice(0, 4).reduce((a, b) => a + b, 0) - 10;
   page.drawText('Grand Total', {
-    x: totalLabelX,
+    x: margin + 5,
     y: y - 20,
     size: fontSize,
     font,
     color: rgb(0, 0, 0),
   });
 
-  // Total Price in the last column
   drawText(`Rs. ${totalPrice}`, margin + colWidths.slice(0, 4).reduce((a, b) => a + b, 0) + 5, y - 20);
-
   y -= totalRowHeight;
 
-  // Existing single line note
   drawText(
     'Please refer to terms and conditions on our website: https://trueiron.shop/terms',
     margin,
@@ -201,13 +207,11 @@ export async function generateQuotationPDF(cartItems) {
     }
   );
 
-  // --- NEW SEPARATE PAGE for Terms and Conditions ---
   const termsPage = pdfDoc.addPage([pageWidth, pageHeight]);
   let ty = pageHeight - margin;
   const termsFontSize = 10;
   const termsLineHeight = 14;
   const maxWidth = pageWidth - 2 * margin;
-  const termsFont = font; // reuse Helvetica
 
   const termsText = [
     'Terms and Conditions:',
@@ -228,13 +232,12 @@ export async function generateQuotationPDF(cartItems) {
     '14. For queries, contact us via WhatsApp.',
   ];
 
-  // Function to wrap text for terms page (same as before)
-  function wrapTextTerms(text, maxWidth) {
+  const wrapTextTerms = (text, maxWidth) => {
     const words = text.split(' ');
     let lines = [];
     let currentLine = '';
     for (const word of words) {
-      const width = termsFont.widthOfTextAtSize(currentLine + (currentLine ? ' ' : '') + word, termsFontSize);
+      const width = font.widthOfTextAtSize(currentLine + (currentLine ? ' ' : '') + word, termsFontSize);
       if (width > maxWidth && currentLine) {
         lines.push(currentLine);
         currentLine = word;
@@ -244,15 +247,9 @@ export async function generateQuotationPDF(cartItems) {
     }
     if (currentLine) lines.push(currentLine);
     return lines;
-  }
-
+  };
 
   for (let line of termsText) {
-    if (ty - termsLineHeight < margin) {
-      ty = pageHeight - margin;
-      const newTermsPage = pdfDoc.addPage([pageWidth, pageHeight]);
-      termsPage = newTermsPage; // move pointer
-    }
     const wrappedLines = wrapTextTerms(line, maxWidth);
     for (const wrappedLine of wrappedLines) {
       if (ty - termsLineHeight < margin) {
@@ -264,7 +261,7 @@ export async function generateQuotationPDF(cartItems) {
         x: margin,
         y: ty - termsLineHeight,
         size: termsFontSize,
-        font: termsFont,
+        font,
         color: rgb(0.3, 0.3, 0.3),
       });
       ty -= termsLineHeight;
