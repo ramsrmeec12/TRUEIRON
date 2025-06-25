@@ -85,7 +85,7 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
   y -= 40;
 
   const colWidths = [40, 80, 230, 60, 80];
-  const colTitles = ['Sl. No', 'Image', 'Product Name ', 'Qty', 'Price'];
+  const colTitles = ['Sl. No', 'Image', 'Product Name ', 'Qty', 'Price (1 Qty.)'];
 
   const drawTableHeader = () => {
     let x = margin;

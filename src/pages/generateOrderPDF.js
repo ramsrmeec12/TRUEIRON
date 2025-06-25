@@ -6,8 +6,8 @@ export async function generateOrderPDF(cartItems, clientInfo) {
   const pageWidth = 595;
   const pageHeight = 842;
   const margin = 50;
-  const headerHeight = 30;
   const fontSize = 11;
+  const headerHeight = 30;
 
   let y = pageHeight - margin;
   let page = pdfDoc.addPage([pageWidth, pageHeight]);
@@ -23,7 +23,7 @@ export async function generateOrderPDF(cartItems, clientInfo) {
     });
   };
 
-  // Draw logo and header
+  // Draw logo
   try {
     const logoUrl = 'https://trueiron.shop/static/media/logo.1e18293906268e6ff6e1.png';
     const logoBytes = await fetch(logoUrl).then(res => res.arrayBuffer());
@@ -42,7 +42,7 @@ export async function generateOrderPDF(cartItems, clientInfo) {
     drawText('True Iron Gym Equipments', margin, y - 30, { size: 18 });
   }
 
-  y -= 60;
+  y -= 70;
   drawText('18, NSE Bose Nagar, Puthapedu, Porur, Chennai-116', margin, y);
   drawText('30, Loha Market Main Rd, New Seelampur, Delhi, 110053', margin, y - 15);
   drawText('Phone: +91 63857 06756', margin, y - 30);
@@ -130,9 +130,11 @@ export async function generateOrderPDF(cartItems, clientInfo) {
     const productText = `${item.name} (${item.sku})`;
     const wrappedName = wrapText(productText, colWidths[1] - 10);
     const textHeight = wrappedName.length * 14;
-    const actualRowHeight = Math.max(textHeight + 20, 60);
 
-    if (y - actualRowHeight < 60) {
+    const imageHeight = 80;
+    const rowHeight = Math.max(textHeight + 20, imageHeight + 10);
+
+    if (y - rowHeight < 60) {
       page = pdfDoc.addPage([pageWidth, pageHeight]);
       y = pageHeight - margin;
       drawTableHeader();
@@ -142,9 +144,9 @@ export async function generateOrderPDF(cartItems, clientInfo) {
     for (let j = 0; j < colWidths.length; j++) {
       page.drawRectangle({
         x,
-        y: y - actualRowHeight,
+        y: y - rowHeight,
         width: colWidths[j],
-        height: actualRowHeight,
+        height: rowHeight,
         borderColor: rgb(0, 0, 0),
         borderWidth: 1,
       });
@@ -152,18 +154,29 @@ export async function generateOrderPDF(cartItems, clientInfo) {
     }
 
     drawText(`${i + 1}`, margin + 5, y - 20);
-
     wrappedName.forEach((line, idx) => {
       drawText(line, margin + colWidths[0] + 5, y - 20 - idx * 14);
     });
-
     drawText(`${quantity}`, margin + colWidths[0] + colWidths[1] + 5, y - 20);
 
-    if (item.image && item.image.startsWith('data:image')) {
+    // Draw image
+    if (item.image) {
       try {
-        const imageBytes = Uint8Array.from(atob(item.image.split(',')[1]), c => c.charCodeAt(0));
-        const image = await pdfDoc.embedJpg(imageBytes);
-        const imageDims = image.scaleToFit(60, 60);
+        let imageBytes, image;
+        if (item.image.startsWith('data:image')) {
+          const base64 = item.image.split(',')[1];
+          imageBytes = Uint8Array.from(atob(base64), c => c.charCodeAt(0));
+          image = item.image.includes('jpeg') || item.image.includes('jpg')
+            ? await pdfDoc.embedJpg(imageBytes)
+            : await pdfDoc.embedPng(imageBytes);
+        } else {
+          const response = await fetch(item.image);
+          imageBytes = await response.arrayBuffer();
+          image = item.image.endsWith('.jpg') || item.image.endsWith('.jpeg')
+            ? await pdfDoc.embedJpg(imageBytes)
+            : await pdfDoc.embedPng(imageBytes);
+        }
+        const imageDims = image.scaleToFit(100, 80);
         page.drawImage(image, {
           x: margin + colWidths[0] + colWidths[1] + colWidths[2] + 5,
           y: y - imageDims.height - 5,
@@ -171,13 +184,13 @@ export async function generateOrderPDF(cartItems, clientInfo) {
           height: imageDims.height,
         });
       } catch (err) {
-        drawText('Image failed to load', margin + colWidths[0] + colWidths[1] + colWidths[2] + 5, y - 20);
+        drawText('Image Load Error', margin + colWidths[0] + colWidths[1] + colWidths[2] + 5, y - 20);
       }
     } else {
       drawText('No Image', margin + colWidths[0] + colWidths[1] + colWidths[2] + 5, y - 20);
     }
 
-    y -= actualRowHeight;
+    y -= rowHeight;
   }
 
   const pdfBytes = await pdfDoc.save();
