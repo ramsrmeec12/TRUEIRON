@@ -85,7 +85,7 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
   y -= 40;
 
   const colWidths = [40, 80, 230, 60, 80];
-  const colTitles = ['Sl. No', 'Image', 'Product Name ', 'Qty', 'Price (1 Qty.)'];
+  const colTitles = ['Sl. No', 'Image', 'Product Name ', 'Qty', 'Price'];
 
   const drawTableHeader = () => {
     let x = margin;
@@ -183,8 +183,11 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
     drawText(`${quantity}`, margin + colWidths[0] + colWidths[1] + colWidths[2] + 5, y - 20);
 
     const priceX = margin + colWidths[0] + colWidths[1] + colWidths[2] + colWidths[3] + 5;
-    const originalPriceText = `Rs. ${originalPrice}`;
-    const discountedPriceText = `Rs. ${discountedPrice}`;
+    const originalPriceTotal = originalPrice * quantity;
+    const discountedPriceTotal = discountedPrice * quantity;
+
+    const originalPriceText = `Rs. ${originalPriceTotal}`;
+    const discountedPriceText = `Rs. ${discountedPriceTotal}`;
     const originalTextWidth = font.widthOfTextAtSize(originalPriceText, fontSize);
 
     drawText(originalPriceText, priceX, y - 10);
@@ -196,6 +199,7 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
     });
 
     drawText(discountedPriceText, priceX, y - 30, { size: fontSize + 1 });
+
 
     y -= actualRowHeight;
   }
