@@ -84,8 +84,8 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
   drawClientRow('Address:', clientInfo.address || '', y);
   y -= 40;
 
-  const colWidths = [40, 80, 230, 60, 80];
-  const colTitles = ['Sl. No', 'Image', 'Product Name ', 'Qty', 'Price'];
+  const colWidths = [35, 70, 200, 50, 65, 75];
+  const colTitles = ['Sl. No', 'Image', 'Product Name', 'Qty', 'Unit Price', 'Total'];
 
   const drawTableHeader = () => {
     let x = margin;
@@ -133,8 +133,7 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
     const total = discountedPrice * quantity;
     totalPrice += total;
 
-    const productText = `${item.name} `;
-    const wrappedName = wrapText(productText, colWidths[2] - 10);
+    const wrappedName = wrapText(item.name || '', colWidths[2] - 10);
     const textHeight = wrappedName.length * 14;
     const actualRowHeight = Math.max(textHeight + 20, rowHeight);
 
@@ -180,26 +179,40 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
       drawText(line, margin + colWidths[0] + colWidths[1] + 5, y - 20 - idx * 14);
     });
 
-    drawText(`${quantity}`, margin + colWidths[0] + colWidths[1] + colWidths[2] + 5, y - 20);
+    const qtyX = margin + colWidths[0] + colWidths[1] + colWidths[2];
+    const unitX = qtyX + colWidths[3];
+    const totalX = unitX + colWidths[4];
 
-    const priceX = margin + colWidths[0] + colWidths[1] + colWidths[2] + colWidths[3] + 5;
-    const originalPriceTotal = originalPrice * quantity;
-    const discountedPriceTotal = discountedPrice * quantity;
+    drawText(`${quantity}`, qtyX + 5, y - 20);
+    const originalUnitText = `Rs. ${originalPrice}`;
+    const discountedUnitText = `Rs. ${discountedPrice}`;
+    const originalUnitTextWidth = font.widthOfTextAtSize(originalUnitText, fontSize);
 
-    const originalPriceText = `Rs. ${originalPriceTotal}`;
-    const discountedPriceText = `Rs. ${discountedPriceTotal}`;
-    const originalTextWidth = font.widthOfTextAtSize(originalPriceText, fontSize);
-
-    drawText(originalPriceText, priceX, y - 10);
+    // Draw original unit price with strikethrough
+    drawText(originalUnitText, unitX + 5, y - 10);
     page.drawLine({
-      start: { x: priceX, y: y - 10 + fontSize / 2 },
-      end: { x: priceX + originalTextWidth, y: y - 10 + fontSize / 2 },
+      start: { x: unitX + 5, y: y - 10 + fontSize / 2 },
+      end: { x: unitX + 5 + originalUnitTextWidth, y: y - 10 + fontSize / 2 },
       thickness: 1,
       color: rgb(1, 0, 0),
     });
 
-    drawText(discountedPriceText, priceX, y - 30, { size: fontSize + 1 });
+    // Draw discounted unit price below
+    drawText(discountedUnitText, unitX + 5, y - 28, { size: fontSize + 1 });
 
+
+    const originalPriceText = `Rs. ${originalPrice * quantity}`;
+    const discountedPriceText = `Rs. ${discountedPrice * quantity}`;
+    const originalTextWidth = font.widthOfTextAtSize(originalPriceText, fontSize);
+
+    drawText(originalPriceText, totalX + 5, y - 10);
+    page.drawLine({
+      start: { x: totalX + 5, y: y - 10 + fontSize / 2 },
+      end: { x: totalX + 5 + originalTextWidth, y: y - 10 + fontSize / 2 },
+      thickness: 1,
+      color: rgb(1, 0, 0),
+    });
+    drawText(discountedPriceText, totalX + 5, y - 30, { size: fontSize + 1 });
 
     y -= actualRowHeight;
   }
@@ -232,7 +245,7 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
     color: rgb(0, 0, 0),
   });
 
-  drawText(`Rs. ${totalPrice}`, margin + colWidths.slice(0, 4).reduce((a, b) => a + b, 0) + 5, y - 20);
+  drawText(`Rs. ${totalPrice}`, margin + colWidths.slice(0, 5).reduce((a, b) => a + b, 0) + 5, y - 20);
 
   y -= totalRowHeight;
 
