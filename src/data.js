@@ -2545,7 +2545,7 @@ export const products = [
   {
     id: 165,
     sku: 'GYM-COM-166',
-    name: 'WEIGHTED PLATED V1',
+    name: 'WEIGHTED PLATED V1 (Kgs)',
     category: 'Strength',
     subcategory: 'Dumbells & Plates',
     image: D1,
@@ -2557,7 +2557,7 @@ export const products = [
   {
     id: 166,
     sku: 'GYM-COM-167',
-    name: 'WEIGHTED PLATED V2',
+    name: 'WEIGHTED PLATED V2 (Kgs)',
     category: 'Strength',
     subcategory: 'Dumbells & Plates',
     image: D2,
@@ -2569,7 +2569,7 @@ export const products = [
   {
     id: 167,
     sku: 'GYM-COM-168',
-    name: 'WEIGHTED PLATES V3',
+    name: 'WEIGHTED PLATES V3 (Kgs)',
     category: 'Strength',
     subcategory: 'Dumbells & Plates',
     image: D3,
@@ -2581,7 +2581,7 @@ export const products = [
   {
     id: 168,
     sku: 'GYM-COM-169',
-    name: 'DUMBELL V1',
+    name: 'DUMBELL V1 (Kgs)',
     category: 'Strength',
     subcategory: 'Dumbells & Plates',
     image: D4,
@@ -2593,7 +2593,7 @@ export const products = [
   {
     id: 169,
     sku: 'GYM-COM-170',
-    name: 'DUMBELL V2',
+    name: 'DUMBELL V2 (Kgs)',
     category: 'Strength',
     subcategory: 'Dumbells & Plates',
     image: D5,

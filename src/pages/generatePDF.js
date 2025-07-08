@@ -201,18 +201,9 @@ export async function generateQuotationPDF(cartItems, clientInfo) {
     drawText(discountedUnitText, unitX + 5, y - 28, { size: fontSize + 1 });
 
 
-    const originalPriceText = `Rs. ${originalPrice * quantity}`;
     const discountedPriceText = `Rs. ${discountedPrice * quantity}`;
-    const originalTextWidth = font.widthOfTextAtSize(originalPriceText, fontSize);
+    drawText(discountedPriceText, totalX + 5, y - 20, { size: fontSize + 1 });
 
-    drawText(originalPriceText, totalX + 5, y - 10);
-    page.drawLine({
-      start: { x: totalX + 5, y: y - 10 + fontSize / 2 },
-      end: { x: totalX + 5 + originalTextWidth, y: y - 10 + fontSize / 2 },
-      thickness: 1,
-      color: rgb(1, 0, 0),
-    });
-    drawText(discountedPriceText, totalX + 5, y - 30, { size: fontSize + 1 });
 
     y -= actualRowHeight;
   }
