@@ -1,7 +1,7 @@
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-import auth from '../config';
+import { auth } from '../config';
 
 export default function ProductCard({ product }) {
   const { addToCart, cartItems } = useCart();

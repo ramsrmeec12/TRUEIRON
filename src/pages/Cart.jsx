@@ -2,7 +2,8 @@ import { useCart } from '../context/CartContext';
 import { useState, useEffect } from 'react';
 import { generateQuotationPDF } from './generatePDF';
 import { generateOrderPDF } from './generateOrderPDF';
-import auth from '../config';
+import { auth } from '../config';
+
 
 export default function Cart() {
   const { cartItems, removeFromCart } = useCart();
@@ -237,4 +238,4 @@ function CustomProductForm({ onAdd }) {
       <button onClick={handleAdd} className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Add</button>
     </div>
   );
-}
+} 

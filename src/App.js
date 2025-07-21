@@ -16,6 +16,8 @@ import { useEffect } from "react";
 import TermsAndConditions from "./pages/termsandcond";
 import Login from "./pages/Login";
 import ProfessionalsHandler from "./ProfessionalsHandler";
+import ZohoRedirectHandler from "./pages/ZohoRedirectHandler";
+
 
 function App() {
   useEffect(() => {
@@ -69,6 +71,8 @@ function App() {
                 <Route path="/terms" element={<TermsAndConditions></TermsAndConditions>}></Route>
                 <Route path="login" element={<Login></Login>}></Route>
                 <Route path="/professionals" element={<ProfessionalsHandler />} />
+                <Route path="/billing" element={<ZohoRedirectHandler />} />
+
               </Routes>
             </main>
 
