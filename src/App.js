@@ -17,6 +17,7 @@ import TermsAndConditions from "./pages/termsandcond";
 import Login from "./pages/Login";
 import ProfessionalsHandler from "./ProfessionalsHandler";
 import ZohoRedirectHandler from "./pages/ZohoRedirectHandler";
+import BlockedRoutesPage from "./pages/Blockedroutes";
 
 
 function App() {
@@ -54,13 +55,13 @@ function App() {
 
             </Helmet>
 
-            <Navbar />
+            {/* <Navbar /> */}
 
             {/* Main content grows to fill space */}
             <main className="flex-grow">
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<BlockedRoutesPage/>} />
+                {/* <Route path="/home" element={<Home />} />
                 <Route path="/Commercial" element={<Commercial />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/location" element={<Location />} />
@@ -71,7 +72,7 @@ function App() {
                 <Route path="/terms" element={<TermsAndConditions></TermsAndConditions>}></Route>
                 <Route path="login" element={<Login></Login>}></Route>
                 <Route path="/professionals" element={<ProfessionalsHandler />} />
-                <Route path="/billing" element={<ZohoRedirectHandler />} />
+                <Route path="/billing" element={<ZohoRedirectHandler />} /> */}
 
               </Routes>
             </main>

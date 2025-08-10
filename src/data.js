@@ -3469,21 +3469,7 @@ export const products = [
     colorOptions: ['red', 'yellow', 'gray', 'Choose Own Color'],
 
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ];
+
+
 
