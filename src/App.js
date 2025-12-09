@@ -60,8 +60,8 @@ function App() {
             {/* Main content grows to fill space */}
             <main className="flex-grow">
               <Routes>
-                <Route path="/" element={<BlockedRoutesPage/>} />
-                {/* <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Home></Home>} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/Commercial" element={<Commercial />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/location" element={<Location />} />
@@ -72,7 +72,7 @@ function App() {
                 <Route path="/terms" element={<TermsAndConditions></TermsAndConditions>}></Route>
                 <Route path="login" element={<Login></Login>}></Route>
                 <Route path="/professionals" element={<ProfessionalsHandler />} />
-                <Route path="/billing" element={<ZohoRedirectHandler />} /> */}
+                <Route path="/billing" element={<ZohoRedirectHandler />} />
 
               </Routes>
             </main>
