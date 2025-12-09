@@ -41,6 +41,16 @@ function Footer() {
           </div>
         </div>
 
+        <nav aria-label="Products">
+          <h3 className="text-lg font-semibold mb-4">Policies</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href='https://merchant.razorpay.com/policy/RpYIHDrvJXzNaE/privacy'>Privacy Policy</a></li>
+            <li><a href='https://merchant.razorpay.com/policy/RpYIHDrvJXzNaE/refund'>Cancellation and Refunds</a></li>
+            <li><a href='https://merchant.razorpay.com/policy/RpYIHDrvJXzNaE/shipping'>Shipping Policy</a></li>
+            
+          </ul>
+        </nav>
+
         {/* Products */}
         <nav aria-label="Products">
           <h3 className="text-lg font-semibold mb-4">Products</h3>
