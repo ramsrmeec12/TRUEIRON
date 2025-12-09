@@ -55,7 +55,7 @@ function App() {
 
             </Helmet>
 
-            {/* <Navbar /> */}
+            <Navbar />
 
             {/* Main content grows to fill space */}
             <main className="flex-grow">
